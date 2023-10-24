@@ -70,9 +70,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
         lblNgayLapHoaDon = new javax.swing.JLabel();
         txtMaHoaDon = new javax.swing.JTextField();
         ftxtNgayLapHoaDon = new javax.swing.JFormattedTextField();
-        btnTimKiemHoaDon = new javax.swing.JButton();
-        btnLamMoiHoaDon = new javax.swing.JButton();
-        btnHienThiChiTietHoaDon = new javax.swing.JButton();
+        btnThanhToan = new javax.swing.JButton();
         pnlDanhSachHoaDon = new javax.swing.JPanel();
         scrDanhSachHoaDon = new javax.swing.JScrollPane();
         tblDanhSachHoaDon = new javax.swing.JTable();
@@ -368,7 +366,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblQuanLiThongTinHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblQuanLiThongTinHoaDon.setText("QUẢN LÍ THÔNG TIN HOÁ ĐƠN");
+        lblQuanLiThongTinHoaDon.setText("THANH TOÁN");
 
         pnlThongTinHoaDon.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm hoá đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
@@ -390,19 +388,10 @@ public class GUIThanhToan extends javax.swing.JFrame {
             }
         });
 
-        btnTimKiemHoaDon.setText("Tìm kiếm");
-
-        btnLamMoiHoaDon.setText("Làm mới hoá đơn");
-        btnLamMoiHoaDon.addActionListener(new java.awt.event.ActionListener() {
+        btnThanhToan.setText("Thanh toán");
+        btnThanhToan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLamMoiHoaDonActionPerformed(evt);
-            }
-        });
-
-        btnHienThiChiTietHoaDon.setText("Hiển thị chi tiết HD");
-        btnHienThiChiTietHoaDon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHienThiChiTietHoaDonActionPerformed(evt);
+                btnThanhToanActionPerformed(evt);
             }
         });
 
@@ -414,33 +403,25 @@ public class GUIThanhToan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblMaHoaDon)
                 .addGap(47, 47, 47)
-                .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addComponent(lblNgayLapHoaDon)
                 .addGap(36, 36, 36)
-                .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(btnTimKiemHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnLamMoiHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnHienThiChiTietHoaDon)
-                .addGap(21, 21, 21))
+                .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(btnThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         pnlThongTinHoaDonLayout.setVerticalGroup(
             pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlThongTinHoaDonLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblMaHoaDon)
-                        .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblNgayLapHoaDon)
-                        .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnTimKiemHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnLamMoiHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnHienThiChiTietHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(5, 5, 5)
+                .addGroup(pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMaHoaDon)
+                    .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNgayLapHoaDon)
+                    .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -494,7 +475,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
         );
         pnlDanhSachHoaDonLayout.setVerticalGroup(
             pnlDanhSachHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrDanhSachHoaDon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
+            .addComponent(scrDanhSachHoaDon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
         );
 
         mnHeThong.setText("Hệ Thống");
@@ -709,12 +690,10 @@ public class GUIThanhToan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlDanhSachHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pnlThongTinHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 8, Short.MAX_VALUE)))
+                    .addComponent(pnlThongTinHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(380, 380, 380)
+                .addGap(437, 437, 437)
                 .addComponent(lblQuanLiThongTinHoaDon)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -732,10 +711,6 @@ public class GUIThanhToan extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ftxtNgayLapHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftxtNgayLapHoaDonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ftxtNgayLapHoaDonActionPerformed
-
     private void tblDanhSachHoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDanhSachHoaDonMouseClicked
         
     }//GEN-LAST:event_tblDanhSachHoaDonMouseClicked
@@ -743,19 +718,6 @@ public class GUIThanhToan extends javax.swing.JFrame {
     private void tblDanhSachHoaDonComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_tblDanhSachHoaDonComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_tblDanhSachHoaDonComponentAdded
-
-    private void btnLamMoiHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiHoaDonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnLamMoiHoaDonActionPerformed
-
-    private void txtMaHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaHoaDonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMaHoaDonActionPerformed
-
-    private void btnHienThiChiTietHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHienThiChiTietHoaDonActionPerformed
-        // TODO add your handling code here:
-        dlgHoaDon.setVisible(true);
-    }//GEN-LAST:event_btnHienThiChiTietHoaDonActionPerformed
 
     private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
         // TODO add your handling code here:
@@ -866,14 +828,14 @@ public class GUIThanhToan extends javax.swing.JFrame {
 
     private void mniCapNhatDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatDichVuActionPerformed
         // TODO add your handling code here:
-        GUICapNhatDichVu cndv = new GUICapNhatDichVu();
+        GUITimKiemDichVu cndv = new GUITimKiemDichVu();
         cndv.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniCapNhatDichVuActionPerformed
 
     private void mniTimKiemDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemDichVuActionPerformed
         // TODO add your handling code here:
-        GUITimKiemDichVu tkdv = new GUITimKiemDichVu();
+        GUICapNhatDichVu tkdv = new GUICapNhatDichVu();
         tkdv.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemDichVuActionPerformed
@@ -895,6 +857,19 @@ public class GUIThanhToan extends javax.swing.JFrame {
     private void mnuKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuKhuyenMaiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mnuKhuyenMaiActionPerformed
+
+    private void txtMaHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaHoaDonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMaHoaDonActionPerformed
+
+    private void ftxtNgayLapHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftxtNgayLapHoaDonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ftxtNgayLapHoaDonActionPerformed
+
+    private void btnThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThanhToanActionPerformed
+        // TODO add your handling code here:
+        dlgHoaDon.setVisible(true);
+    }//GEN-LAST:event_btnThanhToanActionPerformed
     private HoaDon_DAO HD_dao;
 // doc du lieu tu Data vao Table
 //	public void docDuLieuTuDataVaoTable()
@@ -949,10 +924,8 @@ public class GUIThanhToan extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHienThiChiTietHoaDon;
-    private javax.swing.JButton btnLamMoiHoaDon;
     private javax.swing.JButton btnQuayLaiFromHoaDonTinhTien;
-    private javax.swing.JButton btnTimKiemHoaDon;
+    private javax.swing.JButton btnThanhToan;
     private javax.swing.JButton btnXacNhanIndlgChiTietHoaDon;
     private javax.swing.JDialog dlgHoaDon;
     private javax.swing.JFormattedTextField ftxtNgayLapHoaDon;

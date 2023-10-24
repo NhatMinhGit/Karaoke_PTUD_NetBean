@@ -438,7 +438,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="QU&#x1ea2;N L&#xcd; TH&#xd4;NG TIN D&#x1eca;CH V&#x1ee4;"/>
+        <Property name="text" type="java.lang.String" value="T&#xcc;M KI&#x1ebe;M TH&#xd4;NG TIN D&#x1eca;CH V&#x1ee4;"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -461,7 +461,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="50" width="1210" height="100"/>
+          <AbsoluteConstraints x="0" y="50" width="1210" height="130"/>
         </Constraint>
       </Constraints>
 
@@ -470,40 +470,72 @@
           <Group type="103" groupAlignment="1" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblMaDichVu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="txtMaDichVu" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lblMaDichVu" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="txtMaDichVu" min="-2" pref="165" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lblTenDichVu1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txtTenDichVu1" min="-2" pref="178" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="lblTenDichVu" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblTenDichVu" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTenDichVu2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="txtTenDichVu" min="-2" pref="195" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnTimKiemDichVu" min="-2" pref="139" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btnLamMoiThongTinDichVu" min="-2" pref="133" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnThemThongTinDichVu" min="-2" pref="138" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnCapNhatThongTinDichVu1" min="-2" pref="148" max="-2" attributes="0"/>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="txtTenDichVu2" min="-2" pref="188" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="lblTenDichVu3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="txtTenDichVu3" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="txtTenDichVu" min="-2" pref="507" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnLamMoiThongTinDichVu" max="32767" attributes="0"/>
+                      <Component id="btnTimKiemDichVu" pref="193" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblMaDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtMaDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblTenDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtTenDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnTimKiemDichVu" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="btnLamMoiThongTinDichVu" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="btnCapNhatThongTinDichVu1" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="btnThemThongTinDichVu" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblMaDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMaDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblTenDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtTenDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnTimKiemDichVu" min="-2" pref="45" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblTenDichVu1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtTenDichVu1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTenDichVu2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtTenDichVu2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnLamMoiThongTinDichVu" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="lblTenDichVu3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtTenDichVu3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -540,19 +572,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLamMoiThongTinDichVuActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnThemThongTinDichVu">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Th&#xea;m d&#x1ecb;ch v&#x1ee5;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThemThongTinDichVuActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnCapNhatThongTinDichVu1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t d&#x1ecb;ch v&#x1ee5;"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="btnTimKiemDichVu">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -562,6 +581,36 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTimKiemDichVuActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtTenDichVu1">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenDichVu1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblTenDichVu1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="S&#x1ed1; l&#x1b0;&#x1ee3;ng:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtTenDichVu2">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenDichVu2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblTenDichVu2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gi&#xe1; b&#xe1;n:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblTenDichVu3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x110;&#x1a1;n v&#x1ecb; t&#xed;nh:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtTenDichVu3">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenDichVu3ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -578,7 +627,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="160" width="1210" height="480"/>
+          <AbsoluteConstraints x="10" y="190" width="1210" height="450"/>
         </Constraint>
       </Constraints>
 
@@ -596,7 +645,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="scrDanhSachDichVu" min="-2" pref="445" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

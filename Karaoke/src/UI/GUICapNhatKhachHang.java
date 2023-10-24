@@ -510,7 +510,7 @@ public class GUICapNhatKhachHang extends javax.swing.JFrame {
 
     private void mniDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDichVuActionPerformed
         // TODO add your handling code here:
-        GUICapNhatDichVu ttdv = new GUICapNhatDichVu();
+        GUITimKiemDichVu ttdv = new GUITimKiemDichVu();
         ttdv.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniDichVuActionPerformed

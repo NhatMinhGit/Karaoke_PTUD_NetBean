@@ -463,14 +463,14 @@ public class GUIThongKeDoanhThuTheoKhachHang extends javax.swing.JFrame {
 
     private void mniCapNhatDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatDichVuActionPerformed
         // TODO add your handling code here:
-        GUICapNhatDichVu cndv = new GUICapNhatDichVu();
+        GUITimKiemDichVu cndv = new GUITimKiemDichVu();
         cndv.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniCapNhatDichVuActionPerformed
 
     private void mniTimKiemDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemDichVuActionPerformed
         // TODO add your handling code here:
-        GUITimKiemDichVu tkdv = new GUITimKiemDichVu();
+        GUICapNhatDichVu tkdv = new GUICapNhatDichVu();
         tkdv.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemDichVuActionPerformed
