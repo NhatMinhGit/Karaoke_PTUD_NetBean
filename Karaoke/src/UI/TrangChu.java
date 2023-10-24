@@ -446,7 +446,7 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_mniHoaDonActionPerformed
 
     private void mniThongKeDanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDanhThuActionPerformed
-        GUIThongKeDoanhThu tkdt = new GUIThongKeDoanhThu();
+        GUIThongKeKhachHang tkdt = new GUIThongKeKhachHang();
         tkdt.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniThongKeDanhThuActionPerformed

@@ -502,7 +502,7 @@ public class GUIDatPhong extends javax.swing.JFrame {
     }//GEN-LAST:event_mniDatPhongChoActionPerformed
 
     private void mniThongKeDoanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuActionPerformed
-        GUIThongKeDoanhThu tkdt = new GUIThongKeDoanhThu();
+        GUIThongKeKhachHang tkdt = new GUIThongKeKhachHang();
         tkdt.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniThongKeDoanhThuActionPerformed

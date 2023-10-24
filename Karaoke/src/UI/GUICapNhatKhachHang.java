@@ -553,7 +553,7 @@ public class GUICapNhatKhachHang extends javax.swing.JFrame {
 
     private void mniThongKeDoanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuActionPerformed
         // TODO add your handling code here:
-        GUIThongKeDoanhThu tkdt = new GUIThongKeDoanhThu();
+        GUIThongKeKhachHang tkdt = new GUIThongKeKhachHang();
         tkdt.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniThongKeDoanhThuActionPerformed

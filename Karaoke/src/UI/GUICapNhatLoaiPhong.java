@@ -487,7 +487,7 @@ public class GUICapNhatLoaiPhong extends javax.swing.JFrame {
 
     private void mniThongKeDoanhThuTheoKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
         // TODO add your handling code here:
-        GUIThongKeDoanhThuTheoKhachHang tkdttkh = new GUIThongKeDoanhThuTheoKhachHang();
+        GUIThongKeDoanhThu tkdttkh = new GUIThongKeDoanhThu();
         tkdttkh.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
@@ -591,7 +591,7 @@ public class GUICapNhatLoaiPhong extends javax.swing.JFrame {
 
     private void mniThongKeDoanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuActionPerformed
         // TODO add your handling code here:
-        GUIThongKeDoanhThu tkdt = new GUIThongKeDoanhThu();
+        GUIThongKeKhachHang tkdt = new GUIThongKeKhachHang();
         tkdt.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniThongKeDoanhThuActionPerformed

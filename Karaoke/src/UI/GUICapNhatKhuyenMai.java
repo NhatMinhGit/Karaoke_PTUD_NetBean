@@ -548,7 +548,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
     }//GEN-LAST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
 
     private void mnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnThongKeActionPerformed
-        GUIThongKeDoanhThu tkdt = new GUIThongKeDoanhThu();
+        GUIThongKeKhachHang tkdt = new GUIThongKeKhachHang();
         tkdt.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mnThongKeActionPerformed
