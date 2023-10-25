@@ -677,14 +677,14 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
     private void mniCapNhatKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhachHangActionPerformed
         // TODO add your handling code here:
-        GUICapNhatKhachHang cnkh = new GUICapNhatKhachHang();
+        GUITimKiemKhachHang cnkh = new GUITimKiemKhachHang();
         cnkh.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniCapNhatKhachHangActionPerformed
 
     private void mniTimKiemKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemKhachHangActionPerformed
         // TODO add your handling code here:
-        GUITimKiemKhachHang tkkh = new GUITimKiemKhachHang();
+        GUICapNhatKhachHang tkkh = new GUICapNhatKhachHang();
         tkkh.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemKhachHangActionPerformed
@@ -737,7 +737,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
     private void mniCapNhatKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhuyenMaiActionPerformed
         // TODO add your handling code here:
-        GUICapNhatKhuyenMai cnkm = new GUICapNhatKhuyenMai();
+        GUICapNhatKhuyenMai1 cnkm = new GUICapNhatKhuyenMai1();
         cnkm.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniCapNhatKhuyenMaiActionPerformed
