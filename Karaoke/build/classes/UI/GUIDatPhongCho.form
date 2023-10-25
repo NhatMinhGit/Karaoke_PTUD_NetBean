@@ -420,6 +420,9 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="focusTraversalPolicy" type="java.awt.FocusTraversalPolicy" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="default"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="mnuTong"/>
@@ -446,7 +449,7 @@
     <Component class="javax.swing.JLabel" name="lblQuanLiThongTinDatPhong">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
+          <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="QU&#x1ea2;N L&#xcd; TH&#xd4;NG TIN &#x110;&#x1eb6;T PH&#xd2;NG CH&#x1edc;"/>
       </Properties>
@@ -486,7 +489,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lblSoNguoiToiDa" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="txtSoNguoiToiDa" pref="271" max="32767" attributes="0"/>
+                          <Component id="txtSoNguoiToiDa" pref="171" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
@@ -545,12 +548,14 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lblLoaiPhong" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="radVip" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="radThuong" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radVip" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radThuong" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -601,22 +606,46 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblMaPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="M&#xe3; ph&#xf2;ng:"/>
+            <Property name="focusTraversalPolicy" type="java.awt.FocusTraversalPolicy" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSoNguoiToiDa">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="S&#x1ed1; ng&#x1b0;&#x1edd;i t&#x1ed1;i &#x111;a:"/>
+            <Property name="focusTraversalPolicy" type="java.awt.FocusTraversalPolicy" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTrangThaiPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tr&#x1ea1;ng th&#xe1;i ph&#xf2;ng:"/>
+            <Property name="focusTraversalPolicy" type="java.awt.FocusTraversalPolicy" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblLoaiPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i ph&#xf2;ng:"/>
+            <Property name="focusTraversalPolicy" type="java.awt.FocusTraversalPolicy" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnLamMoi">
@@ -632,21 +661,33 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="radVip">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Vip"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="radThuong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Th&#x1b0;&#x1edd;ng"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="radTrong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tr&#x1ed1;ng"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="radDay">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x110;&#x1ea7;y"/>
           </Properties>
         </Component>

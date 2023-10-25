@@ -365,13 +365,15 @@ public class GUIThanhToan extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblQuanLiThongTinHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblQuanLiThongTinHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblQuanLiThongTinHoaDon.setText("THANH TOÁN");
 
         pnlThongTinHoaDon.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm hoá đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
+        lblMaHoaDon.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblMaHoaDon.setText("Mã hoá đơn:");
 
+        lblNgayLapHoaDon.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblNgayLapHoaDon.setText("Ngày lập HD:");
 
         txtMaHoaDon.setText("HD001");
@@ -388,6 +390,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
             }
         });
 
+        btnThanhToan.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnThanhToan.setText("Thanh toán");
         btnThanhToan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -404,7 +407,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
                 .addComponent(lblMaHoaDon)
                 .addGap(47, 47, 47)
                 .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblNgayLapHoaDon)
                 .addGap(36, 36, 36)
                 .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -475,7 +478,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
         );
         pnlDanhSachHoaDonLayout.setVerticalGroup(
             pnlDanhSachHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrDanhSachHoaDon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+            .addComponent(scrDanhSachHoaDon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
         );
 
         mnHeThong.setText("Hệ Thống");

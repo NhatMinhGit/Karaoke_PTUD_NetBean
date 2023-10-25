@@ -107,25 +107,18 @@ public class GUILapHoaDon extends javax.swing.JFrame {
             }
         });
 
-        txtMaNhanVien.setText("Bùi Tất Nhựt Minh");
         txtMaNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMaNhanVienActionPerformed(evt);
             }
         });
 
-        txtSoDT.setText("0938533438");
-
-        txtNgaySinh.setText("08/01/2003");
         txtNgaySinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNgaySinhActionPerformed(evt);
             }
         });
 
-        txtSoCCCD.setText("072203004088");
-
-        txtDiaChi.setText("Tây Ninh");
         txtDiaChi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDiaChiActionPerformed(evt);
@@ -275,7 +268,7 @@ public class GUILapHoaDon extends javax.swing.JFrame {
                 .addComponent(scrDanhSachNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE))
         );
 
-        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTieuDe.setText("LẬP HOÁ ĐƠN");
 
         mnHeThong.setText("Hệ Thống");
@@ -502,7 +495,7 @@ public class GUILapHoaDon extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(lblTieuDe)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlDanhSachKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()

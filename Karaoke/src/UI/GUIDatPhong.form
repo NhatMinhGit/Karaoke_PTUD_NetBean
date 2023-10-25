@@ -257,7 +257,7 @@
     <Component class="javax.swing.JLabel" name="lblQuanLiThongTinDatPhong">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
+          <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="QU&#x1ea2;N L&#xcd; TH&#xd4;NG TIN &#x110;&#x1eb6;T PH&#xd2;NG"/>
       </Properties>
@@ -331,7 +331,7 @@
                       <Component id="btnDatPhongNgay" max="32767" attributes="0"/>
                       <Component id="btnLamMoi" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="194" max="32767" attributes="0"/>
+                  <EmptySpace pref="130" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -341,31 +341,31 @@
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtMaPhong" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="btnDatPhongNgay" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblTenPhong" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtTenPhong" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lblSoNguoiToiDa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtSoNguoiToiDa" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtTenPhong" alignment="1" pref="26" max="32767" attributes="0"/>
+                              <Component id="txtSoNguoiToiDa" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="lblTenPhong" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblTrangThaiThanhToan" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                              <Component id="lblLoaiPhong" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                               <Component id="radLoaiVip" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="radLoaiThuong" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="radTrong" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="radDay" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblLoaiPhong" alignment="1" max="32767" attributes="0"/>
+                              <Component id="lblTrangThaiThanhToan" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="btnLamMoi" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="11" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -373,21 +373,33 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblMaPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="M&#xe3; ph&#xf2;ng:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTenPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="T&#xea;n ph&#xf2;ng:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTrangThaiThanhToan">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tr&#x1ea1;ng th&#xe1;i:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSoNguoiToiDa">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="S&#x1ed1; ng&#x1b0;&#x1edd;i t&#x1ed1;i &#x111;a:"/>
           </Properties>
         </Component>
@@ -400,11 +412,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblLoaiPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i ph&#xf2;ng:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="radLoaiVip">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Vip"/>
           </Properties>
           <Events>
@@ -413,6 +431,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="radLoaiThuong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Th&#x1b0;&#x1edd;ng"/>
           </Properties>
         </Component>
@@ -431,6 +452,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="radTrong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tr&#x1ed1;ng"/>
           </Properties>
           <Events>
@@ -439,6 +463,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="radDay">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x110;&#x1ea7;y"/>
           </Properties>
         </Component>

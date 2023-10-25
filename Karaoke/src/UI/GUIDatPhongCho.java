@@ -208,7 +208,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblQuanLiThongTinDatPhong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblQuanLiThongTinDatPhong.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblQuanLiThongTinDatPhong.setText("QUẢN LÍ THÔNG TIN ĐẶT PHÒNG CHỜ");
         getContentPane().add(lblQuanLiThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 23, -1, -1));
 
@@ -241,12 +241,16 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
             }
         });
 
+        lblMaPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblMaPhong.setText("Mã phòng:");
 
+        lblSoNguoiToiDa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblSoNguoiToiDa.setText("Số người tối đa:");
 
+        lblTrangThaiPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTrangThaiPhong.setText("Trạng thái phòng:");
 
+        lblLoaiPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblLoaiPhong.setText("Loại phòng:");
 
         btnLamMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -257,12 +261,16 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
             }
         });
 
+        radVip.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         radVip.setText("Vip");
 
+        radThuong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         radThuong.setText("Thường");
 
+        radTrong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         radTrong.setText("Trống");
 
+        radDay.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         radDay.setText("Đầy");
 
         javax.swing.GroupLayout pnlChucNangThongTinDatPhongLayout = new javax.swing.GroupLayout(pnlChucNangThongTinDatPhong);
@@ -279,7 +287,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                     .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
                         .addComponent(lblSoNguoiToiDa)
                         .addGap(18, 18, 18)
-                        .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)))
+                        .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
                 .addGap(45, 45, 45)
                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
@@ -325,12 +333,13 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                 .addGap(123, 123, 123))
             .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMaPhong)
+                .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblLoaiPhong)
-                    .addComponent(radVip)
-                    .addComponent(radThuong)
-                    .addComponent(txtMaPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblMaPhong)
+                        .addComponent(radVip)
+                        .addComponent(radThuong)
+                        .addComponent(txtMaPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 

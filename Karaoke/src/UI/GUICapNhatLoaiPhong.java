@@ -76,23 +76,30 @@ public class GUICapNhatLoaiPhong extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTieuDe.setText("QUẢN LÍ THÔNG TIN PHÒNG");
 
         pnlThongTinPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "THÔNG TIN PHÒNG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
+        lblMaPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblMaPhong.setText("Mã phòng:");
 
+        lblMaLoaiPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblMaLoaiPhong.setText("Mã loại phòng:");
 
+        lblSoNguoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblSoNguoi.setText("Số người:");
 
+        lblTenPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTenPhong.setText("Tên phòng:");
 
+        lblTrangThai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTrangThai.setText("Trạng thái:");
 
+        radTrong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         radTrong.setText("Trống");
 
+        radDay.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         radDay.setText("Đầy");
         radDay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +157,7 @@ public class GUICapNhatLoaiPhong extends javax.swing.JFrame {
                 .addGroup(pnlThongTinPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCapNhatPhong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnLamMoi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlThongTinPhongLayout.setVerticalGroup(
             pnlThongTinPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -435,13 +442,10 @@ public class GUICapNhatLoaiPhong extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(pnlDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(pnlThongTinPhong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnlDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlThongTinPhong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)

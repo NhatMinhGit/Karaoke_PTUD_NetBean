@@ -253,15 +253,10 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pnlDanhSachPhong" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pnlThongTinPhong" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="pnlDanhSachPhong" alignment="0" max="32767" attributes="0"/>
+                  <Component id="pnlThongTinPhong" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -290,7 +285,7 @@
     <Component class="javax.swing.JLabel" name="lblTieuDe">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
+          <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="QU&#x1ea2;N L&#xcd; TH&#xd4;NG TIN PH&#xd2;NG"/>
       </Properties>
@@ -341,7 +336,7 @@
                       <Component id="btnCapNhatPhong" max="32767" attributes="0"/>
                       <Component id="btnLamMoi" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="45" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -391,36 +386,57 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblMaPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="M&#xe3; ph&#xf2;ng:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblMaLoaiPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="M&#xe3; lo&#x1ea1;i ph&#xf2;ng:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblSoNguoi">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="S&#x1ed1; ng&#x1b0;&#x1edd;i:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTenPhong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="T&#xea;n ph&#xf2;ng:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTrangThai">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tr&#x1ea1;ng th&#xe1;i:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="radTrong">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tr&#x1ed1;ng"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="radDay">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x110;&#x1ea7;y"/>
           </Properties>
           <Events>
