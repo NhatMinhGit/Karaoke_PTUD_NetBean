@@ -295,11 +295,6 @@ public class GUILapHoaDon extends javax.swing.JFrame {
         mnuTong.add(mnHeThong);
 
         mnuPhong.setText("Phòng");
-        mnuPhong.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuPhongActionPerformed(evt);
-            }
-        });
 
         mniCapNhatPhong.setText("Cập nhật phòng");
         mniCapNhatPhong.addActionListener(new java.awt.event.ActionListener() {
@@ -384,11 +379,6 @@ public class GUILapHoaDon extends javax.swing.JFrame {
         mnuTong.add(mnuKhachHang);
 
         mnuThongKe.setText("Thống Kê");
-        mnuThongKe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuThongKeActionPerformed(evt);
-            }
-        });
 
         mniThongKeDoanhThu.setText("Thống kê doanh thu");
         mniThongKeDoanhThu.addActionListener(new java.awt.event.ActionListener() {
@@ -449,11 +439,6 @@ public class GUILapHoaDon extends javax.swing.JFrame {
         mnuTong.add(mnuDichVu);
 
         mnuKhuyenMai.setText("Khuyến mãi");
-        mnuKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuKhuyenMaiActionPerformed(evt);
-            }
-        });
 
         mniCapNhatKhuyenMai.setText("Cập nhật khuyến mãi");
         mniCapNhatKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
@@ -525,145 +510,6 @@ public class GUILapHoaDon extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCapNhatKhachHangActionPerformed
 
-    private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
-        // TODO add your handling code here:
-        TrangChu tc = new TrangChu();
-        tc.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniTrangChuActionPerformed
-
-    private void mniTroGiupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTroGiupActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mniTroGiupActionPerformed
-
-    private void mniCapNhatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatPhongActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mniCapNhatPhongActionPerformed
-
-    private void mniCapNhatLoaiPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatLoaiPhongActionPerformed
-        // TODO add your handling code here:
-        GUICapNhatLoaiPhong cnlp = new GUICapNhatLoaiPhong();
-        cnlp.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniCapNhatLoaiPhongActionPerformed
-
-    private void mniTimKiemPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemPhongActionPerformed
-        // TODO add your handling code here:
-        GUITimKiemPhong tkp = new GUITimKiemPhong();
-        tkp.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniTimKiemPhongActionPerformed
-
-    private void mniDatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatPhongActionPerformed
-        GUIDatPhong dp = new GUIDatPhong();
-        dp.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniDatPhongActionPerformed
-
-    private void mniDatPhongChoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatPhongChoActionPerformed
-        // TODO add your handling code here:
-        GUIDatPhongCho dpc = new GUIDatPhongCho();
-        dpc.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniDatPhongChoActionPerformed
-
-    private void mnuPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPhongActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mnuPhongActionPerformed
-
-    private void mniCapNhatNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatNhanVienActionPerformed
-        // TODO add your handling code here:
-        GUICapNhatNhanVien cnnv = new GUICapNhatNhanVien();
-        cnnv.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniCapNhatNhanVienActionPerformed
-
-    private void mniTimKiemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemNhanVienActionPerformed
-        // TODO add your handling code here:
-        GUITimKiemNhanVien tknv = new GUITimKiemNhanVien();
-        tknv.setVisible(true);
-        this.setVisible(false);
-
-    }//GEN-LAST:event_mniTimKiemNhanVienActionPerformed
-
-    private void mniCapNhatKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhachHangActionPerformed
-        // TODO add your handling code here:
-        GUITimKiemKhachHang cnkh = new GUITimKiemKhachHang();
-        cnkh.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniCapNhatKhachHangActionPerformed
-
-    private void mniTimKiemKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemKhachHangActionPerformed
-        // TODO add your handling code here:
-        GUICapNhatKhachHang tkkh = new GUICapNhatKhachHang();
-        tkkh.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniTimKiemKhachHangActionPerformed
-
-    private void mniThongKeDoanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuActionPerformed
-        // TODO add your handling code here:
-        GUIThongKeKhachHang tkdt = new GUIThongKeKhachHang();
-        tkdt.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniThongKeDoanhThuActionPerformed
-
-    private void mniThongKeDoanhThuTheoKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
-        // TODO add your handling code here:
-        GUIThongKeDoanhThu tkdttkh = new GUIThongKeDoanhThu();
-        tkdttkh.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
-
-    private void mnuThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuThongKeActionPerformed
-
-    }//GEN-LAST:event_mnuThongKeActionPerformed
-
-    private void mniLapHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniLapHoaDonActionPerformed
-        // TODO add your handling code here:
-        GUILapHoaDon lhd = new GUILapHoaDon();
-        lhd.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniLapHoaDonActionPerformed
-
-    private void mniThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThanhToanActionPerformed
-        // TODO add your handling code here:
-        GUILapHoaDon lhd = new GUILapHoaDon();
-        lhd.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniThanhToanActionPerformed
-
-    private void mniCapNhatDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatDichVuActionPerformed
-        // TODO add your handling code here:
-        GUITimKiemDichVu cndv = new GUITimKiemDichVu();
-        cndv.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniCapNhatDichVuActionPerformed
-
-    private void mniTimKiemDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemDichVuActionPerformed
-        // TODO add your handling code here:
-        GUICapNhatDichVu tkdv = new GUICapNhatDichVu();
-        tkdv.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniTimKiemDichVuActionPerformed
-
-    private void mniCapNhatKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhuyenMaiActionPerformed
-        // TODO add your handling code here:
-        GUICapNhatKhuyenMai1 cnkm = new GUICapNhatKhuyenMai1();
-        cnkm.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniCapNhatKhuyenMaiActionPerformed
-
-    private void mniTimKiemKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemKhuyenMaiActionPerformed
-        // TODO add your handling code here:
-        GUITimKiemKhuyenMai tkkm = new GUITimKiemKhuyenMai();
-        tkkm.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
-
-    private void mnuKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuKhuyenMaiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mnuKhuyenMaiActionPerformed
-
     private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLamMoiActionPerformed
@@ -675,6 +521,119 @@ public class GUILapHoaDon extends javax.swing.JFrame {
     private void txtDiaChiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiaChiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDiaChiActionPerformed
+
+    private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
+        GUITrangChu tc = new GUITrangChu();
+        tc.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTrangChuActionPerformed
+
+    private void mniTroGiupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTroGiupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mniTroGiupActionPerformed
+
+    private void mniCapNhatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatPhongActionPerformed
+        GUICapNhatPhong cnp = new GUICapNhatPhong();
+        cnp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatPhongActionPerformed
+
+    private void mniCapNhatLoaiPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatLoaiPhongActionPerformed
+        GUICapNhatLoaiPhong cnlp = new GUICapNhatLoaiPhong();
+        cnlp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatLoaiPhongActionPerformed
+
+    private void mniTimKiemPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemPhongActionPerformed
+        GUITimKiemPhong tkp = new GUITimKiemPhong();
+        tkp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemPhongActionPerformed
+
+    private void mniDatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatPhongActionPerformed
+        // TODO add your handling code here:
+        GUIDatPhong ttdp = new GUIDatPhong();
+        ttdp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniDatPhongActionPerformed
+
+    private void mniDatPhongChoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatPhongChoActionPerformed
+        GUIDatPhongCho dpc = new GUIDatPhongCho();
+        dpc.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniDatPhongChoActionPerformed
+
+    private void mniCapNhatNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatNhanVienActionPerformed
+        GUICapNhatNhanVien cnnv = new GUICapNhatNhanVien();
+        cnnv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatNhanVienActionPerformed
+
+    private void mniTimKiemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemNhanVienActionPerformed
+        GUITimKiemNhanVien tknv = new GUITimKiemNhanVien();
+        tknv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemNhanVienActionPerformed
+
+    private void mniCapNhatKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhachHangActionPerformed
+        GUICapNhatKhachHang cnkh = new GUICapNhatKhachHang();
+        cnkh.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatKhachHangActionPerformed
+
+    private void mniTimKiemKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemKhachHangActionPerformed
+        GUITimKiemKhachHang tkkh = new GUITimKiemKhachHang();
+        tkkh.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemKhachHangActionPerformed
+
+    private void mniThongKeDoanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuActionPerformed
+        GUIThongKeDoanhThu tkdt = new GUIThongKeDoanhThu();
+        tkdt.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniThongKeDoanhThuActionPerformed
+
+    private void mniThongKeDoanhThuTheoKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
+        GUIThongKeKhachHang tkdtkh = new GUIThongKeKhachHang();
+        tkdtkh.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
+
+    private void mniLapHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniLapHoaDonActionPerformed
+        GUILapHoaDon lhd = new GUILapHoaDon();
+        lhd.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniLapHoaDonActionPerformed
+
+    private void mniThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThanhToanActionPerformed
+        GUIThanhToan tt = new GUIThanhToan();
+        tt.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniThanhToanActionPerformed
+
+    private void mniCapNhatDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatDichVuActionPerformed
+        GUICapNhatDichVu cndv = new GUICapNhatDichVu();
+        cndv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatDichVuActionPerformed
+
+    private void mniTimKiemDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemDichVuActionPerformed
+        GUITimKiemDichVu tkdv = new GUITimKiemDichVu();
+        tkdv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemDichVuActionPerformed
+
+    private void mniCapNhatKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhuyenMaiActionPerformed
+        GUICapNhatKhuyenMai cnkm = new GUICapNhatKhuyenMai();
+        cnkm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatKhuyenMaiActionPerformed
+
+    private void mniTimKiemKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemKhuyenMaiActionPerformed
+        GUITimKiemKhuyenMai tkkm = new GUITimKiemKhuyenMai();
+        tkkm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
 
     /**
      * @param args the command line arguments
