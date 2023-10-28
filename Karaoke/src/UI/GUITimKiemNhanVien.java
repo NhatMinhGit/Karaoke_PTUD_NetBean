@@ -194,8 +194,6 @@ public class GUITimKiemNhanVien extends javax.swing.JFrame {
         });
         scrDanhSachNhanVien.setViewportView(tblDanhSachNhanVien);
 
-<<<<<<< HEAD
-=======
         btnLamMoi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnLamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/synchronize.png"))); // NOI18N
         btnLamMoi.setText("Làm mới");
@@ -249,7 +247,6 @@ public class GUITimKiemNhanVien extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         mnHeThong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/system.png"))); // NOI18N
@@ -487,11 +484,7 @@ public class GUITimKiemNhanVien extends javax.swing.JFrame {
                     .addComponent(pnlThongTinNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlChucNang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-<<<<<<< HEAD
-                .addComponent(scrDanhSachNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
-=======
                 .addComponent(scrDanhSachNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
                 .addContainerGap())
         );
 

@@ -333,9 +333,6 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="pnlTieuDe" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-<<<<<<< HEAD
-              <Component id="scrThongKeKhachHang" pref="541" max="32767" attributes="0"/>
-=======
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="pnlThongKeKhachHang" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
@@ -345,7 +342,6 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="scrThongKeKhachHang" min="-2" pref="540" max="-2" attributes="0"/>
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>

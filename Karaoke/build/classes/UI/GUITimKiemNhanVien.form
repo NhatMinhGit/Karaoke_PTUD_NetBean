@@ -341,11 +341,7 @@
                   <Component id="pnlChucNang" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-<<<<<<< HEAD
-              <Component id="scrDanhSachNhanVien" pref="573" max="32767" attributes="0"/>
-=======
               <Component id="scrDanhSachNhanVien" pref="530" max="32767" attributes="0"/>
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>

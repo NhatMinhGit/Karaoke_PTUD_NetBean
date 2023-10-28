@@ -338,13 +338,8 @@
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <Component id="pnlChucNang" min="-2" max="-2" attributes="0"/>
               </Group>
-<<<<<<< HEAD
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="scrThongKeDoanhThu" pref="540" max="32767" attributes="0"/>
-=======
               <EmptySpace max="-2" attributes="0"/>
               <Component id="scrThongKeDoanhThu" pref="560" max="32767" attributes="0"/>
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>

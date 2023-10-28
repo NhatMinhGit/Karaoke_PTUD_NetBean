@@ -91,8 +91,6 @@ public class GUIThongKeKhachHang extends javax.swing.JFrame {
         });
         scrThongKeKhachHang.setViewportView(tblThongKeKhachHang);
 
-<<<<<<< HEAD
-=======
         pnlTieuDe.setBackground(new java.awt.Color(102, 0, 0));
 
         lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
@@ -196,7 +194,6 @@ public class GUIThongKeKhachHang extends javax.swing.JFrame {
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         mnHeThong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/system.png"))); // NOI18N
@@ -429,9 +426,6 @@ public class GUIThongKeKhachHang extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlTieuDe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-<<<<<<< HEAD
-                .addComponent(scrThongKeKhachHang, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
-=======
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlThongKeKhachHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
@@ -439,7 +433,6 @@ public class GUIThongKeKhachHang extends javax.swing.JFrame {
                         .addComponent(pnlChucNang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrThongKeKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
                 .addContainerGap())
         );
 

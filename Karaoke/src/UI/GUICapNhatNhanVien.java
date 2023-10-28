@@ -109,8 +109,6 @@ public class GUICapNhatNhanVien extends javax.swing.JFrame {
         });
         scrDanhSachNhanVien.setViewportView(tblDanhSachNhanVien);
 
-<<<<<<< HEAD
-=======
         pnlTieuDe.setBackground(new java.awt.Color(102, 0, 0));
 
         lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
@@ -282,7 +280,6 @@ public class GUICapNhatNhanVien extends javax.swing.JFrame {
                     .addComponent(btnLamMoi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         mnHeThong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/system.png"))); // NOI18N
@@ -314,10 +311,7 @@ public class GUICapNhatNhanVien extends javax.swing.JFrame {
         mnuPhong.setText("Phòng");
         mnuPhong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-<<<<<<< HEAD
-=======
         mniCapNhatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/room (1).png"))); // NOI18N
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
         mniCapNhatPhong.setText("Cập nhật phòng");
         mniCapNhatPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,10 +328,7 @@ public class GUICapNhatNhanVien extends javax.swing.JFrame {
         });
         mnuPhong.add(mniCapNhatLoaiPhong);
 
-<<<<<<< HEAD
-=======
         mniTimKiemPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
         mniTimKiemPhong.setText("Tìm kiếm phòng");
         mniTimKiemPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -361,59 +352,6 @@ public class GUICapNhatNhanVien extends javax.swing.JFrame {
             }
         });
         mnuPhong.add(mniDatPhongCho);
-<<<<<<< HEAD
-
-        mnuTong.add(mnuPhong);
-
-        mnuNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nhanvien.png"))); // NOI18N
-        mnuNhanVien.setText("Nhân viên");
-        mnuNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-
-        mniCapNhatNhanVien.setText("Cập nhật nhân viên");
-        mniCapNhatNhanVien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniCapNhatNhanVienActionPerformed(evt);
-            }
-        });
-        mnuNhanVien.add(mniCapNhatNhanVien);
-
-        mniTimKiemNhanVien.setText("Tìm kiếm nhân viên");
-        mniTimKiemNhanVien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniTimKiemNhanVienActionPerformed(evt);
-            }
-        });
-        mnuNhanVien.add(mniTimKiemNhanVien);
-
-        mnuTong.add(mnuNhanVien);
-
-        mnuKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/khachHang.png"))); // NOI18N
-        mnuKhachHang.setText("Khách hàng");
-        mnuKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-
-        mniCapNhatKhachHang.setText("Cập nhật khách hàng");
-        mniCapNhatKhachHang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniCapNhatKhachHangActionPerformed(evt);
-            }
-        });
-        mnuKhachHang.add(mniCapNhatKhachHang);
-
-        mniTimKiemKhachHang.setText("Tìm kiếm khách hàng");
-        mniTimKiemKhachHang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniTimKiemKhachHangActionPerformed(evt);
-            }
-        });
-        mnuKhachHang.add(mniTimKiemKhachHang);
-
-        mnuTong.add(mnuKhachHang);
-
-        mnuThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/thongke.png"))); // NOI18N
-        mnuThongKe.setText("Thống Kê");
-        mnuThongKe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-=======
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
 
         mnuTong.add(mnuPhong);
 
@@ -580,11 +518,7 @@ public class GUICapNhatNhanVien extends javax.swing.JFrame {
                     .addComponent(pnlThongTinNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlChucNang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-<<<<<<< HEAD
-                .addComponent(scrDanhSachNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
-=======
                 .addComponent(scrDanhSachNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
->>>>>>> cb1ddc718532da16710ed07751e656d29f2bbb12
                 .addContainerGap())
         );
 
