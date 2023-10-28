@@ -293,7 +293,7 @@
                   <Component id="pnlTraCuuDoanhThu" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="scrThongKeDoanhThu" pref="554" max="32767" attributes="0"/>
+              <Component id="scrThongKeDoanhThu" pref="540" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>

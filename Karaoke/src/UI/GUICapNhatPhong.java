@@ -49,26 +49,30 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         mniTrangChu = new javax.swing.JMenuItem();
         mniTroGiup = new javax.swing.JMenuItem();
         mniDangXuat = new javax.swing.JMenuItem();
-        mnuDatPhong = new javax.swing.JMenu();
-        mniDatPhongCho = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        mnuPhong = new javax.swing.JMenu();
+        mniCapNhatPhong = new javax.swing.JMenuItem();
+        mniCapNhatLoaiPhong = new javax.swing.JMenuItem();
+        mniTimKiemPhong = new javax.swing.JMenuItem();
         mniDatPhong = new javax.swing.JMenuItem();
-        mnThongKe = new javax.swing.JMenu();
+        mniDatPhongCho = new javax.swing.JMenuItem();
+        mnuNhanVien = new javax.swing.JMenu();
+        mniCapNhatNhanVien = new javax.swing.JMenuItem();
+        mniTimKiemNhanVien = new javax.swing.JMenuItem();
+        mnuKhachHang = new javax.swing.JMenu();
+        mniCapNhatKhachHang = new javax.swing.JMenuItem();
+        mniTimKiemKhachHang = new javax.swing.JMenuItem();
+        mnuThongKe = new javax.swing.JMenu();
         mniThongKeDoanhThu = new javax.swing.JMenuItem();
         mniThongKeDoanhThuTheoKhachHang = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        mnuHoaDon = new javax.swing.JMenu();
+        mniLapHoaDon = new javax.swing.JMenuItem();
+        mniThanhToan = new javax.swing.JMenuItem();
+        mnuDichVu = new javax.swing.JMenu();
+        mniCapNhatDichVu = new javax.swing.JMenuItem();
+        mniTimKiemDichVu = new javax.swing.JMenuItem();
+        mnuKhuyenMai = new javax.swing.JMenu();
+        mniCapNhatKhuyenMai = new javax.swing.JMenuItem();
+        mniTimKiemKhuyenMai = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -203,9 +207,18 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         });
         scrDanhSachPhong.setViewportView(tblDanhSachPhong);
 
+        mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        mnHeThong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/system.png"))); // NOI18N
         mnHeThong.setText("Hệ Thống");
+        mnHeThong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniTrangChu.setText("Trang chủ");
+        mniTrangChu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniTrangChuActionPerformed(evt);
+            }
+        });
         mnHeThong.add(mniTrangChu);
 
         mniTroGiup.setText("Trợ giúp");
@@ -221,21 +234,33 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
 
         mnuTong.add(mnHeThong);
 
-        mnuDatPhong.setText("Phòng");
+        mnuPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/home.png"))); // NOI18N
+        mnuPhong.setText("Phòng");
+        mnuPhong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        mniDatPhongCho.setText("Cập nhật phòng");
-        mniDatPhongCho.addActionListener(new java.awt.event.ActionListener() {
+        mniCapNhatPhong.setText("Cập nhật phòng");
+        mniCapNhatPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniDatPhongChoActionPerformed(evt);
+                mniCapNhatPhongActionPerformed(evt);
             }
         });
-        mnuDatPhong.add(mniDatPhongCho);
+        mnuPhong.add(mniCapNhatPhong);
 
-        jMenuItem4.setText("Cập nhật loại phòng");
-        mnuDatPhong.add(jMenuItem4);
+        mniCapNhatLoaiPhong.setText("Cập nhật loại phòng");
+        mniCapNhatLoaiPhong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniCapNhatLoaiPhongActionPerformed(evt);
+            }
+        });
+        mnuPhong.add(mniCapNhatLoaiPhong);
 
-        jMenuItem5.setText("Tìm kiếm phòng");
-        mnuDatPhong.add(jMenuItem5);
+        mniTimKiemPhong.setText("Tìm kiếm phòng");
+        mniTimKiemPhong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniTimKiemPhongActionPerformed(evt);
+            }
+        });
+        mnuPhong.add(mniTimKiemPhong);
 
         mniDatPhong.setText("Đặt phòng");
         mniDatPhong.addActionListener(new java.awt.event.ActionListener() {
@@ -243,19 +268,73 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
                 mniDatPhongActionPerformed(evt);
             }
         });
-        mnuDatPhong.add(mniDatPhong);
+        mnuPhong.add(mniDatPhong);
 
-        mnuTong.add(mnuDatPhong);
-
-        mnThongKe.setText("Thống Kê");
-        mnThongKe.addActionListener(new java.awt.event.ActionListener() {
+        mniDatPhongCho.setText("Đặt phòng chờ");
+        mniDatPhongCho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnThongKeActionPerformed(evt);
+                mniDatPhongChoActionPerformed(evt);
             }
         });
+        mnuPhong.add(mniDatPhongCho);
+
+        mnuTong.add(mnuPhong);
+
+        mnuNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nhanvien.png"))); // NOI18N
+        mnuNhanVien.setText("Nhân viên");
+        mnuNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        mniCapNhatNhanVien.setText("Cập nhật nhân viên");
+        mniCapNhatNhanVien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniCapNhatNhanVienActionPerformed(evt);
+            }
+        });
+        mnuNhanVien.add(mniCapNhatNhanVien);
+
+        mniTimKiemNhanVien.setText("Tìm kiếm nhân viên");
+        mniTimKiemNhanVien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniTimKiemNhanVienActionPerformed(evt);
+            }
+        });
+        mnuNhanVien.add(mniTimKiemNhanVien);
+
+        mnuTong.add(mnuNhanVien);
+
+        mnuKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/khachHang.png"))); // NOI18N
+        mnuKhachHang.setText("Khách hàng");
+        mnuKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        mniCapNhatKhachHang.setText("Cập nhật khách hàng");
+        mniCapNhatKhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniCapNhatKhachHangActionPerformed(evt);
+            }
+        });
+        mnuKhachHang.add(mniCapNhatKhachHang);
+
+        mniTimKiemKhachHang.setText("Tìm kiếm khách hàng");
+        mniTimKiemKhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniTimKiemKhachHangActionPerformed(evt);
+            }
+        });
+        mnuKhachHang.add(mniTimKiemKhachHang);
+
+        mnuTong.add(mnuKhachHang);
+
+        mnuThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/thongke.png"))); // NOI18N
+        mnuThongKe.setText("Thống Kê");
+        mnuThongKe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniThongKeDoanhThu.setText("Thống kê doanh thu");
-        mnThongKe.add(mniThongKeDoanhThu);
+        mniThongKeDoanhThu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniThongKeDoanhThuActionPerformed(evt);
+            }
+        });
+        mnuThongKe.add(mniThongKeDoanhThu);
 
         mniThongKeDoanhThuTheoKhachHang.setText("Thống kê doanh thu theo khách hàng");
         mniThongKeDoanhThuTheoKhachHang.addActionListener(new java.awt.event.ActionListener() {
@@ -263,64 +342,75 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
                 mniThongKeDoanhThuTheoKhachHangActionPerformed(evt);
             }
         });
-        mnThongKe.add(mniThongKeDoanhThuTheoKhachHang);
+        mnuThongKe.add(mniThongKeDoanhThuTheoKhachHang);
 
-        mnuTong.add(mnThongKe);
+        mnuTong.add(mnuThongKe);
 
-        jMenu1.setText("Hoá đơn");
+        mnuHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hoadon.png"))); // NOI18N
+        mnuHoaDon.setText("Hoá đơn");
+        mnuHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        jMenuItem6.setText("Lập hoá đơn");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        mniLapHoaDon.setText("Lập hoá đơn");
+        mniLapHoaDon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                mniLapHoaDonActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem6);
+        mnuHoaDon.add(mniLapHoaDon);
 
-        jMenuItem7.setText("Thanh toán");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        mniThanhToan.setText("Thanh toán");
+        mniThanhToan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                mniThanhToanActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem7);
+        mnuHoaDon.add(mniThanhToan);
 
-        mnuTong.add(jMenu1);
+        mnuTong.add(mnuHoaDon);
 
-        jMenu2.setText("Dịch vụ");
+        mnuDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dichvu.png"))); // NOI18N
+        mnuDichVu.setText("Dịch vụ");
+        mnuDichVu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        jMenuItem2.setText("Cập nhật dịch vụ");
-        jMenu2.add(jMenuItem2);
-
-        jMenuItem3.setText("Tìm kiếm dịch vụ");
-        jMenu2.add(jMenuItem3);
-
-        mnuTong.add(jMenu2);
-
-        jMenu3.setText("Khách hàng");
-
-        jMenuItem10.setText("Cập nhật khách hàng");
-        jMenu3.add(jMenuItem10);
-
-        jMenuItem11.setText("Tìm kiếm khách hàng");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+        mniCapNhatDichVu.setText("Cập nhật dịch vụ");
+        mniCapNhatDichVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
+                mniCapNhatDichVuActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem11);
+        mnuDichVu.add(mniCapNhatDichVu);
 
-        mnuTong.add(jMenu3);
+        mniTimKiemDichVu.setText("Tìm kiếm dịch vụ");
+        mniTimKiemDichVu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniTimKiemDichVuActionPerformed(evt);
+            }
+        });
+        mnuDichVu.add(mniTimKiemDichVu);
 
-        jMenu4.setText("Khuyến mãi");
+        mnuTong.add(mnuDichVu);
 
-        jMenuItem8.setText("Cập nhật khuyến mãi");
-        jMenu4.add(jMenuItem8);
+        mnuKhuyenMai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/khuyenmai.png"))); // NOI18N
+        mnuKhuyenMai.setText("Khuyến mãi");
+        mnuKhuyenMai.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        jMenuItem9.setText("Tìm kiếm khuyến mãi");
-        jMenu4.add(jMenuItem9);
+        mniCapNhatKhuyenMai.setText("Cập nhật khuyến mãi");
+        mniCapNhatKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniCapNhatKhuyenMaiActionPerformed(evt);
+            }
+        });
+        mnuKhuyenMai.add(mniCapNhatKhuyenMai);
 
-        mnuTong.add(jMenu4);
+        mniTimKiemKhuyenMai.setText("Tìm kiếm khuyến mãi");
+        mniTimKiemKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniTimKiemKhuyenMaiActionPerformed(evt);
+            }
+        });
+        mnuKhuyenMai.add(mniTimKiemKhuyenMai);
+
+        mnuTong.add(mnuKhuyenMai);
 
         setJMenuBar(mnuTong);
 
@@ -346,7 +436,7 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pnlThongTinPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
+                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -361,41 +451,118 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMaNhanVienActionPerformed
 
+    private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
+        GUITrangChu tc = new GUITrangChu();
+        tc.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTrangChuActionPerformed
+
     private void mniTroGiupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTroGiupActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mniTroGiupActionPerformed
 
-    private void mniDatPhongChoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatPhongChoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mniDatPhongChoActionPerformed
+    private void mniCapNhatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatPhongActionPerformed
+        GUICapNhatPhong cnp = new GUICapNhatPhong();
+        cnp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatPhongActionPerformed
+
+    private void mniCapNhatLoaiPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatLoaiPhongActionPerformed
+        GUICapNhatLoaiPhong cnlp = new GUICapNhatLoaiPhong();
+        cnlp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatLoaiPhongActionPerformed
+
+    private void mniTimKiemPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemPhongActionPerformed
+        GUITimKiemPhong tkp = new GUITimKiemPhong();
+        tkp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemPhongActionPerformed
 
     private void mniDatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatPhongActionPerformed
+        // TODO add your handling code here:
         GUIDatPhong ttdp = new GUIDatPhong();
         ttdp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniDatPhongActionPerformed
 
-    private void mniThongKeDoanhThuTheoKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
+    private void mniDatPhongChoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatPhongChoActionPerformed
+        GUIDatPhongCho dpc = new GUIDatPhongCho();
+        dpc.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniDatPhongChoActionPerformed
 
-    private void mnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnThongKeActionPerformed
-        GUIThongKeKhachHang tkdt = new GUIThongKeKhachHang();
+    private void mniCapNhatNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatNhanVienActionPerformed
+        GUICapNhatNhanVien cnnv = new GUICapNhatNhanVien();
+        cnnv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatNhanVienActionPerformed
+
+    private void mniTimKiemNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemNhanVienActionPerformed
+        GUITimKiemNhanVien tknv = new GUITimKiemNhanVien();
+        tknv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemNhanVienActionPerformed
+
+    private void mniCapNhatKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhachHangActionPerformed
+        GUICapNhatKhachHang cnkh = new GUICapNhatKhachHang();
+        cnkh.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatKhachHangActionPerformed
+
+    private void mniTimKiemKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemKhachHangActionPerformed
+        GUITimKiemKhachHang tkkh = new GUITimKiemKhachHang();
+        tkkh.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemKhachHangActionPerformed
+
+    private void mniThongKeDoanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuActionPerformed
+        GUIThongKeDoanhThu tkdt = new GUIThongKeDoanhThu();
         tkdt.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_mnThongKeActionPerformed
+    }//GEN-LAST:event_mniThongKeDoanhThuActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    private void mniThongKeDoanhThuTheoKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
+        GUIThongKeKhachHang tkdtkh = new GUIThongKeKhachHang();
+        tkdtkh.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniThongKeDoanhThuTheoKhachHangActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    private void mniLapHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniLapHoaDonActionPerformed
+        GUILapHoaDon lhd = new GUILapHoaDon();
+        lhd.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniLapHoaDonActionPerformed
 
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
+    private void mniThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniThanhToanActionPerformed
+        GUIThanhToan tt = new GUIThanhToan();
+        tt.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniThanhToanActionPerformed
+
+    private void mniCapNhatDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatDichVuActionPerformed
+        GUICapNhatDichVu cndv = new GUICapNhatDichVu();
+        cndv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatDichVuActionPerformed
+
+    private void mniTimKiemDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemDichVuActionPerformed
+        GUITimKiemDichVu tkdv = new GUITimKiemDichVu();
+        tkdv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemDichVuActionPerformed
+
+    private void mniCapNhatKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCapNhatKhuyenMaiActionPerformed
+        GUICapNhatKhuyenMai cnkm = new GUICapNhatKhuyenMai();
+        cnkm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniCapNhatKhuyenMaiActionPerformed
+
+    private void mniTimKiemKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTimKiemKhuyenMaiActionPerformed
+        GUITimKiemKhuyenMai tkkm = new GUITimKiemKhuyenMai();
+        tkkm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -437,20 +604,6 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
     private javax.swing.JButton btnCapNhatPhong;
     private javax.swing.JButton btnLamMoi;
     private javax.swing.JButton btnThemPhong;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JLabel lblMaLoaiPhong;
     private javax.swing.JLabel lblMaPhong;
     private javax.swing.JLabel lblSoNguoi;
@@ -458,15 +611,33 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
     private javax.swing.JLabel lblTieuDe;
     private javax.swing.JLabel lblTrangThai;
     private javax.swing.JMenu mnHeThong;
-    private javax.swing.JMenu mnThongKe;
+    private javax.swing.JMenuItem mniCapNhatDichVu;
+    private javax.swing.JMenuItem mniCapNhatKhachHang;
+    private javax.swing.JMenuItem mniCapNhatKhuyenMai;
+    private javax.swing.JMenuItem mniCapNhatLoaiPhong;
+    private javax.swing.JMenuItem mniCapNhatNhanVien;
+    private javax.swing.JMenuItem mniCapNhatPhong;
     private javax.swing.JMenuItem mniDangXuat;
     private javax.swing.JMenuItem mniDatPhong;
     private javax.swing.JMenuItem mniDatPhongCho;
+    private javax.swing.JMenuItem mniLapHoaDon;
+    private javax.swing.JMenuItem mniThanhToan;
     private javax.swing.JMenuItem mniThongKeDoanhThu;
     private javax.swing.JMenuItem mniThongKeDoanhThuTheoKhachHang;
+    private javax.swing.JMenuItem mniTimKiemDichVu;
+    private javax.swing.JMenuItem mniTimKiemKhachHang;
+    private javax.swing.JMenuItem mniTimKiemKhuyenMai;
+    private javax.swing.JMenuItem mniTimKiemNhanVien;
+    private javax.swing.JMenuItem mniTimKiemPhong;
     private javax.swing.JMenuItem mniTrangChu;
     private javax.swing.JMenuItem mniTroGiup;
-    private javax.swing.JMenu mnuDatPhong;
+    private javax.swing.JMenu mnuDichVu;
+    private javax.swing.JMenu mnuHoaDon;
+    private javax.swing.JMenu mnuKhachHang;
+    private javax.swing.JMenu mnuKhuyenMai;
+    private javax.swing.JMenu mnuNhanVien;
+    private javax.swing.JMenu mnuPhong;
+    private javax.swing.JMenu mnuThongKe;
     private javax.swing.JMenuBar mnuTong;
     private javax.swing.JPanel pnlThongTinPhong;
     private javax.swing.JRadioButton radDay;

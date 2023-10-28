@@ -22,7 +22,7 @@ public class ConnectDB {
 	//ket noi
 	public void connect() throws SQLException
 	{
-            String url = "jdbc:sqlserver://localhost:1433;databasename=QLKara";
+            String url = "jdbc:sqlserver://localhost:1433;databasename=QlKara";
             String user = "sa";
             String pass = "123456789";
             con = DriverManager.getConnection(url, user, pass);

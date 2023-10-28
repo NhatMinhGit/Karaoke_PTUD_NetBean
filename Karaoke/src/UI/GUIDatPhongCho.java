@@ -4,7 +4,19 @@
  */
 package UI;
 
+import connectdb.ConnectDB;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JDialog;
+import javax.swing.JTable;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -214,6 +226,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         pnlChucNangThongTinDatPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CHỨC NĂNG THÔNG TIN ĐẶT PHÒNG CHỜ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
+        btnNhanPhongCho.setBackground(new java.awt.Color(153, 255, 153));
         btnNhanPhongCho.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnNhanPhongCho.setText("Nhận phòng chờ");
         btnNhanPhongCho.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -225,6 +238,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
             }
         });
 
+        btnDatPhongCho.setBackground(new java.awt.Color(153, 255, 255));
         btnDatPhongCho.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnDatPhongCho.setText("Đặt phòng chờ");
         btnDatPhongCho.addActionListener(new java.awt.event.ActionListener() {
@@ -233,6 +247,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
             }
         });
 
+        btnHuyPhongCho.setBackground(new java.awt.Color(255, 51, 51));
         btnHuyPhongCho.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnHuyPhongCho.setText("Huỷ phòng chờ");
         btnHuyPhongCho.addActionListener(new java.awt.event.ActionListener() {
@@ -253,6 +268,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         lblLoaiPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblLoaiPhong.setText("Loại phòng:");
 
+        btnLamMoi.setBackground(new java.awt.Color(153, 255, 153));
         btnLamMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnLamMoi.setText("Làm mới");
         btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
@@ -348,22 +364,27 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         getContentPane().add(pnlChucNangThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1300, 180));
 
         pnlDanhSachPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DANH SÁCH ĐẶT PHÒNG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        pnlDanhSachPhong.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                pnlDanhSachPhongComponentShown(evt);
+            }
+        });
 
         tblDanhSachPhong.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "STT", "Mã phòng", "Số người tối đa", "Loại phòng", "Trạng thái phòng", "Dịch vụ", "Nhân viên"
+                "Mã phòng", "Loại phòng", "Tên phòng"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -375,18 +396,14 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                 tblDanhSachPhongFocusLost(evt);
             }
         });
+        tblDanhSachPhong.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                tblDanhSachPhongComponentShown(evt);
+            }
+        });
         scrDanhSachPhong.setViewportView(tblDanhSachPhong);
         if (tblDanhSachPhong.getColumnModel().getColumnCount() > 0) {
-            tblDanhSachPhong.getColumnModel().getColumn(0).setMinWidth(30);
-            tblDanhSachPhong.getColumnModel().getColumn(0).setHeaderValue("STT");
-            tblDanhSachPhong.getColumnModel().getColumn(1).setHeaderValue("Mã phòng");
-            tblDanhSachPhong.getColumnModel().getColumn(2).setHeaderValue("Số người tối đa");
-            tblDanhSachPhong.getColumnModel().getColumn(3).setMinWidth(100);
-            tblDanhSachPhong.getColumnModel().getColumn(3).setHeaderValue("Loại phòng");
-            tblDanhSachPhong.getColumnModel().getColumn(4).setMinWidth(130);
-            tblDanhSachPhong.getColumnModel().getColumn(4).setHeaderValue("Trạng thái phòng");
-            tblDanhSachPhong.getColumnModel().getColumn(5).setHeaderValue("Dịch vụ");
-            tblDanhSachPhong.getColumnModel().getColumn(6).setHeaderValue("Nhân viên");
+            tblDanhSachPhong.getColumnModel().getColumn(1).setMinWidth(100);
         }
 
         javax.swing.GroupLayout pnlDanhSachPhongLayout = new javax.swing.GroupLayout(pnlDanhSachPhong);
@@ -408,7 +425,11 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         getContentPane().add(pnlDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 247, 1310, 510));
 
+        mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        mnHeThong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/system.png"))); // NOI18N
         mnHeThong.setText("Hệ Thống");
+        mnHeThong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniTrangChu.setText("Trang chủ");
         mniTrangChu.addActionListener(new java.awt.event.ActionListener() {
@@ -431,7 +452,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         mnuTong.add(mnHeThong);
 
+        mnuPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/home.png"))); // NOI18N
         mnuPhong.setText("Phòng");
+        mnuPhong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniCapNhatPhong.setText("Cập nhật phòng");
         mniCapNhatPhong.addActionListener(new java.awt.event.ActionListener() {
@@ -475,7 +498,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         mnuTong.add(mnuPhong);
 
+        mnuNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nhanvien.png"))); // NOI18N
         mnuNhanVien.setText("Nhân viên");
+        mnuNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniCapNhatNhanVien.setText("Cập nhật nhân viên");
         mniCapNhatNhanVien.addActionListener(new java.awt.event.ActionListener() {
@@ -495,7 +520,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         mnuTong.add(mnuNhanVien);
 
+        mnuKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/khachHang.png"))); // NOI18N
         mnuKhachHang.setText("Khách hàng");
+        mnuKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniCapNhatKhachHang.setText("Cập nhật khách hàng");
         mniCapNhatKhachHang.addActionListener(new java.awt.event.ActionListener() {
@@ -515,7 +542,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         mnuTong.add(mnuKhachHang);
 
+        mnuThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/thongke.png"))); // NOI18N
         mnuThongKe.setText("Thống Kê");
+        mnuThongKe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniThongKeDoanhThu.setText("Thống kê doanh thu");
         mniThongKeDoanhThu.addActionListener(new java.awt.event.ActionListener() {
@@ -535,7 +564,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         mnuTong.add(mnuThongKe);
 
+        mnuHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hoadon.png"))); // NOI18N
         mnuHoaDon.setText("Hoá đơn");
+        mnuHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniLapHoaDon.setText("Lập hoá đơn");
         mniLapHoaDon.addActionListener(new java.awt.event.ActionListener() {
@@ -555,7 +586,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         mnuTong.add(mnuHoaDon);
 
+        mnuDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dichvu.png"))); // NOI18N
         mnuDichVu.setText("Dịch vụ");
+        mnuDichVu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniCapNhatDichVu.setText("Cập nhật dịch vụ");
         mniCapNhatDichVu.addActionListener(new java.awt.event.ActionListener() {
@@ -575,7 +608,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         mnuTong.add(mnuDichVu);
 
+        mnuKhuyenMai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/khuyenmai.png"))); // NOI18N
         mnuKhuyenMai.setText("Khuyến mãi");
+        mnuKhuyenMai.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         mniCapNhatKhuyenMai.setText("Cập nhật khuyến mãi");
         mniCapNhatKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
@@ -600,8 +635,10 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void tblDanhSachPhongFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblDanhSachPhongFocusLost
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_tblDanhSachPhongFocusLost
 
     private void radLoaiVipPhongChoIndlgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radLoaiVipPhongChoIndlgActionPerformed
@@ -624,6 +661,38 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
     private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLamMoiActionPerformed
+    private void showDuLieu(){
+        try{
+            tblDanhSachPhong.removeAll();
+            String[] arr = {"Mã phòng","Loại phòng","Tên phòng"};
+            DefaultTableModel mdlPhong = new DefaultTableModel(arr,0); 
+            
+            Connection connection = ConnectDB.getConnection();
+            String query = "SELECT * FROM Phong";
+            PreparedStatement ps = connection.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                Vector vector = new Vector();
+                vector.add(rs.getString("MaPhong"));
+                vector.add(rs.getString("MaLP"));
+                vector.add(rs.getString("TenPhong"));
+                mdlPhong.addRow(vector);
+            }
+            tblDanhSachPhong.setModel(mdlPhong);
+        }catch(SQLException ex){
+            Logger.getLogger(GUIDatPhongCho.class.getName()).log(Level.SEVERE, null,ex);
+        }
+        
+    }
+    private void tblDanhSachPhongComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tblDanhSachPhongComponentShown
+        showDuLieu();
+    }//GEN-LAST:event_tblDanhSachPhongComponentShown
+
+    private void pnlDanhSachPhongComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_pnlDanhSachPhongComponentShown
+        // TODO add your handling code here:
+        showDuLieu();
+    }//GEN-LAST:event_pnlDanhSachPhongComponentShown
 
     private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
         GUITrangChu tc = new GUITrangChu();
