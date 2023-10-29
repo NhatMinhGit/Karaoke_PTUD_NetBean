@@ -4,7 +4,6 @@
  */
 package UI;
 
-import javax.swing.JFrame;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
 
 /**
@@ -18,7 +17,6 @@ public class GUITrangChu extends javax.swing.JFrame {
      */
     public GUITrangChu() {
         initComponents();
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     

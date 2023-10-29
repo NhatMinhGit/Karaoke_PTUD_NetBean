@@ -4,8 +4,6 @@
  */
 package UI;
 
-import javax.swing.JFrame;
-
 /**
  *
  * @author Duong Ngo Manh
@@ -17,7 +15,6 @@ public class GUITimKiemDichVu extends javax.swing.JFrame {
      */
     public GUITimKiemDichVu() {
         initComponents();
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

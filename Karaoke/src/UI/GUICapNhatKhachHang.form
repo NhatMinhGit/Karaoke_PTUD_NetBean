@@ -338,7 +338,7 @@
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="DANH S&#xc1;CH KH&#xc1;CH H&#xc0;NG">
-              <Font PropertyName="font" name="Segoe UI" size="18" style="1"/>
+              <Font PropertyName="font" name="Segoe UI" size="14" style="1"/>
             </TitledBorder>
           </Border>
         </Property>
