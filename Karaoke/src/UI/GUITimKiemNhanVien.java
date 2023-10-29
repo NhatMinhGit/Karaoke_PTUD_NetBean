@@ -4,6 +4,7 @@
  */
 package UI;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,7 @@ public class GUITimKiemNhanVien extends javax.swing.JFrame {
      */
     public GUITimKiemNhanVien() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

@@ -7,6 +7,7 @@ package UI;
 import dao.HoaDon_DAO;
 import entity.HoaDon;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 
 /**
  *
@@ -19,6 +20,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
      */
     public GUIThanhToan() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

@@ -4,6 +4,8 @@
  */
 package UI;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Duong Ngo Manh
@@ -15,6 +17,7 @@ public class GUIThongKeDoanhThu extends javax.swing.JFrame {
      */
     public GUIThongKeDoanhThu() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

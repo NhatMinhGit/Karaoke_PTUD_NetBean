@@ -12,67 +12,44 @@ import java.util.Objects;
  */
 public class Phong {
     private String maPhong;
-    private String maLoaiPhong;
     private String tenPhong;
-
+    private LoaiPhong loaiPhong;
     public Phong() {
     }
 
-    public Phong(String maPhong, String maLoaiPhong, String tenPhong) {
+    public Phong(String maPhong) {
         this.maPhong = maPhong;
-        this.maLoaiPhong = maLoaiPhong;
-        this.tenPhong = tenPhong;
     }
 
+    public Phong(String maPhong, String tenPhong, LoaiPhong loaiPhong) {
+        this.maPhong = maPhong;
+        this.tenPhong = tenPhong;
+        this.loaiPhong = loaiPhong;
+    }
+    
     public String getMaPhong() {
         return maPhong;
-    }
-
-    public String getMaLoaiPhong() {
-        return maLoaiPhong;
-    }
-
-    public String getTenPhong() {
-        return tenPhong;
     }
 
     public void setMaPhong(String maPhong) {
         this.maPhong = maPhong;
     }
 
-    public void setMaLoaiPhong(String maLoaiPhong) {
-        this.maLoaiPhong = maLoaiPhong;
+    public String getTenPhong() {
+        return tenPhong;
     }
 
     public void setTenPhong(String tenPhong) {
         this.tenPhong = tenPhong;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.maPhong);
-        return hash;
+    public LoaiPhong getLoaiPhong() {
+        return loaiPhong;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Phong other = (Phong) obj;
-        return Objects.equals(this.maPhong, other.maPhong);
+    public void setLoaiPhong(LoaiPhong loaiPhong) {
+        this.loaiPhong = loaiPhong;
     }
 
-    @Override
-    public String toString() {
-        return "Phong{" + "maPhong=" + maPhong + ", maLoaiPhong=" + maLoaiPhong + ", tenPhong=" + tenPhong + '}';
-    }
     
-}
+}   

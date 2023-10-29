@@ -4,6 +4,9 @@
  */
 package UI;
 
+import javax.swing.JFrame;
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+
 /**
  *
  * @author Duong Ngo Manh
@@ -15,6 +18,7 @@ public class GUITrangChu extends javax.swing.JFrame {
      */
     public GUITrangChu() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     
@@ -177,7 +181,7 @@ public class GUITrangChu extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/karaoke.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 740));
+        getContentPane().add(jLabel1, new AbsoluteConstraints(0, 0, 1220, 740));
 
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 

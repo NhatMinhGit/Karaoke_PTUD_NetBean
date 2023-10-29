@@ -5,6 +5,7 @@
 package UI;
 
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 
 /**
  *
@@ -17,6 +18,7 @@ public class GUIDatPhong extends javax.swing.JFrame {
      */
     public GUIDatPhong() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
