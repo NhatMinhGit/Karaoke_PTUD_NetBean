@@ -589,14 +589,16 @@
                               <Component id="txtSoLuong" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblGiaBan" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblDonViTinh" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDonViTinh" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblTrangThaiDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="radCon" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="radHet" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txtGiaBan" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblGiaBan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDonViTinh" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDonViTinh" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTrangThaiDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radCon" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radHet" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
