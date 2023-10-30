@@ -7,6 +7,7 @@ package dao;
 import connectdb.ConnectDB;
 import entity.DichVu;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -17,32 +18,59 @@ import java.util.ArrayList;
  * @author ad
  */
 public class DichVu_DAO {
-//	public ArrayList<DichVu> getAllDichVu() throws SQLException
-//	{
-//            
-//		ArrayList<DichVu> dsDV = new ArrayList<DichVu>();
-//		
-//			//ket noi
-//			ConnectDB.getInstance();
-//			Connection con = ConnectDB.getConnection();
-//			String sql = "SELECT * FROM DichVu";
-//			Statement stmt = con.createStatement();
-//			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
-//			ResultSet rs = stmt.executeQuery(sql);
-//			//Duyet tren tung ket qua tra ve
-//			while(rs.next())
-//			{
-//                                String maDV = rs.getString(1);
-//				String tenDV = rs.getString(2);
-//				int soLuong = rs.getInt(3);
-//                                double giaBan = rs.getDouble(4);
-//				String donViTinh = rs.getString(5);
-//                                Boolean trangThaiDV = rs.getBoolean(6);
-//				DichVu x = new DichVu(maDV,tenDV,soLuong,giaBan,donViTinh,trangThaiDV);
-//				dsDV.add(x);
-//                                
-//			}
-//            
-//            return dsDV;
-//	}
+	public ArrayList<DichVu> getAllDichVu() throws SQLException
+	{
+            
+		ArrayList<DichVu> dsDV = new ArrayList<>();
+		
+			//ket noi
+			ConnectDB.getInstance();
+			Connection con = ConnectDB.getConnection();
+			String sql = "SELECT * FROM DichVu";
+			Statement stmt = con.createStatement();
+			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
+			ResultSet rs = stmt.executeQuery(sql);
+			//Duyet tren tung ket qua tra ve
+			while(rs.next())
+			{
+                                DichVu dv = new DichVu();
+                                dv.setMaDV(rs.getString(1));
+				dv.setTenDV(rs.getString(2));
+				dv.setSoLuong(rs.getInt(3));
+                                dv.setGiaBan(rs.getDouble(4));
+				dv.setDonViTinh(rs.getString(5));
+                                dv.setTrangThaiDV(rs.getBoolean(6));
+				dsDV.add(dv);      
+			}
+            
+            return dsDV;
+	}
+        public boolean themDichVu(DichVu x)
+	{
+		//ket noi ConnectDB
+		Connection con = ConnectDB.getInstance().getConnection();
+		PreparedStatement stmt = null;
+		int n =0;
+		String sql ="insert into VanDongVien(maVDV,hoTen,tuoi,maCLB) VALUES(?,?,?,?)";
+		try {
+			stmt = con.prepareStatement(sql);
+			stmt.setString(1,x.getMaDV());
+			stmt.setString(2, x.getTenDV());
+			stmt.setInt(3, x.getSoLuong());
+                        stmt.setDouble(4, x.getGiaBan());
+			stmt.setString(5, x.getDonViTinh());
+                        stmt.setBoolean(6, x.isTrangThaiDV());
+			n = stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				stmt.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return n > 0;
+        }
 }

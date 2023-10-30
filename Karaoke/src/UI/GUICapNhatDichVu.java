@@ -16,6 +16,7 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -25,11 +26,22 @@ import javax.swing.table.TableModel;
  * @author Duong Ngo Manh
  */
 public class GUICapNhatDichVu extends javax.swing.JFrame {
-
+    private DichVu_DAO dv_dao = new DichVu_DAO();
+    DefaultTableModel dftbl ;
+        
+           
+        
+    
     /**
      * Creates new form GUIThongTinPhong
      */
     public GUICapNhatDichVu() {
+        //khoi tao ket noi den CSDL
+	try {
+            ConnectDB.getInstance().connect();
+	} catch (SQLException e) {
+            e.printStackTrace();
+	}
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
@@ -72,6 +84,9 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         lblGiaBan = new javax.swing.JLabel();
         txtDonViTinh = new javax.swing.JTextField();
         lblDonViTinh = new javax.swing.JLabel();
+        lblTrangThaiDichVu = new javax.swing.JLabel();
+        radCon = new javax.swing.JRadioButton();
+        radHet = new javax.swing.JRadioButton();
         pnlDanhSachDichVu = new javax.swing.JPanel();
         scrDanhSachDichVu = new javax.swing.JScrollPane();
         tblDanhSachDichVu = new javax.swing.JTable();
@@ -280,37 +295,54 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         lblDonViTinh.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblDonViTinh.setText("Đơn vị tính:");
 
+        lblTrangThaiDichVu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTrangThaiDichVu.setText("Trạng thái dịch vụ:");
+
+        radCon.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        radCon.setText("Còn");
+
+        radHet.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        radHet.setText("Hết");
+
         javax.swing.GroupLayout pnlThongTinDichVuLayout = new javax.swing.GroupLayout(pnlThongTinDichVu);
         pnlThongTinDichVu.setLayout(pnlThongTinDichVuLayout);
         pnlThongTinDichVuLayout.setHorizontalGroup(
             pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlThongTinDichVuLayout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMaDichVu)
+                    .addComponent(lblGiaBan))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtMaDichVu, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+                    .addComponent(txtGiaBan))
+                .addGap(53, 53, 53)
                 .addGroup(pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(pnlThongTinDichVuLayout.createSequentialGroup()
-                        .addComponent(lblMaDichVu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtMaDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
                         .addComponent(lblTenDichVu)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtTenDichVu))
+                        .addComponent(txtTenDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlThongTinDichVuLayout.createSequentialGroup()
+                        .addComponent(lblDonViTinh)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtDonViTinh, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addGroup(pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlThongTinDichVuLayout.createSequentialGroup()
                         .addComponent(lblSoLuong)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(lblGiaBan)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtGiaBan, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlThongTinDichVuLayout.createSequentialGroup()
+                        .addComponent(lblTrangThaiDichVu)
+                        .addGap(34, 34, 34)
+                        .addComponent(radCon)
                         .addGap(18, 18, 18)
-                        .addComponent(lblDonViTinh)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtDonViTinh, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                .addComponent(btnCapNhatThongTinDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addComponent(btnLamMoiThongTinDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(radHet)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addComponent(btnCapNhatThongTinDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(btnLamMoiThongTinDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46))
         );
         pnlThongTinDichVuLayout.setVerticalGroup(
@@ -323,19 +355,22 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
                             .addComponent(lblMaDichVu)
                             .addComponent(txtMaDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblTenDichVu)
-                            .addComponent(txtTenDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtTenDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSoLuong)
+                            .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(14, 14, 14)
                         .addGroup(pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSoLuong)
-                            .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblGiaBan)
-                            .addComponent(txtGiaBan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblDonViTinh)
-                            .addComponent(txtDonViTinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnCapNhatThongTinDichVu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                        .addComponent(btnLamMoiThongTinDichVu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                            .addComponent(txtDonViTinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTrangThaiDichVu)
+                            .addComponent(radCon)
+                            .addComponent(radHet)
+                            .addComponent(txtGiaBan, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlThongTinDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnLamMoiThongTinDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCapNhatThongTinDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlThongTinDichVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1910, 150));
@@ -345,14 +380,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         tblDanhSachDichVu.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tblDanhSachDichVu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "Mã dịch vụ", "Tên dịch vụ", "Số lượng", "Giá bán", "Đơn vị tính", "Trạng thái dịch vụ"
@@ -364,6 +392,11 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        tblDanhSachDichVu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblDanhSachDichVuMouseClicked(evt);
             }
         });
         tblDanhSachDichVu.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -600,6 +633,13 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
 
     private void btnLamMoiThongTinDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiThongTinDichVuActionPerformed
         // TODO add your handling code here:
+        txtMaDichVu.setText("");
+        txtTenDichVu.setText("");
+        txtSoLuong.setText("");
+        txtDonViTinh.setText("");
+        txtGiaBan.setText("");
+        radCon.setSelected(false);
+        radHet.setSelected(false);
     }//GEN-LAST:event_btnLamMoiThongTinDichVuActionPerformed
 
     private void txtTenDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenDichVuActionPerformed
@@ -616,26 +656,113 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
 
     private void btnCapNhatThongTinDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapNhatThongTinDichVuActionPerformed
         // TODO add your handling code here:
+        if (txtMaDichVu.getText().equals("") ||txtTenDichVu.getText().equals("")||txtSoLuong.getText().equals("")||txtGiaBan.getText().equals("")||txtDonViTinh.getText().equals("")||radCon.getText().equals("")&&radHet.getText().equals("")) {
+				JOptionPane.showMessageDialog(this, "Bạn chưa điền đủ thông tin");
+				return;
+			}
+			String maDV = txtMaDichVu.getText();
+			String tenDV = txtTenDichVu.getText();
+			int soLuong = Integer.parseInt(txtSoLuong.getText());
+			double giaBan = Double.parseDouble(txtGiaBan.getText());
+                        String donViTinh = txtDonViTinh.getText();
+			Boolean trangThaiDV = true;
+                        if(radCon.isSelected())
+                        {
+                            trangThaiDV = true;
+                        }else
+                        {
+                            trangThaiDV = false;
+                        }
+			DichVu x = new DichVu(maDV, tenDV, soLuong, giaBan,donViTinh,trangThaiDV);
+                        DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
+			//kiem tra trung ma
+			for(int i = 0; i< dftbl.getRowCount();i++)
+			{
+				if(dftbl.getValueAt(i, 0).equals(maDV))
+				{
+					JOptionPane.showMessageDialog(this, "trung ma~!!");
+					return;
+				}
+			}
+			try {
+				dv_dao.themDichVu(x);
+				dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),x.isTrangThaiDV()});
+				JOptionPane.showMessageDialog(this, "Them thanh cong");
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
     }//GEN-LAST:event_btnCapNhatThongTinDichVuActionPerformed
 
     private void tblDanhSachDichVuComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tblDanhSachDichVuComponentShown
-        try {
-            // TODO add your handling code here:
-            docDuLieuTuDataVaoTable();
-        } catch (SQLException ex) {
-            Logger.getLogger(GUICapNhatDichVu.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+//            // TODO add your handling code here:
+//            docDuLieuTuDataVaoTable();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(GUICapNhatDichVu.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }//GEN-LAST:event_tblDanhSachDichVuComponentShown
 
+//    ArrayList<DichVu> dsdv;
+//    int row;
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-        try {
-            // TODO add your handling code here:
+        try {       
             docDuLieuTuDataVaoTable();
+            System.out.println("Đọc thành công");
         } catch (SQLException ex) {
-            Logger.getLogger(GUICapNhatDichVu.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Đọc lỗi");
         }
     }//GEN-LAST:event_formComponentShown
-
+       // doc du lieu tu Data vao Table
+	public void docDuLieuTuDataVaoTable() throws SQLException 
+	{
+//            DichVu_DAO dv_dao = new DichVu_DAO();
+//            DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
+//            dftbl.setColumnCount(0);
+//            for(int i = 0;i < dsdv.size();i++)
+//            {
+//                String madv = dsdv.get(i).getMaDV();
+//                String tendv = dsdv.get(i).getTenDV();
+//                int soluong = dsdv.get(i).getSoLuong();
+//                double dongia = dsdv.get(i).getGiaBan();
+//                String dvt = dsdv.get(i).getDonViTinh();
+//                boolean ttdv = dsdv.get(i).isTrangThaiDV();
+//                Object[] row = new Object[]{madv,tendv,soluong,dongia,dvt,ttdv};
+//                dftbl.addRow(row);
+//            }
+            ///
+//            try{
+//            tblDanhSachDichVu.removeAll();
+//            String[] arr = {"Mã dịch vụ","Tên dịch vụ","Số lượng dịch vụ","Giá bán","Đơn vị tính","Trạng thái dịch vụ"};
+//            DefaultTableModel mdlPhong = new DefaultTableModel(arr,0); 
+//            
+//            Connection connection = ConnectDB.getConnection();
+//            String query = "SELECT * FROM DichVu";
+//            PreparedStatement ps = connection.prepareStatement(query);
+//            ResultSet rs = ps.executeQuery();
+//            
+//            while(rs.next()){
+//                DichVu dv = new DichVu();
+//                dv.add(rs.getString(1));
+//                dv.add(rs.getString(2));
+//                dv.add(rs.getInt(3));
+//                dv.add(rs.getString(4));
+//                dv.add(rs.getInt(5));
+//                dv.add(rs.getBoolean(6));
+//                mdlPhong.addRow(dv);
+//            }
+//            tblDanhSachDichVu.setModel(mdlPhong);
+//            }catch(SQLException ex){
+//                Logger.getLogger(GUIDatPhongCho.class.getName()).log(Level.SEVERE, null,ex);
+//            }
+            ///
+            
+            DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
+            ArrayList<DichVu> listdv = dv_dao.getAllDichVu();
+		for(DichVu x : listdv)
+		{
+			dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),x.isTrangThaiDV()});
+		}
+        }
     private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
         GUITrangChu tc = new GUITrangChu();
         tc.setVisible(true);
@@ -748,34 +875,11 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         tkkm.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
-    // doc du lieu tu Data vao Table
-	public void docDuLieuTuDataVaoTable() throws SQLException 
-	{
-            try{
-            tblDanhSachDichVu.removeAll();
-            String[] arr = {"Mã dịch vụ","Tên dịch vụ","Số lượng dịch vụ","Giá bán","Đơn vị tính","Trạng thái dịch vụ"};
-            DefaultTableModel mdlPhong = new DefaultTableModel(arr,0); 
-            
-            Connection connection = ConnectDB.getConnection();
-            String query = "SELECT * FROM DichVu";
-            PreparedStatement ps = connection.prepareStatement(query);
-            ResultSet rs = ps.executeQuery();
-            
-            while(rs.next()){
-                Vector vector = new Vector();
-                vector.add(rs.getString(1));
-                vector.add(rs.getString(2));
-                vector.add(rs.getInt(3));
-                vector.add(rs.getString(4));
-                vector.add(rs.getInt(5));
-                vector.add(rs.getBoolean(6));
-                mdlPhong.addRow(vector);
-            }
-            tblDanhSachDichVu.setModel(mdlPhong);
-            }catch(SQLException ex){
-                Logger.getLogger(GUIDatPhongCho.class.getName()).log(Level.SEVERE, null,ex);
-            }
-        }
+
+    private void tblDanhSachDichVuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDanhSachDichVuMouseClicked
+        
+    }//GEN-LAST:event_tblDanhSachDichVuMouseClicked
+ 
     /**
      * @param args the command line arguments
      */
@@ -801,8 +905,6 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUICapNhatPhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -827,6 +929,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
     private javax.swing.JLabel lblSoLuongDichVuIndlg;
     private javax.swing.JLabel lblTenDichVu;
     private javax.swing.JLabel lblTenDichVuIndlg;
+    private javax.swing.JLabel lblTrangThaiDichVu;
     private javax.swing.JLabel lblTrangThaiThanhToan1;
     private javax.swing.JMenu mnHeThong;
     private javax.swing.JMenuItem mniCapNhatDichVu;
@@ -861,6 +964,8 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
     private javax.swing.JPanel pnlThemDichVu;
     private javax.swing.JPanel pnlThongTinDatPhong;
     private javax.swing.JPanel pnlThongTinDichVu;
+    private javax.swing.JRadioButton radCon;
+    private javax.swing.JRadioButton radHet;
     private javax.swing.JScrollPane scrDanhSachDichVu;
     private javax.swing.JTable tblDanhSachDichVu;
     private javax.swing.JTextField txtDonViTinh;
