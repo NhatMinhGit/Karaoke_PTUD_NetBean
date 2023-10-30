@@ -13,17 +13,17 @@ import java.util.Objects;
 public class LoaiPhong {
     private String maLoaiPhong;
     private String tenLoaiPhong;
-    private float giaPhong;
-    private int soNguoiToiDa;
-
+    
     public LoaiPhong() {
     }
 
-    public LoaiPhong(String maLoaiPhong, String tenLoaiPhong, float giaPhong, int soNguoiToiDa) {
+    public LoaiPhong(String maLoaiPhong) {
+        this.maLoaiPhong = maLoaiPhong;
+    }
+    
+    public LoaiPhong(String maLoaiPhong, String tenLoaiPhong) {
         this.maLoaiPhong = maLoaiPhong;
         this.tenLoaiPhong = tenLoaiPhong;
-        this.giaPhong = giaPhong;
-        this.soNguoiToiDa = soNguoiToiDa;
     }
 
     public String getMaLoaiPhong() {
@@ -34,13 +34,6 @@ public class LoaiPhong {
         return tenLoaiPhong;
     }
 
-    public float getGiaPhong() {
-        return giaPhong;
-    }
-
-    public int getSoNguoiToiDa() {
-        return soNguoiToiDa;
-    }
 
     public void setMaLoaiPhong(String maLoaiPhong) {
         this.maLoaiPhong = maLoaiPhong;
@@ -50,13 +43,6 @@ public class LoaiPhong {
         this.tenLoaiPhong = tenLoaiPhong;
     }
 
-    public void setGiaPhong(float giaPhong) {
-        this.giaPhong = giaPhong;
-    }
-
-    public void setSoNguoiToiDa(int soNguoiToiDa) {
-        this.soNguoiToiDa = soNguoiToiDa;
-    }
 
     @Override
     public int hashCode() {
@@ -82,7 +68,7 @@ public class LoaiPhong {
 
     @Override
     public String toString() {
-        return "LoaiPhong{" + "maLoaiPhong=" + maLoaiPhong + ", tenLoaiPhong=" + tenLoaiPhong + ", giaPhong=" + giaPhong + ", soNguoiToiDa=" + soNguoiToiDa + '}';
+        return "LoaiPhong{" + "maLoaiPhong=" + maLoaiPhong + ", tenLoaiPhong=" + tenLoaiPhong + '}';
     }
     
 }

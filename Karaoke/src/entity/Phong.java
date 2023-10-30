@@ -12,8 +12,12 @@ import java.util.Objects;
  */
 public class Phong {
     private String maPhong;
-    private String tenPhong;
     private LoaiPhong loaiPhong;
+    private String tenPhong;
+    private float giaPhong;
+    private int soNguoiToiDa;
+    private boolean trangThaiPhong;
+
     public Phong() {
     }
 
@@ -21,18 +25,29 @@ public class Phong {
         this.maPhong = maPhong;
     }
 
-    public Phong(String maPhong, String tenPhong, LoaiPhong loaiPhong) {
+    public Phong(String maPhong, LoaiPhong loaiPhong, String tenPhong, float giaPhong, int soNguoiToiDa, boolean trangThaiPhong) {
         this.maPhong = maPhong;
-        this.tenPhong = tenPhong;
         this.loaiPhong = loaiPhong;
+        this.tenPhong = tenPhong;
+        this.giaPhong = giaPhong;
+        this.soNguoiToiDa = soNguoiToiDa;
+        this.trangThaiPhong = trangThaiPhong;
     }
-    
+
     public String getMaPhong() {
         return maPhong;
     }
 
     public void setMaPhong(String maPhong) {
         this.maPhong = maPhong;
+    }
+
+    public LoaiPhong getLoaiPhong() {
+        return loaiPhong;
+    }
+
+    public void setLoaiPhong(LoaiPhong loaiPhong) {
+        this.loaiPhong = loaiPhong;
     }
 
     public String getTenPhong() {
@@ -43,13 +58,33 @@ public class Phong {
         this.tenPhong = tenPhong;
     }
 
-    public LoaiPhong getLoaiPhong() {
-        return loaiPhong;
+    public float getGiaPhong() {
+        return giaPhong;
     }
 
-    public void setLoaiPhong(LoaiPhong loaiPhong) {
-        this.loaiPhong = loaiPhong;
+    public void setGiaPhong(float giaPhong) {
+        this.giaPhong = giaPhong;
     }
+
+    public int getSoNguoiToiDa() {
+        return soNguoiToiDa;
+    }
+
+    public void setSoNguoiToiDa(int soNguoiToiDa) {
+        this.soNguoiToiDa = soNguoiToiDa;
+    }
+
+    public boolean isTrangThaiPhong() {
+        return trangThaiPhong;
+    }
+
+    public void setTrangThaiPhong(boolean trangThaiPhong) {
+        this.trangThaiPhong = trangThaiPhong;
+    }
+    
+    
+
+    
 
     
 }   

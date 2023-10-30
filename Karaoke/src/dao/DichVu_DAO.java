@@ -51,7 +51,7 @@ public class DichVu_DAO {
 		Connection con = ConnectDB.getInstance().getConnection();
 		PreparedStatement stmt = null;
 		int n =0;
-		String sql ="insert into VanDongVien(maVDV,hoTen,tuoi,maCLB) VALUES(?,?,?,?)";
+		String sql ="INSERT INTO DichVu(MaDichVu,TenDichVu,SoLuongDichVu,GiaBan,DonViTinh,trangThaiDichVu) VALUES(?,?,?,?,?,?)";
 		try {
 			stmt = con.prepareStatement(sql);
 			stmt.setString(1,x.getMaDV());
