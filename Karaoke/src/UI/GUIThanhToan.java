@@ -66,7 +66,6 @@ public class GUIThanhToan extends javax.swing.JFrame {
         btnQuayLaiFromHoaDonTinhTien = new javax.swing.JButton();
         btnXacNhanIndlgChiTietHoaDon = new javax.swing.JButton();
         jMenuItem1 = new javax.swing.JMenuItem();
-        lblQuanLiThongTinHoaDon = new javax.swing.JLabel();
         pnlThongTinHoaDon = new javax.swing.JPanel();
         lblMaHoaDon = new javax.swing.JLabel();
         lblNgayLapHoaDon = new javax.swing.JLabel();
@@ -76,6 +75,8 @@ public class GUIThanhToan extends javax.swing.JFrame {
         pnlDanhSachHoaDon = new javax.swing.JPanel();
         scrDanhSachHoaDon = new javax.swing.JScrollPane();
         tblDanhSachHoaDon = new javax.swing.JTable();
+        pnlTieuDe = new javax.swing.JPanel();
+        lblTieuDe = new javax.swing.JLabel();
         mnuTong = new javax.swing.JMenuBar();
         mnHeThong = new javax.swing.JMenu();
         mniTrangChu = new javax.swing.JMenuItem();
@@ -367,9 +368,6 @@ public class GUIThanhToan extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblQuanLiThongTinHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblQuanLiThongTinHoaDon.setText("THANH TOÁN");
-
         pnlThongTinHoaDon.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm hoá đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
         lblMaHoaDon.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -394,6 +392,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
 
         btnThanhToan.setBackground(new java.awt.Color(153, 255, 153));
         btnThanhToan.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnThanhToan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hoadon.png"))); // NOI18N
         btnThanhToan.setText("Thanh toán");
         btnThanhToan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -409,14 +408,14 @@ public class GUIThanhToan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblMaHoaDon)
                 .addGap(47, 47, 47)
-                .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lblNgayLapHoaDon)
                 .addGap(36, 36, 36)
-                .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(btnThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(btnThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         pnlThongTinHoaDonLayout.setVerticalGroup(
             pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,7 +480,31 @@ public class GUIThanhToan extends javax.swing.JFrame {
         );
         pnlDanhSachHoaDonLayout.setVerticalGroup(
             pnlDanhSachHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrDanhSachHoaDon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE)
+            .addComponent(scrDanhSachHoaDon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
+        );
+
+        pnlTieuDe.setBackground(new java.awt.Color(102, 0, 0));
+
+        lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
+        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTieuDe.setForeground(new java.awt.Color(242, 242, 242));
+        lblTieuDe.setText("THANH TOÁN");
+
+        javax.swing.GroupLayout pnlTieuDeLayout = new javax.swing.GroupLayout(pnlTieuDe);
+        pnlTieuDe.setLayout(pnlTieuDeLayout);
+        pnlTieuDeLayout.setHorizontalGroup(
+            pnlTieuDeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTieuDeLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTieuDe)
+                .addGap(448, 448, 448))
+        );
+        pnlTieuDeLayout.setVerticalGroup(
+            pnlTieuDeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDeLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lblTieuDe)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -701,16 +724,12 @@ public class GUIThanhToan extends javax.swing.JFrame {
                     .addComponent(pnlDanhSachHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlThongTinHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(437, 437, 437)
-                .addComponent(lblQuanLiThongTinHoaDon)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlTieuDe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(lblQuanLiThongTinHoaDon)
+                .addComponent(pnlTieuDe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlThongTinHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -936,13 +955,13 @@ public class GUIThanhToan extends javax.swing.JFrame {
     private javax.swing.JLabel lblMaHoaDon;
     private javax.swing.JLabel lblNgayLapHoaDon;
     private javax.swing.JLabel lblNhanVien;
-    private javax.swing.JLabel lblQuanLiThongTinHoaDon;
     private javax.swing.JLabel lblTenQuan;
     private javax.swing.JLabel lblThanhTien;
     private javax.swing.JLabel lblThueVAT;
     private javax.swing.JLabel lblTienNhan;
     private javax.swing.JLabel lblTienThanhToan;
     private javax.swing.JLabel lblTienThoi;
+    private javax.swing.JLabel lblTieuDe;
     private javax.swing.JMenu mnHeThong;
     private javax.swing.JMenuItem mniCapNhatDichVu;
     private javax.swing.JMenuItem mniCapNhatKhachHang;
@@ -975,6 +994,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
     private javax.swing.JPanel pnlDanhSachDichVu;
     private javax.swing.JPanel pnlDanhSachHoaDon;
     private javax.swing.JPanel pnlThongTinHoaDon;
+    private javax.swing.JPanel pnlTieuDe;
     private javax.swing.JScrollPane scrDanhSachDichVu;
     private javax.swing.JScrollPane scrDanhSachHoaDon;
     private javax.swing.JTable tblDanhSachDichVu;

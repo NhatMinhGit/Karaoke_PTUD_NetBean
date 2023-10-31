@@ -11,6 +11,8 @@ import entity.LoaiPhong;
 import entity.Phong;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -51,14 +53,13 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         lblSoNguoi = new javax.swing.JLabel();
         lblTenPhong = new javax.swing.JLabel();
         lblTrangThai = new javax.swing.JLabel();
-        radTrong = new javax.swing.JRadioButton();
-        radDay = new javax.swing.JRadioButton();
         txtMaPhong = new javax.swing.JTextField();
         txtMaLoaiPhong = new javax.swing.JTextField();
         txtTenPhong = new javax.swing.JTextField();
         txtSoNguoiToiDa = new javax.swing.JTextField();
         lblGiaBan = new javax.swing.JLabel();
         txtGiaBan = new javax.swing.JTextField();
+        cboTrangThaiP = new javax.swing.JComboBox<>();
         scrDanhSachPhong = new javax.swing.JScrollPane();
         tblDanhSachPhong = new javax.swing.JTable();
         pnlTieuDe = new javax.swing.JPanel();
@@ -119,32 +120,20 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         lblTrangThai.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblTrangThai.setText("Trạng thái:");
 
-        radTrong.setText("Trống");
-
-        radDay.setText("Đầy");
-        radDay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radDayActionPerformed(evt);
-            }
-        });
-
-        txtMaPhong.setText("P001");
         txtMaPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMaPhongActionPerformed(evt);
             }
         });
 
-        txtMaLoaiPhong.setText("LP001");
-
-        txtTenPhong.setText("Phòng 001");
-
-        txtSoNguoiToiDa.setText("5");
-
         lblGiaBan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblGiaBan.setText("Giá bán:");
 
-        txtGiaBan.setText("100000");
+        cboTrangThaiP.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                cboTrangThaiPComponentShown(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlThongTinPhongLayout = new javax.swing.GroupLayout(pnlThongTinPhong);
         pnlThongTinPhong.setLayout(pnlThongTinPhongLayout);
@@ -172,17 +161,15 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
                     .addComponent(txtSoNguoiToiDa)
                     .addComponent(txtTenPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlThongTinPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnlThongTinPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlThongTinPhongLayout.createSequentialGroup()
                         .addComponent(lblTrangThai)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(radTrong)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(radDay))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cboTrangThaiP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlThongTinPhongLayout.createSequentialGroup()
                         .addComponent(lblGiaBan)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtGiaBan)))
+                        .addComponent(txtGiaBan, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(67, 67, 67))
         );
         pnlThongTinPhongLayout.setVerticalGroup(
@@ -205,25 +192,19 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
                     .addComponent(lblSoNguoi, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(radTrong)
-                    .addComponent(radDay)))
+                    .addComponent(cboTrangThaiP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         tblDanhSachPhong.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
-                "STT", "Mã phòng", "Tên phòng", "Loại phòng", "Số người", "Trạng thái"
+                "Mã phòng", "Loại phòng", "Tên phòng", "Giá phòng", "Số người tối đa", "Trạng thái"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -550,10 +531,6 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void radDayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radDayActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radDayActionPerformed
-
     private void txtMaPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaPhongActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMaPhongActionPerformed
@@ -674,27 +651,26 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
     private void btnCapNhatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapNhatPhongActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCapNhatPhongActionPerformed
-
+//    private void themDuLieuComboBox() throws SQLException{
+//        ArrayList<Phong> dsP = p_dao.getAllPhong();
+//		for(Phong x : dsP)
+//		{
+//			cboTrangThaiP.addItem(x.getLoaiPhong().getMaLoaiPhong());
+//		}
+//    }
     private void btnThemPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemPhongActionPerformed
         // TODO add your handling code here:
-        if (txtMaPhong.getText().equals("") ||txtMaLoaiPhong.getText().equals("")||txtTenPhong.getText().equals("")||txtGiaBan.getText().equals("")||radTrong.getText().equals("")&&radDay.getText().equals("")) {
+        if (txtMaPhong.getText().equals("") ||txtMaLoaiPhong.getText().equals("")||txtTenPhong.getText().equals("")||txtGiaBan.getText().equals("")/*||cboTrangThaiP.getSelectedItem()==""*/) {
 				JOptionPane.showMessageDialog(this, "Bạn chưa điền đủ thông tin");
 				return;
 			}
 			String maP = txtMaPhong.getText();
                         LoaiPhong maLP = new LoaiPhong(txtMaLoaiPhong.getText());
 			String tenP = txtTenPhong.getText();
-			int soNguoiToiDa = Integer.parseInt(txtSoNguoiToiDa.getText());
-			float giaBan = Float.parseFloat(txtGiaBan.getText());
-			Boolean trangThaiP = true;
-                        if(radTrong.isSelected())
-                        {
-                            trangThaiP = true;
-                        }else
-                        {
-                            trangThaiP = false;
-                        }
-			Phong x = new Phong( maP ,maLP ,tenP ,giaBan,soNguoiToiDa  ,trangThaiP);
+                        float giaBan = Float.parseFloat(txtGiaBan.getText());
+			int soToiDa = Integer.parseInt(txtSoNguoiToiDa.getText());
+			String trangThaiP = (String)(cboTrangThaiP.getSelectedItem());
+			Phong x = new Phong( maP ,maLP ,tenP ,giaBan,soToiDa,trangThaiP);
                         DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
 			//kiem tra trung ma
 			for(int i = 0; i< dftbl.getRowCount();i++)
@@ -707,9 +683,10 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
 			}
 			try {
 				p_dao.themPhong(x);
-				dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.isTrangThaiPhong()});
+				dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
 				JOptionPane.showMessageDialog(this, "Them thanh cong");
 			} catch (Exception e2) {
+                                JOptionPane.showMessageDialog(this, "Them không thanh cong");
 				e2.printStackTrace();
 			}
     }//GEN-LAST:event_btnThemPhongActionPerformed
@@ -721,13 +698,18 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
-        try {       
+        try {
+            //themDuLieuComboBox();
             docDuLieuTuDataVaoTableDanhSachPhong();
             System.out.println("Đọc thành công");
         } catch (SQLException ex) {
             System.out.println("Đọc lỗi");
         }
     }//GEN-LAST:event_formComponentShown
+
+    private void cboTrangThaiPComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_cboTrangThaiPComponentShown
+        
+    }//GEN-LAST:event_cboTrangThaiPComponentShown
     public void docDuLieuTuDataVaoTableDanhSachPhong() throws SQLException 
 	{
 //            DichVu_DAO dv_dao = new DichVu_DAO();
@@ -775,7 +757,7 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
             ArrayList<Phong> listp = p_dao.getAllPhong();
 		for(Phong x : listp)
 		{
-			dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.isTrangThaiPhong()});
+			dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
 		}
         }
     /**
@@ -818,6 +800,7 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
     private javax.swing.JButton btnCapNhatPhong;
     private javax.swing.JButton btnLamMoi;
     private javax.swing.JButton btnThemPhong;
+    private javax.swing.JComboBox<String> cboTrangThaiP;
     private javax.swing.JLabel lblGiaBan;
     private javax.swing.JLabel lblMaLoaiPhong;
     private javax.swing.JLabel lblMaPhong;
@@ -857,8 +840,6 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
     private javax.swing.JPanel pnlChucNang;
     private javax.swing.JPanel pnlThongTinPhong;
     private javax.swing.JPanel pnlTieuDe;
-    private javax.swing.JRadioButton radDay;
-    private javax.swing.JRadioButton radTrong;
     private javax.swing.JScrollPane scrDanhSachPhong;
     private javax.swing.JTable tblDanhSachPhong;
     private javax.swing.JTextField txtGiaBan;

@@ -779,7 +779,7 @@
                     <Column editable="true" title="S&#x1ed1; l&#x1b0;&#x1ee3;ng" type="java.lang.Integer"/>
                     <Column editable="true" title="Gi&#xe1; b&#xe1;n" type="java.lang.Double"/>
                     <Column editable="true" title="&#x110;&#x1a1;n v&#x1ecb; t&#xed;nh" type="java.lang.String"/>
-                    <Column editable="true" title="Tr&#x1ea1;ng th&#xe1;i d&#x1ecb;ch v&#x1ee5;" type="java.lang.Boolean"/>
+                    <Column editable="true" title="Tr&#x1ea1;ng th&#xe1;i d&#x1ecb;ch v&#x1ee5;" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

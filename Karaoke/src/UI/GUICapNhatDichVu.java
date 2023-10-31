@@ -388,7 +388,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Double.class, java.lang.String.class, java.lang.Boolean.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -761,7 +761,16 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
             ArrayList<DichVu> listdv = dv_dao.getAllDichVu();
 		for(DichVu x : listdv)
 		{
-			dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),x.isTrangThaiDV()});
+                    String trangThai = "";
+                    if(x.isTrangThaiDV()== true)
+                    {
+                        trangThai = "Còn";
+                    }    
+                    else
+                    {
+                        trangThai = "Hết";
+                    }
+                    dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),trangThai});
 		}
         }
     private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed

@@ -30,7 +30,6 @@ public class GUIDatPhong extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblQuanLiThongTinDatPhong = new javax.swing.JLabel();
         pnlThongTinDatPhong = new javax.swing.JPanel();
         lblMaPhong = new javax.swing.JLabel();
         lblTenPhong = new javax.swing.JLabel();
@@ -49,6 +48,8 @@ public class GUIDatPhong extends javax.swing.JFrame {
         pnlDanhSachPhong = new javax.swing.JPanel();
         scrDanhSachPhong = new javax.swing.JScrollPane();
         tblDanhSachPhong = new javax.swing.JTable();
+        pnlTieuDe3 = new javax.swing.JPanel();
+        lblTieuDe = new javax.swing.JLabel();
         mnuTong = new javax.swing.JMenuBar();
         mnHeThong = new javax.swing.JMenu();
         mniTrangChu = new javax.swing.JMenuItem();
@@ -82,10 +83,6 @@ public class GUIDatPhong extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblQuanLiThongTinDatPhong.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblQuanLiThongTinDatPhong.setText("QUẢN LÍ THÔNG TIN ĐẶT PHÒNG");
-        getContentPane().add(lblQuanLiThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 23, -1, -1));
-
         pnlThongTinDatPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "THÔNG TIN ĐẶT PHÒNG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
         lblMaPhong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -116,8 +113,15 @@ public class GUIDatPhong extends javax.swing.JFrame {
         radLoaiThuong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         radLoaiThuong.setText("Thường");
 
+        txtTenPhong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTenPhongActionPerformed(evt);
+            }
+        });
+
         btnDatPhongNgay.setBackground(new java.awt.Color(153, 255, 255));
         btnDatPhongNgay.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnDatPhongNgay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add.png"))); // NOI18N
         btnDatPhongNgay.setText("Đặt phòng ngay");
         btnDatPhongNgay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,6 +142,7 @@ public class GUIDatPhong extends javax.swing.JFrame {
 
         btnLamMoi.setBackground(new java.awt.Color(153, 255, 153));
         btnLamMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnLamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clean.png"))); // NOI18N
         btnLamMoi.setText("Làm mới");
         btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,19 +157,25 @@ public class GUIDatPhong extends javax.swing.JFrame {
             .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTenPhong)
-                    .addComponent(lblMaPhong)
-                    .addComponent(lblTrangThaiThanhToan))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
+                        .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMaPhong)
+                            .addComponent(lblTrangThaiThanhToan))
+                        .addGap(15, 15, 15))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlThongTinDatPhongLayout.createSequentialGroup()
+                        .addComponent(lblTenPhong)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
                         .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTenPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
                                 .addComponent(radTrong)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(radDay)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radDay)
+                                .addGap(67, 67, 67))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlThongTinDatPhongLayout.createSequentialGroup()
+                                .addComponent(txtTenPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                         .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
                                 .addGap(3, 3, 3)
@@ -173,47 +184,51 @@ public class GUIDatPhong extends javax.swing.JFrame {
                                 .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
                                 .addComponent(lblLoaiPhong)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(radLoaiVip)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(radLoaiThuong))))
                     .addComponent(txtMaPhong))
-                .addGap(71, 71, 71)
-                .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnDatPhongNgay)
-                    .addComponent(btnLamMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addComponent(btnDatPhongNgay, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnLamMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         pnlThongTinDatPhongLayout.setVerticalGroup(
             pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addGap(20, 20, 20)
                 .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMaPhong)
-                    .addComponent(txtMaPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDatPhongNgay, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMaPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 27, Short.MAX_VALUE)
+                .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblSoNguoiToiDa)
+                        .addComponent(txtTenPhong))
+                    .addComponent(lblTenPhong, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
-                        .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTenPhong, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblTenPhong, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSoNguoiToiDa))
-                        .addGap(18, 18, 18)
-                        .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblLoaiPhong, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblTrangThaiThanhToan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(radLoaiVip)
-                                .addComponent(radLoaiThuong)
-                                .addComponent(radTrong)
-                                .addComponent(radDay))))
-                    .addComponent(btnLamMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblLoaiPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                        .addComponent(radLoaiVip)
+                        .addComponent(radLoaiThuong))
+                    .addComponent(lblTrangThaiThanhToan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(radTrong)
+                        .addComponent(radDay)))
                 .addContainerGap())
+            .addGroup(pnlThongTinDatPhongLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(pnlThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnDatPhongNgay, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                    .addComponent(btnLamMoi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(pnlThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 1080, 170));
+        getContentPane().add(pnlThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 1300, 190));
 
         pnlDanhSachPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DANH SÁCH PHÒNG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
@@ -263,18 +278,44 @@ public class GUIDatPhong extends javax.swing.JFrame {
             pnlDanhSachPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDanhSachPhongLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
+                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 1278, Short.MAX_VALUE)
                 .addContainerGap())
         );
         pnlDanhSachPhongLayout.setVerticalGroup(
             pnlDanhSachPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDanhSachPhongLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
+                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(pnlDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 240, 1090, 490));
+        getContentPane().add(pnlDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 1300, 460));
+
+        pnlTieuDe3.setBackground(new java.awt.Color(102, 0, 0));
+
+        lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
+        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTieuDe.setForeground(new java.awt.Color(242, 242, 242));
+        lblTieuDe.setText("ĐẶT PHÒNG CHỜ");
+
+        javax.swing.GroupLayout pnlTieuDe3Layout = new javax.swing.GroupLayout(pnlTieuDe3);
+        pnlTieuDe3.setLayout(pnlTieuDe3Layout);
+        pnlTieuDe3Layout.setHorizontalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDe3Layout.createSequentialGroup()
+                .addGap(471, 471, 471)
+                .addComponent(lblTieuDe)
+                .addContainerGap(667, Short.MAX_VALUE))
+        );
+        pnlTieuDe3Layout.setVerticalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDe3Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(lblTieuDe)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(pnlTieuDe3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1340, 90));
 
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -635,6 +676,10 @@ public class GUIDatPhong extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
 
+    private void txtTenPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenPhongActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTenPhongActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -675,9 +720,9 @@ public class GUIDatPhong extends javax.swing.JFrame {
     private javax.swing.JButton btnLamMoi;
     private javax.swing.JLabel lblLoaiPhong;
     private javax.swing.JLabel lblMaPhong;
-    private javax.swing.JLabel lblQuanLiThongTinDatPhong;
     private javax.swing.JLabel lblSoNguoiToiDa;
     private javax.swing.JLabel lblTenPhong;
+    private javax.swing.JLabel lblTieuDe;
     private javax.swing.JLabel lblTrangThaiThanhToan;
     private javax.swing.JMenu mnHeThong;
     private javax.swing.JMenuItem mniCapNhatDichVu;
@@ -710,6 +755,7 @@ public class GUIDatPhong extends javax.swing.JFrame {
     private javax.swing.JMenuBar mnuTong;
     private javax.swing.JPanel pnlDanhSachPhong;
     private javax.swing.JPanel pnlThongTinDatPhong;
+    private javax.swing.JPanel pnlTieuDe3;
     private javax.swing.JRadioButton radDay;
     private javax.swing.JRadioButton radLoaiThuong;
     private javax.swing.JRadioButton radLoaiVip;

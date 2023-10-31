@@ -50,6 +50,7 @@ public class GUILapHoaDon extends javax.swing.JFrame {
         pnlDanhSachKhachHang = new javax.swing.JPanel();
         scrDanhSachNhanVien = new javax.swing.JScrollPane();
         tblDanhSachNhanVien = new javax.swing.JTable();
+        pnlTieuDe3 = new javax.swing.JPanel();
         lblTieuDe = new javax.swing.JLabel();
         mnuTong = new javax.swing.JMenuBar();
         mnHeThong = new javax.swing.JMenu();
@@ -135,8 +136,9 @@ public class GUILapHoaDon extends javax.swing.JFrame {
             }
         });
 
-        btnLamMoi.setBackground(new java.awt.Color(153, 255, 255));
+        btnLamMoi.setBackground(new java.awt.Color(153, 255, 153));
         btnLamMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnLamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clean.png"))); // NOI18N
         btnLamMoi.setText("Làm mới");
         btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +148,7 @@ public class GUILapHoaDon extends javax.swing.JFrame {
 
         btnCapNhatKhachHang.setBackground(new java.awt.Color(153, 255, 255));
         btnCapNhatKhachHang.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnCapNhatKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hoadon.png"))); // NOI18N
         btnCapNhatKhachHang.setText("Lập hoá đơn");
         btnCapNhatKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,8 +205,8 @@ public class GUILapHoaDon extends javax.swing.JFrame {
                     .addGroup(pnlThongTinKhachHangLayout.createSequentialGroup()
                         .addComponent(btnLamMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnHienThiChiTietHoaDon)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnHienThiChiTietHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCapNhatKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
@@ -284,8 +287,29 @@ public class GUILapHoaDon extends javax.swing.JFrame {
                 .addComponent(scrDanhSachNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE))
         );
 
+        pnlTieuDe3.setBackground(new java.awt.Color(102, 0, 0));
+
+        lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
         lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTieuDe.setForeground(new java.awt.Color(242, 242, 242));
         lblTieuDe.setText("LẬP HOÁ ĐƠN");
+
+        javax.swing.GroupLayout pnlTieuDe3Layout = new javax.swing.GroupLayout(pnlTieuDe3);
+        pnlTieuDe3.setLayout(pnlTieuDe3Layout);
+        pnlTieuDe3Layout.setHorizontalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTieuDe3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTieuDe)
+                .addGap(448, 448, 448))
+        );
+        pnlTieuDe3Layout.setVerticalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDe3Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lblTieuDe)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
 
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -504,17 +528,13 @@ public class GUILapHoaDon extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(pnlThongTinKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(635, 635, 635)
-                .addComponent(lblTieuDe)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlTieuDe3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(lblTieuDe)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(pnlTieuDe3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlDanhSachKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
@@ -722,6 +742,9 @@ public class GUILapHoaDon extends javax.swing.JFrame {
     private javax.swing.JLabel lblSoDT;
     private javax.swing.JLabel lblTenKhachHang;
     private javax.swing.JLabel lblTieuDe;
+    private javax.swing.JLabel lblTieuDe1;
+    private javax.swing.JLabel lblTieuDe2;
+    private javax.swing.JLabel lblTieuDe3;
     private javax.swing.JMenu mnHeThong;
     private javax.swing.JMenuItem mniCapNhatDichVu;
     private javax.swing.JMenuItem mniCapNhatKhachHang;
@@ -753,6 +776,10 @@ public class GUILapHoaDon extends javax.swing.JFrame {
     private javax.swing.JMenuBar mnuTong;
     private javax.swing.JPanel pnlDanhSachKhachHang;
     private javax.swing.JPanel pnlThongTinKhachHang;
+    private javax.swing.JPanel pnlTieuDe;
+    private javax.swing.JPanel pnlTieuDe1;
+    private javax.swing.JPanel pnlTieuDe2;
+    private javax.swing.JPanel pnlTieuDe3;
     private javax.swing.JRadioButton radNam;
     private javax.swing.JRadioButton radNu;
     private javax.swing.JScrollPane scrDanhSachNhanVien;

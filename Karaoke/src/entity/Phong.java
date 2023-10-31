@@ -16,7 +16,7 @@ public class Phong {
     private String tenPhong;
     private float giaPhong;
     private int soNguoiToiDa;
-    private boolean trangThaiPhong;
+    private String trangThaiPhong;
 
     public Phong() {
     }
@@ -25,7 +25,7 @@ public class Phong {
         this.maPhong = maPhong;
     }
 
-    public Phong(String maPhong, LoaiPhong loaiPhong, String tenPhong, float giaPhong, int soNguoiToiDa, boolean trangThaiPhong) {
+    public Phong(String maPhong, LoaiPhong loaiPhong, String tenPhong, float giaPhong, int soNguoiToiDa, String trangThaiPhong) {
         this.maPhong = maPhong;
         this.loaiPhong = loaiPhong;
         this.tenPhong = tenPhong;
@@ -74,13 +74,16 @@ public class Phong {
         this.soNguoiToiDa = soNguoiToiDa;
     }
 
-    public boolean isTrangThaiPhong() {
+    public String getTrangThaiPhong() {
         return trangThaiPhong;
     }
 
-    public void setTrangThaiPhong(boolean trangThaiPhong) {
+    public void setTrangThaiPhong(String trangThaiPhong) {
         this.trangThaiPhong = trangThaiPhong;
     }
+
+    
+
     
     
 

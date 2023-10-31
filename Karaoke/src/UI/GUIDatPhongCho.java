@@ -57,7 +57,6 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         txtTenPhongChoIndlg = new javax.swing.JTextField();
         btnXacNhanIndlgDatPhongCho = new javax.swing.JButton();
         btnQuayLaiFromDatPhongCho = new javax.swing.JButton();
-        lblQuanLiThongTinDatPhong = new javax.swing.JLabel();
         pnlChucNangThongTinDatPhong = new javax.swing.JPanel();
         btnNhanPhongCho = new javax.swing.JButton();
         btnDatPhongCho = new javax.swing.JButton();
@@ -76,6 +75,8 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         pnlDanhSachPhong = new javax.swing.JPanel();
         scrDanhSachPhong = new javax.swing.JScrollPane();
         tblDanhSachPhong = new javax.swing.JTable();
+        pnlTieuDe3 = new javax.swing.JPanel();
+        lblTieuDe = new javax.swing.JLabel();
         mnuTong = new javax.swing.JMenuBar();
         mnHeThong = new javax.swing.JMenu();
         mniTrangChu = new javax.swing.JMenuItem();
@@ -222,14 +223,11 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblQuanLiThongTinDatPhong.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblQuanLiThongTinDatPhong.setText("QUẢN LÍ THÔNG TIN ĐẶT PHÒNG CHỜ");
-        getContentPane().add(lblQuanLiThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 23, -1, -1));
-
         pnlChucNangThongTinDatPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CHỨC NĂNG THÔNG TIN ĐẶT PHÒNG CHỜ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         btnNhanPhongCho.setBackground(new java.awt.Color(153, 255, 153));
         btnNhanPhongCho.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnNhanPhongCho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add.png"))); // NOI18N
         btnNhanPhongCho.setText("Nhận phòng chờ");
         btnNhanPhongCho.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNhanPhongCho.setName(""); // NOI18N
@@ -242,6 +240,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         btnDatPhongCho.setBackground(new java.awt.Color(153, 255, 255));
         btnDatPhongCho.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnDatPhongCho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/danhmuc.png"))); // NOI18N
         btnDatPhongCho.setText("Đặt phòng chờ");
         btnDatPhongCho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,6 +250,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         btnHuyPhongCho.setBackground(new java.awt.Color(255, 51, 51));
         btnHuyPhongCho.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnHuyPhongCho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/cancel (1).png"))); // NOI18N
         btnHuyPhongCho.setText("Huỷ phòng chờ");
         btnHuyPhongCho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,6 +272,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         btnLamMoi.setBackground(new java.awt.Color(153, 255, 153));
         btnLamMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnLamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clean.png"))); // NOI18N
         btnLamMoi.setText("Làm mới");
         btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,7 +306,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                     .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
                         .addComponent(lblSoNguoiToiDa)
                         .addGap(18, 18, 18)
-                        .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
+                        .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)))
                 .addGap(45, 45, 45)
                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
@@ -320,25 +321,26 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                         .addComponent(radTrong)
                         .addGap(18, 18, 18)
                         .addComponent(radDay)))
-                .addGap(186, 186, 186)
+                .addGap(56, 56, 56)
                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
-                        .addComponent(btnNhanPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnDatPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
-                        .addComponent(btnHuyPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnLamMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnNhanPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
+                        .addComponent(btnHuyPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnLamMoi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDatPhongCho, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
                 .addContainerGap())
         );
         pnlChucNangThongTinDatPhongLayout.setVerticalGroup(
             pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNhanPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDatPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnNhanPhongCho, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                    .addComponent(btnDatPhongCho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnHuyPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -363,7 +365,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         btnNhanPhongCho.getAccessibleContext().setAccessibleDescription("");
 
-        getContentPane().add(pnlChucNangThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1300, 180));
+        getContentPane().add(pnlChucNangThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 1300, 180));
 
         pnlDanhSachPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DANH SÁCH ĐẶT PHÒNG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         pnlDanhSachPhong.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -421,11 +423,37 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
             pnlDanhSachPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDanhSachPhongLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
+                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(pnlDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 247, 1310, 510));
+        getContentPane().add(pnlDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 367, 1310, 390));
+
+        pnlTieuDe3.setBackground(new java.awt.Color(102, 0, 0));
+
+        lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
+        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTieuDe.setForeground(new java.awt.Color(242, 242, 242));
+        lblTieuDe.setText("ĐẶT PHÒNG CHỜ");
+
+        javax.swing.GroupLayout pnlTieuDe3Layout = new javax.swing.GroupLayout(pnlTieuDe3);
+        pnlTieuDe3.setLayout(pnlTieuDe3Layout);
+        pnlTieuDe3Layout.setHorizontalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDe3Layout.createSequentialGroup()
+                .addGap(471, 471, 471)
+                .addComponent(lblTieuDe)
+                .addContainerGap(657, Short.MAX_VALUE))
+        );
+        pnlTieuDe3Layout.setVerticalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDe3Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(lblTieuDe)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(pnlTieuDe3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 90));
 
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -857,10 +885,10 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
     private javax.swing.JLabel lblLoaiPhongChoIndlg;
     private javax.swing.JLabel lblMaPhong;
     private javax.swing.JLabel lblMaPhongChoIndlg;
-    private javax.swing.JLabel lblQuanLiThongTinDatPhong;
     private javax.swing.JLabel lblSoNguoiToiDa;
     private javax.swing.JLabel lblSoNguoiToiDaPhongChoIndlg;
     private javax.swing.JLabel lblTenPhongChoIndlg;
+    private javax.swing.JLabel lblTieuDe;
     private javax.swing.JLabel lblTrangThaiPhong;
     private javax.swing.JLabel lblTrangThaiThanhToanPhongChoIndlg;
     private javax.swing.JMenu mnHeThong;
@@ -895,6 +923,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
     private javax.swing.JPanel pnlChucNangThongTinDatPhong;
     private javax.swing.JPanel pnlDanhSachPhong;
     private javax.swing.JPanel pnlThongTinDatPhongCho;
+    private javax.swing.JPanel pnlTieuDe3;
     private javax.swing.JRadioButton radDay;
     private javax.swing.JRadioButton radLoaiThuongPhongChoIndlg;
     private javax.swing.JRadioButton radLoaiVipPhongChoIndlg;
