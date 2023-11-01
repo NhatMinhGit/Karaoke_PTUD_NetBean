@@ -306,7 +306,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                     .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
                         .addComponent(lblSoNguoiToiDa)
                         .addGap(18, 18, 18)
-                        .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)))
+                        .addComponent(txtSoNguoiToiDa, javax.swing.GroupLayout.DEFAULT_SIZE, 779, Short.MAX_VALUE)))
                 .addGap(45, 45, 45)
                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlChucNangThongTinDatPhongLayout.createSequentialGroup()
@@ -365,7 +365,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
         btnNhanPhongCho.getAccessibleContext().setAccessibleDescription("");
 
-        getContentPane().add(pnlChucNangThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 1300, 180));
+        getContentPane().add(pnlChucNangThongTinDatPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 1900, 180));
 
         pnlDanhSachPhong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DANH SÁCH ĐẶT PHÒNG", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         pnlDanhSachPhong.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -373,22 +373,23 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                 pnlDanhSachPhongComponentShown(evt);
             }
         });
+        pnlDanhSachPhong.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblDanhSachPhong.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Mã phòng", "Loại phòng", "Tên phòng"
+                "Mã phòng", "Loại phòng", "Tên phòng", "Số người tối đa", "Trạng thái phòng"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -410,50 +411,36 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
             tblDanhSachPhong.getColumnModel().getColumn(1).setMinWidth(100);
         }
 
-        javax.swing.GroupLayout pnlDanhSachPhongLayout = new javax.swing.GroupLayout(pnlDanhSachPhong);
-        pnlDanhSachPhong.setLayout(pnlDanhSachPhongLayout);
-        pnlDanhSachPhongLayout.setHorizontalGroup(
-            pnlDanhSachPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDanhSachPhongLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 1288, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        pnlDanhSachPhongLayout.setVerticalGroup(
-            pnlDanhSachPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDanhSachPhongLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(scrDanhSachPhong, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        pnlDanhSachPhong.add(scrDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 22, 1890, 530));
 
-        getContentPane().add(pnlDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 367, 1310, 390));
+        getContentPane().add(pnlDanhSachPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 1900, 560));
 
         pnlTieuDe3.setBackground(new java.awt.Color(102, 0, 0));
 
         lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
         lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTieuDe.setForeground(new java.awt.Color(242, 242, 242));
-        lblTieuDe.setText("ĐẶT PHÒNG CHỜ");
+        lblTieuDe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTieuDe.setText("LẬP HOÁ ĐƠN");
 
         javax.swing.GroupLayout pnlTieuDe3Layout = new javax.swing.GroupLayout(pnlTieuDe3);
         pnlTieuDe3.setLayout(pnlTieuDe3Layout);
         pnlTieuDe3Layout.setHorizontalGroup(
             pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTieuDe3Layout.createSequentialGroup()
-                .addGap(471, 471, 471)
+                .addGap(827, 827, 827)
                 .addComponent(lblTieuDe)
-                .addContainerGap(657, Short.MAX_VALUE))
+                .addContainerGap(926, Short.MAX_VALUE))
         );
         pnlTieuDe3Layout.setVerticalGroup(
             pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTieuDe3Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(28, 28, 28)
                 .addComponent(lblTieuDe)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        getContentPane().add(pnlTieuDe3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 90));
+        getContentPane().add(pnlTieuDe3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, -1));
 
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 

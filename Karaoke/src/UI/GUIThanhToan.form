@@ -788,14 +788,14 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblMaHoaDon" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                  <Component id="txtMaHoaDon" min="-2" pref="213" max="-2" attributes="0"/>
+                  <Component id="txtMaHoaDon" pref="296" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="lblNgayLapHoaDon" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                  <Component id="ftxtNgayLapHoaDon" min="-2" pref="191" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="ftxtNgayLapHoaDon" min="-2" pref="261" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnThanhToan" min="-2" pref="188" max="-2" attributes="0"/>
-                  <EmptySpace pref="129" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
