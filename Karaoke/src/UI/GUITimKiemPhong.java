@@ -98,6 +98,8 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         lblTrangThai.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblTrangThai.setText("Trạng thái:");
 
+        cboLoaiPhong.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LP001", "LP002" }));
+
         cboTrangThai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Trống", "Đầy", "Chờ" }));
 
         javax.swing.GroupLayout pnlThongTinPhongLayout = new javax.swing.GroupLayout(pnlThongTinPhong);
@@ -213,6 +215,11 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        tblDanhSachPhong.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblDanhSachPhongMouseClicked(evt);
             }
         });
         tblDanhSachPhong.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -650,18 +657,12 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         String trangThaiP = (String)cboTrangThai.getSelectedItem();
         DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
 	ArrayList<Phong> dsp = p_dao.locPhong(maLP,trangThaiP);
-	if(dsp.isEmpty())//danh sach rong
-	{
-		JOptionPane.showMessageDialog(this, "khong co du lieu");
+	dftbl.setRowCount(0);
+	for(Phong x : dsp)
+	{					
+		dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
 	}
-	else
-	{
-		dftbl.setRowCount(0);
-		for(Phong x : dsp)
-		{					
-			dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
-		}
-	}
+	
     }//GEN-LAST:event_btnTimPhongActionPerformed
     private void themDuLieuComboBox() throws SQLException{
         ArrayList<Phong> dsP = p_dao.getAllPhong();
@@ -676,6 +677,10 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         cboLoaiPhong.setSelectedIndex(0);
         cboTrangThai.setSelectedIndex(0);
     }//GEN-LAST:event_btnLamMoiActionPerformed
+
+    private void tblDanhSachPhongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDanhSachPhongMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblDanhSachPhongMouseClicked
 
     /**
      * @param args the command line arguments

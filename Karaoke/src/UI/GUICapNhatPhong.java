@@ -129,6 +129,7 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         lblGiaBan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblGiaBan.setText("Giá bán:");
 
+        cboTrangThaiP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chờ", "Đầy", "Trống" }));
         cboTrangThaiP.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 cboTrangThaiPComponentShown(evt);
@@ -245,6 +246,11 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         btnLamMoi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnLamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/synchronize.png"))); // NOI18N
         btnLamMoi.setText("Làm mới");
+        btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLamMoiActionPerformed(evt);
+            }
+        });
 
         btnThemPhong.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnThemPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/plus_24.png"))); // NOI18N
@@ -647,7 +653,13 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
         tkkm.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
-
+    private void updataTable() throws SQLException {
+		dftbl.setRowCount(0);
+		for (Phong x : p_dao.getAllPhong()) {
+			Object row[] = {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()};
+			dftbl.addRow(row);
+		}
+    }
     private void btnCapNhatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapNhatPhongActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCapNhatPhongActionPerformed
@@ -660,7 +672,7 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
 //    }
     private void btnThemPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemPhongActionPerformed
         // TODO add your handling code here:
-        if (txtMaPhong.getText().equals("") ||txtMaLoaiPhong.getText().equals("")||txtTenPhong.getText().equals("")||txtGiaBan.getText().equals("")/*||cboTrangThaiP.getSelectedItem()==""*/) {
+        if (txtMaPhong.getText().equals("") ||txtMaLoaiPhong.getText().equals("")||txtTenPhong.getText().equals("")||txtGiaBan.getText().equals("")||cboTrangThaiP.getSelectedItem()=="") {
 				JOptionPane.showMessageDialog(this, "Bạn chưa điền đủ thông tin");
 				return;
 			}
@@ -710,49 +722,23 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
     private void cboTrangThaiPComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_cboTrangThaiPComponentShown
         
     }//GEN-LAST:event_cboTrangThaiPComponentShown
+
+    private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
+        // TODO add your handling code here:
+        txtMaPhong.setText("");
+        txtMaLoaiPhong.setText("");
+        txtTenPhong.setText("");
+        txtGiaBan.setText("");
+        txtSoNguoiToiDa.setText("");
+        cboTrangThaiP.setSelectedItem(ABORT);
+        try {
+            updataTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUICapNhatPhong.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnLamMoiActionPerformed
     public void docDuLieuTuDataVaoTableDanhSachPhong() throws SQLException 
-	{
-//            DichVu_DAO dv_dao = new DichVu_DAO();
-//            DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
-//            dftbl.setColumnCount(0);
-//            for(int i = 0;i < dsdv.size();i++)
-//            {
-//                String madv = dsdv.get(i).getMaDV();
-//                String tendv = dsdv.get(i).getTenDV();
-//                int soluong = dsdv.get(i).getSoLuong();
-//                double dongia = dsdv.get(i).getGiaBan();
-//                String dvt = dsdv.get(i).getDonViTinh();
-//                boolean ttdv = dsdv.get(i).isTrangThaiDV();
-//                Object[] row = new Object[]{madv,tendv,soluong,dongia,dvt,ttdv};
-//                dftbl.addRow(row);
-//            }
-            ///
-//            try{
-//            tblDanhSachDichVu.removeAll();
-//            String[] arr = {"Mã dịch vụ","Tên dịch vụ","Số lượng dịch vụ","Giá bán","Đơn vị tính","Trạng thái dịch vụ"};
-//            DefaultTableModel mdlPhong = new DefaultTableModel(arr,0); 
-//            
-//            Connection connection = ConnectDB.getConnection();
-//            String query = "SELECT * FROM DichVu";
-//            PreparedStatement ps = connection.prepareStatement(query);
-//            ResultSet rs = ps.executeQuery();
-//            
-//            while(rs.next()){
-//                DichVu dv = new DichVu();
-//                dv.add(rs.getString(1));
-//                dv.add(rs.getString(2));
-//                dv.add(rs.getInt(3));
-//                dv.add(rs.getString(4));
-//                dv.add(rs.getInt(5));
-//                dv.add(rs.getBoolean(6));
-//                mdlPhong.addRow(dv);
-//            }
-//            tblDanhSachDichVu.setModel(mdlPhong);
-//            }catch(SQLException ex){
-//                Logger.getLogger(GUIDatPhongCho.class.getName()).log(Level.SEVERE, null,ex);
-//            }
-            ///
-            
+	{  
             DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
             ArrayList<Phong> listp = p_dao.getAllPhong();
 		for(Phong x : listp)

@@ -75,50 +75,47 @@ public class DichVu_DAO {
 		}
 		return n > 0;
         }
-//        public ArrayList<Phong> locDichVu(String maLP,String trangThaiP,)
-//		{
-//			ArrayList<Phong> dsp = new ArrayList<Phong>();
-//			//ket noi 
-//			ConnectDB.getInstance();
-//			Connection con = ConnectDB.getConnection();
-//			PreparedStatement stmt = null;
-//			try {
-//				String sql = "SELECT * FROM Phong WHERE MaLP =? TrangThaiPhong=?";
-//				stmt = con.prepareStatement(sql);
-//				stmt.setString(2, maLP);
-//                                stmt.setString(6, trangThaiP);
-//				//thuc thi cau lenh sql tra ve doi tuong ResultSet
-//				ResultSet rs = stmt.executeQuery();
-//				//Duyet tren ket qua tra ve
-//				while(rs.next())
-//				{
-//					String maDichVu = rs.getString(1);
-//                                        String tenDichVu = rs.getString(2);
-//                                        int soLuongDV = rs.getInt(3);
-//                                        double giaBan = rs.getDouble(4);
-//                                        String donViTinh = rs.getString(5);
-//					Boolean trangThaiDV = rs.getBoolean(6);
-//					
-//                                        
-//					String trangThaiPhong = rs.getString(6);
-//					
-//					DichVu x = new DichVu(maDichVu,tenDichVu, soLuongDV,giaBan, donViTinh,trangThaiDV);
-//					
-//					//them nv x vao dsnv
-//					dsp.add(x);
-//				}
-//				
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			finally {
-//				try {
-//					stmt.close();
-//				} catch (Exception e2) {
-//					e2.printStackTrace();
-//				}
-//			}
-//			return dsp;
-//		}
-//        
+        public ArrayList<DichVu> locDichVu(String maDV,String tenDV)
+		{
+			ArrayList<DichVu> dsp = new ArrayList<DichVu>();
+			//ket noi 
+			ConnectDB.getInstance();
+			Connection con = ConnectDB.getConnection();
+			PreparedStatement stmt = null;
+			try {
+				String sql = "SELECT * FROM DichVu WHERE MaDichVu=? or TenDichVu=?";
+				stmt = con.prepareStatement(sql);
+				stmt.setString(1, maDV);
+                                stmt.setString(2, tenDV);
+				//thuc thi cau lenh sql tra ve doi tuong ResultSet
+				ResultSet rs = stmt.executeQuery();
+				//Duyet tren ket qua tra ve
+				while(rs.next())
+				{
+					String maDichVu = rs.getString(1);
+                                        String tenDichVu = rs.getString(2);
+                                        int soLuongDV = rs.getInt(3);
+                                        double giaBan = rs.getDouble(4);
+                                        String donViTinh = rs.getString(5);
+					Boolean trangThaiDV = rs.getBoolean(6);
+					
+					DichVu x = new DichVu(maDichVu,tenDichVu, soLuongDV,giaBan, donViTinh,trangThaiDV);
+					
+					//them nv x vao dsnv
+					dsp.add(x);
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			finally {
+				try {
+					stmt.close();
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+			return dsp;
+		}
+        
 }

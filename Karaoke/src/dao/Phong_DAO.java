@@ -88,10 +88,10 @@ public class Phong_DAO {
 			Connection con = ConnectDB.getConnection();
 			PreparedStatement stmt = null;
 			try {
-				String sql = "SELECT * FROM Phong WHERE MaLP =? TrangThaiPhong=?";
+				String sql = "SELECT * FROM Phong WHERE MaLP =? and TrangThaiPhong=?";
 				stmt = con.prepareStatement(sql);
-				stmt.setString(2, maLP);
-                                stmt.setString(6, trangThaiP);
+				stmt.setString(1, maLP);
+                                stmt.setString(2, trangThaiP);
 				//thuc thi cau lenh sql tra ve doi tuong ResultSet
 				ResultSet rs = stmt.executeQuery();
 				//Duyet tren ket qua tra ve
@@ -122,5 +122,6 @@ public class Phong_DAO {
 			}
 			return dsp;
 		}
+       
         
 }

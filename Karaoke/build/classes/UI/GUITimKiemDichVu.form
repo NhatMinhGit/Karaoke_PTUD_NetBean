@@ -460,6 +460,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="formComponentShown"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -507,7 +510,7 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtTenDichVu2" pref="178" max="32767" attributes="0"/>
+                      <Component id="txtGiaBan" pref="178" max="32767" attributes="0"/>
                       <Component id="txtMaDichVu" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -520,7 +523,7 @@
                       <Group type="102" attributes="0">
                           <Component id="lblTenDichVu3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="txtTenDichVu3" max="32767" attributes="0"/>
+                          <Component id="txtDonViTinh" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -528,7 +531,7 @@
                       <Group type="102" attributes="0">
                           <Component id="lblTenDichVu1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txtTenDichVu1" pref="235" max="32767" attributes="0"/>
+                          <Component id="txtSoLuong" pref="235" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="lblTenDichVu4" min="-2" max="-2" attributes="0"/>
@@ -560,7 +563,7 @@
                               <Component id="lblTenDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtTenDichVu" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lblTenDichVu1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtTenDichVu1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtSoLuong" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -573,9 +576,9 @@
                       <Component id="btnLamMoiThongTinDichVu" min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                           <Component id="lblTenDichVu2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtTenDichVu2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtGiaBan" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblTenDichVu3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtTenDichVu3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDonViTinh" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblTenDichVu4" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radCon" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radHet" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -609,9 +612,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtTenDichVu">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Bia"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenDichVuActionPerformed"/>
           </Events>
@@ -650,9 +650,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTimKiemDichVuActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtTenDichVu1">
+        <Component class="javax.swing.JTextField" name="txtSoLuong">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenDichVu1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSoLuongActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTenDichVu1">
@@ -663,9 +663,9 @@
             <Property name="text" type="java.lang.String" value="S&#x1ed1; l&#x1b0;&#x1ee3;ng:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtTenDichVu2">
+        <Component class="javax.swing.JTextField" name="txtGiaBan">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenDichVu2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtGiaBanActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTenDichVu2">
@@ -684,9 +684,9 @@
             <Property name="text" type="java.lang.String" value="&#x110;&#x1a1;n v&#x1ecb; t&#xed;nh:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtTenDichVu3">
+        <Component class="javax.swing.JTextField" name="txtDonViTinh">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenDichVu3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDonViTinhActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTenDichVu4">
@@ -761,13 +761,13 @@
             <Component class="javax.swing.JTable" name="tblDanhSachDichVu">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="6" rowCount="6">
-                    <Column editable="true" title="STT" type="java.lang.Integer"/>
-                    <Column editable="true" title="M&#xe3; d&#x1ecb;ch v&#x1ee5;" type="java.lang.Object"/>
+                  <Table columnCount="6" rowCount="0">
+                    <Column editable="true" title="M&#xe3; d&#x1ecb;ch v&#x1ee5;" type="java.lang.String"/>
                     <Column editable="true" title="T&#xea;n d&#x1ecb;ch v&#x1ee5;" type="java.lang.String"/>
                     <Column editable="true" title="S&#x1ed1; l&#x1b0;&#x1ee3;ng" type="java.lang.Integer"/>
                     <Column editable="true" title="Gi&#xe1; b&#xe1;n" type="java.lang.Double"/>
                     <Column editable="true" title="&#x110;&#x1a1;n v&#x1ecb; t&#xed;nh" type="java.lang.String"/>
+                    <Column editable="true" title="Tr&#x1ea1;ng th&#xe1;i d&#x1ecb;ch v&#x1ee5;" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
