@@ -122,6 +122,30 @@ public class Phong_DAO {
 			}
 			return dsp;
 		}
-       
-        
+        public boolean capNhatPhong(Phong x) {
+		ConnectDB.getInstance();
+		Connection con = ConnectDB.getConnection();
+		PreparedStatement stmt = null;
+		int n = 0;
+		try {
+			stmt = con.prepareStatement("update Phong set MaLP=?,TenPhong=?,GiaPhong=?,SoNguoiToiDa=?,TrangThaiPhong=? where MaPhong=?");
+			stmt.setString(1,x.getMaPhong());
+                        stmt.setString(2, x.getLoaiPhong().getTenLoaiPhong());
+			stmt.setString(3, x.getTenPhong());
+                        stmt.setFloat(4, x.getGiaPhong());
+                        stmt.setInt(5, x.getSoNguoiToiDa());
+			stmt.setString(6, x.getTrangThaiPhong());
+			n=stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+        return n > 0;
+        }
 }

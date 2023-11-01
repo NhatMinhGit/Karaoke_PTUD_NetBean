@@ -9,6 +9,8 @@ import dao.Phong_DAO;
 import entity.Phong;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -617,6 +619,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
             
             DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
             ArrayList<Phong> listp = p_dao.getAllPhong();
+            dftbl.setRowCount(0);
 		for(Phong x : listp)
 		{
 			dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
@@ -655,9 +658,14 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
 		}
     }
     private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
-        // TODO add your handling code here:
-        cboLoaiPhong.setSelectedIndex(0);
-        cboTrangThai.setSelectedIndex(0);
+        try {
+            // TODO add your handling code here:
+//        cboLoaiPhong.setSelectedIndex(0);
+//        cboTrangThai.setSelectedIndex(0);
+            docDuLieuTuDataVaoTableDanhSachPhong();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUITimKiemPhong.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnLamMoiActionPerformed
 
     private void tblDanhSachPhongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDanhSachPhongMouseClicked

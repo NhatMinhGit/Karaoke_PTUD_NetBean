@@ -75,7 +75,7 @@ public class DichVu_DAO {
 		}
 		return n > 0;
         }
-        public ArrayList<DichVu> locDichVu(String maDV,String tenDV)
+        public ArrayList<DichVu> locDichVu(String maDV,String tenDV,boolean trangThaiDV)
 		{
 			ArrayList<DichVu> dsp = new ArrayList<DichVu>();
 			//ket noi 
@@ -83,10 +83,11 @@ public class DichVu_DAO {
 			Connection con = ConnectDB.getConnection();
 			PreparedStatement stmt = null;
 			try {
-				String sql = "SELECT * FROM DichVu WHERE MaDichVu=? or TenDichVu=?";
+				String sql = "SELECT * FROM DichVu WHERE MaDichVu=? or TenDichVu=? or trangThaiDichVu=?";
 				stmt = con.prepareStatement(sql);
 				stmt.setString(1, maDV);
                                 stmt.setString(2, tenDV);
+                                stmt.setBoolean(3, trangThaiDV);
 				//thuc thi cau lenh sql tra ve doi tuong ResultSet
 				ResultSet rs = stmt.executeQuery();
 				//Duyet tren ket qua tra ve
@@ -97,9 +98,9 @@ public class DichVu_DAO {
                                         int soLuongDV = rs.getInt(3);
                                         double giaBan = rs.getDouble(4);
                                         String donViTinh = rs.getString(5);
-					Boolean trangThaiDV = rs.getBoolean(6);
+					Boolean trangThaiDichVu = rs.getBoolean(6);
 					
-					DichVu x = new DichVu(maDichVu,tenDichVu, soLuongDV,giaBan, donViTinh,trangThaiDV);
+					DichVu x = new DichVu(maDichVu,tenDichVu, soLuongDV,giaBan, donViTinh,trangThaiDichVu);
 					
 					//them nv x vao dsnv
 					dsp.add(x);

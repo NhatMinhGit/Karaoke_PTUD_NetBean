@@ -256,6 +256,7 @@ public class GUITimKiemDichVu extends javax.swing.JFrame {
             }
         });
 
+        txtSoLuong.setEditable(false);
         txtSoLuong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSoLuongActionPerformed(evt);
@@ -265,6 +266,7 @@ public class GUITimKiemDichVu extends javax.swing.JFrame {
         lblTenDichVu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTenDichVu1.setText("Số lượng:");
 
+        txtGiaBan.setEditable(false);
         txtGiaBan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGiaBanActionPerformed(evt);
@@ -277,6 +279,7 @@ public class GUITimKiemDichVu extends javax.swing.JFrame {
         lblTenDichVu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTenDichVu3.setText("Đơn vị tính:");
 
+        txtDonViTinh.setEditable(false);
         txtDonViTinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDonViTinhActionPerformed(evt);
@@ -648,21 +651,30 @@ public class GUITimKiemDichVu extends javax.swing.JFrame {
         // TODO add your handling code here:
         String ma = txtMaDichVu.getText();
         String ten = txtTenDichVu.getText();
+        boolean trangThai ;
+        if(radCon.isSelected())
+        {
+            trangThai = true;
+        }
+        else
+        {
+            trangThai = false;
+        }
         DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
-        ArrayList<DichVu> dsdv = dv_dao.locDichVu(ma,ten);		
+        ArrayList<DichVu> dsdv = dv_dao.locDichVu(ma,ten,trangThai);		
             dftbl.setRowCount(0);
             for(DichVu x : dsdv)
             {	
-                String trangThai = "";
+                    String trangThaiDV = "";
                     if(x.isTrangThaiDV()== true)
                     {
-                        trangThai = "Còn";
+                        trangThaiDV = "Còn";
                     }    
                     else
                     {
-                        trangThai = "Hết";
+                        trangThaiDV = "Hết";
                     }
-                    dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),trangThai});			
+                    dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),trangThaiDV});			
             }
         
 	
@@ -675,7 +687,9 @@ public class GUITimKiemDichVu extends javax.swing.JFrame {
         txtTenDichVu.setText("");
         //dftbl.setRowCount(0);
         try {
+            
             docDuLieuTuDataVaoTable();
+            
         } catch (SQLException ex) {
             Logger.getLogger(GUITimKiemDichVu.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -865,6 +879,7 @@ public class GUITimKiemDichVu extends javax.swing.JFrame {
             
             DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
             ArrayList<DichVu> listdv = dv_dao.getAllDichVu();
+            dftbl.setRowCount(0);
 		for(DichVu x : listdv)
 		{
                     String trangThai = "";

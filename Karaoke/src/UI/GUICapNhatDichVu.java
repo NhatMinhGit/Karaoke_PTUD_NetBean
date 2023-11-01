@@ -70,7 +70,6 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         lblTrangThaiThanhToan1 = new javax.swing.JLabel();
         btnXacNhanIndlgThemDichVu = new javax.swing.JButton();
         btnQuayLaiFromThemDichVu = new javax.swing.JButton();
-        lblCapNhatThongTinDichVu = new javax.swing.JLabel();
         pnlThongTinDichVu = new javax.swing.JPanel();
         lblMaDichVu = new javax.swing.JLabel();
         lblTenDichVu = new javax.swing.JLabel();
@@ -90,6 +89,8 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         pnlDanhSachDichVu = new javax.swing.JPanel();
         scrDanhSachDichVu = new javax.swing.JScrollPane();
         tblDanhSachDichVu = new javax.swing.JTable();
+        pnlTieuDe3 = new javax.swing.JPanel();
+        lblTieuDe = new javax.swing.JLabel();
         mnuTong = new javax.swing.JMenuBar();
         mnHeThong = new javax.swing.JMenu();
         mniTrangChu = new javax.swing.JMenuItem();
@@ -236,10 +237,6 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblCapNhatThongTinDichVu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblCapNhatThongTinDichVu.setText("CẬP NHẬT THÔNG TIN DỊCH VỤ");
-        getContentPane().add(lblCapNhatThongTinDichVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, -1, -1));
-
         pnlThongTinDichVu.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "THÔNG TIN DỊCH VỤ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
         lblMaDichVu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -258,6 +255,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
 
         btnLamMoiThongTinDichVu.setBackground(new java.awt.Color(153, 255, 153));
         btnLamMoiThongTinDichVu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnLamMoiThongTinDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clean.png"))); // NOI18N
         btnLamMoiThongTinDichVu.setText("Làm mới");
         btnLamMoiThongTinDichVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,6 +265,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
 
         btnCapNhatThongTinDichVu.setBackground(new java.awt.Color(153, 255, 255));
         btnCapNhatThongTinDichVu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnCapNhatThongTinDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/menu.png"))); // NOI18N
         btnCapNhatThongTinDichVu.setText("Cập nhật dịch vụ");
         btnCapNhatThongTinDichVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,7 +373,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        getContentPane().add(pnlThongTinDichVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1910, 150));
+        getContentPane().add(pnlThongTinDichVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 1910, 150));
 
         pnlDanhSachDichVu.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DANH SÁCH DỊCH VỤ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
 
@@ -416,11 +415,38 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
         pnlDanhSachDichVuLayout.setVerticalGroup(
             pnlDanhSachDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDanhSachDichVuLayout.createSequentialGroup()
-                .addComponent(scrDanhSachDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 45, Short.MAX_VALUE))
+                .addComponent(scrDanhSachDichVu, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        getContentPane().add(pnlDanhSachDichVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 1890, 690));
+        getContentPane().add(pnlDanhSachDichVu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 1890, 500));
+
+        pnlTieuDe3.setBackground(new java.awt.Color(102, 0, 0));
+
+        lblTieuDe.setBackground(new java.awt.Color(102, 0, 0));
+        lblTieuDe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTieuDe.setForeground(new java.awt.Color(242, 242, 242));
+        lblTieuDe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTieuDe.setText("CẬP NHẬT THÔNG TIN DỊCH VỤ");
+
+        javax.swing.GroupLayout pnlTieuDe3Layout = new javax.swing.GroupLayout(pnlTieuDe3);
+        pnlTieuDe3.setLayout(pnlTieuDe3Layout);
+        pnlTieuDe3Layout.setHorizontalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDe3Layout.createSequentialGroup()
+                .addGap(827, 827, 827)
+                .addComponent(lblTieuDe)
+                .addContainerGap(724, Short.MAX_VALUE))
+        );
+        pnlTieuDe3Layout.setVerticalGroup(
+            pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTieuDe3Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(lblTieuDe)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(pnlTieuDe3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, -1));
 
         mnuTong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -687,7 +713,16 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
 			}
 			try {
 				dv_dao.themDichVu(x);
-				dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),x.isTrangThaiDV()});
+                                String trangThai = "";
+                                if(x.isTrangThaiDV()== true)
+                                {
+                                    trangThai = "Còn";
+                                }    
+                                else
+                                {
+                                    trangThai = "Hết";
+                                }
+				dftbl.addRow(new Object[] {x.getMaDV(),x.getTenDV(),x.getSoLuong(),x.getGiaBan(),x.getDonViTinh(),trangThai});
 				JOptionPane.showMessageDialog(this, "Them thanh cong");
 			} catch (Exception e2) {
 				e2.printStackTrace();
@@ -929,7 +964,6 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
     private javax.swing.JButton btnQuayLaiFromThemDichVu;
     private javax.swing.JButton btnXacNhanIndlgThemDichVu;
     private javax.swing.JDialog dlgCapNhatDichVu;
-    private javax.swing.JLabel lblCapNhatThongTinDichVu;
     private javax.swing.JLabel lblDonViTinh;
     private javax.swing.JLabel lblGiaBan;
     private javax.swing.JLabel lblGiaBanIndlg;
@@ -939,6 +973,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
     private javax.swing.JLabel lblSoLuongDichVuIndlg;
     private javax.swing.JLabel lblTenDichVu;
     private javax.swing.JLabel lblTenDichVuIndlg;
+    private javax.swing.JLabel lblTieuDe;
     private javax.swing.JLabel lblTrangThaiDichVu;
     private javax.swing.JLabel lblTrangThaiThanhToan1;
     private javax.swing.JMenu mnHeThong;
@@ -974,6 +1009,7 @@ public class GUICapNhatDichVu extends javax.swing.JFrame {
     private javax.swing.JPanel pnlThemDichVu;
     private javax.swing.JPanel pnlThongTinDatPhong;
     private javax.swing.JPanel pnlThongTinDichVu;
+    private javax.swing.JPanel pnlTieuDe3;
     private javax.swing.JRadioButton radCon;
     private javax.swing.JRadioButton radHet;
     private javax.swing.JScrollPane scrDanhSachDichVu;
