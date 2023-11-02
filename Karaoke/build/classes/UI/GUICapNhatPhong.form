@@ -22,6 +22,12 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniTrangChu">
               <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+ESCAPE"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/24-hours.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Trang ch&#x1ee7;"/>
               </Properties>
               <Events>
@@ -30,6 +36,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTroGiup">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/detail.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tr&#x1ee3; gi&#xfa;p"/>
               </Properties>
               <Events>
@@ -38,6 +47,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniDangXuat">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/DangXuat.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng xu&#x1ea5;t"/>
               </Properties>
             </MenuItem>
@@ -57,7 +69,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatPhong">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/room (1).png"/>
+                  <Image iconType="3" name="/icon/menu.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t ph&#xf2;ng"/>
               </Properties>
@@ -67,6 +79,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatLoaiPhong">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/description.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t lo&#x1ea1;i ph&#xf2;ng"/>
               </Properties>
               <Events>
@@ -76,7 +91,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemPhong">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/search.png"/>
+                  <Image iconType="3" name="/icon/icons8-search-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m ph&#xf2;ng"/>
               </Properties>
@@ -86,6 +101,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniDatPhong">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/televisions.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x1eb7;t ph&#xf2;ng"/>
               </Properties>
               <Events>
@@ -94,6 +112,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniDatPhongCho">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/lich_lam.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x1eb7;t ph&#xf2;ng ch&#x1edd;"/>
               </Properties>
               <Events>
@@ -116,7 +137,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatNhanVien">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/patient.png"/>
+                  <Image iconType="3" name="/icon/adminLogin.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t nh&#xe2;n vi&#xea;n"/>
               </Properties>
@@ -127,7 +148,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemNhanVien">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/search.png"/>
+                  <Image iconType="3" name="/icon/customer-service.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m nh&#xe2;n vi&#xea;n"/>
               </Properties>
@@ -150,6 +171,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatKhachHang">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/customer.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t kh&#xe1;ch h&#xe0;ng"/>
               </Properties>
               <Events>
@@ -158,6 +182,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemKhachHang">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/help (1).png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m kh&#xe1;ch h&#xe0;ng"/>
               </Properties>
               <Events>
@@ -180,7 +207,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniThongKeDoanhThu">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/trend.png"/>
+                  <Image iconType="3" name="/icon/bar-chart.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng k&#xea; doanh thu"/>
               </Properties>
@@ -191,7 +218,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniThongKeDoanhThuTheoKhachHang">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/stats.png"/>
+                  <Image iconType="3" name="/icon/budget.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng k&#xea; doanh thu theo kh&#xe1;ch h&#xe0;ng"/>
               </Properties>
@@ -214,6 +241,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniLapHoaDon">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/bill (1).png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="L&#x1ead;p ho&#xe1; &#x111;&#x1a1;n"/>
               </Properties>
               <Events>
@@ -222,6 +252,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniThanhToan">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/money-bag.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Thanh to&#xe1;n"/>
               </Properties>
               <Events>
@@ -243,6 +276,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatDichVu">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/storeNav.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t d&#x1ecb;ch v&#x1ee5;"/>
               </Properties>
               <Events>
@@ -251,6 +287,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemDichVu">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/invoices.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m d&#x1ecb;ch v&#x1ee5;"/>
               </Properties>
               <Events>
@@ -272,6 +311,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatKhuyenMai">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/promotion.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t khuy&#x1ebf;n m&#xe3;i"/>
               </Properties>
               <Events>
@@ -280,6 +322,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemKhuyenMai">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/icons8-search-24.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m khuy&#x1ebf;n m&#xe3;i"/>
               </Properties>
               <Events>
@@ -338,7 +383,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="pnlThongTinPhong" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="scrDanhSachPhong" min="-2" pref="570" max="-2" attributes="0"/>
+              <Component id="scrDanhSachPhong" min="-2" pref="580" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -363,8 +408,8 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtMaPhong" min="-2" pref="158" max="-2" attributes="0"/>
-                      <Component id="txtMaLoaiPhong" min="-2" pref="158" max="-2" attributes="0"/>
+                      <Component id="txtMaLoaiPhong" max="32767" attributes="0"/>
+                      <Component id="txtMaPhong" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -373,15 +418,15 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtTenPhong" pref="236" max="32767" attributes="0"/>
                       <Component id="txtSoNguoiToiDa" max="32767" attributes="0"/>
-                      <Component id="txtTenPhong" min="-2" pref="178" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lblGiaBan" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txtGiaBan" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="txtGiaBan" min="-2" pref="325" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lblTrangThai" min="-2" max="-2" attributes="0"/>
@@ -389,25 +434,31 @@
                           <Component id="cboTrangThaiP" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                   <Component id="btnThemPhong" min="-2" pref="160" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="btnCapNhatPhong" min="-2" pref="200" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Component id="btnLamMoi" min="-2" pref="181" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="51" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                          <Component id="btnLamMoi" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="btnCapNhatPhong" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="btnThemPhong" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblTenPhong" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtTenPhong" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblSoNguoi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtSoNguoiToiDa" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -418,15 +469,11 @@
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="lblMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtMaPhong" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Component id="lblTenPhong" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtTenPhong" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txtMaLoaiPhong" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="lblSoNguoi" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtSoNguoiToiDa" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="lblTrangThai" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="cboTrangThaiP" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lblMaLoaiPhong" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -434,6 +481,15 @@
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnThemPhong" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="btnCapNhatPhong" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="btnLamMoi" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -489,6 +545,9 @@
         <Component class="javax.swing.JTextField" name="txtTenPhong">
         </Component>
         <Component class="javax.swing.JTextField" name="txtSoNguoiToiDa">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSoNguoiToiDaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblGiaBan">
           <Properties>
@@ -519,6 +578,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnThemPhong">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
@@ -533,6 +595,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnCapNhatPhong">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
@@ -547,11 +612,14 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLamMoi">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="ff" red="99" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/icon/synchronize.png"/>
+              <Image iconType="3" name="/icon/clean.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
           </Properties>
