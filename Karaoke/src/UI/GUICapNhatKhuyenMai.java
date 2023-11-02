@@ -281,6 +281,8 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnHeThong.setText("Hệ Thống");
         mnHeThong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniTrangChu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mniTrangChu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/24-hours.png"))); // NOI18N
         mniTrangChu.setText("Trang chủ");
         mniTrangChu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,6 +291,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnHeThong.add(mniTrangChu);
 
+        mniTroGiup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/detail.png"))); // NOI18N
         mniTroGiup.setText("Trợ giúp");
         mniTroGiup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,6 +300,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnHeThong.add(mniTroGiup);
 
+        mniDangXuat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/DangXuat.png"))); // NOI18N
         mniDangXuat.setText("Đăng xuất");
         mnHeThong.add(mniDangXuat);
 
@@ -306,6 +310,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnuPhong.setText("Phòng");
         mnuPhong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/menu.png"))); // NOI18N
         mniCapNhatPhong.setText("Cập nhật phòng");
         mniCapNhatPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,6 +319,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuPhong.add(mniCapNhatPhong);
 
+        mniCapNhatLoaiPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/description.png"))); // NOI18N
         mniCapNhatLoaiPhong.setText("Cập nhật loại phòng");
         mniCapNhatLoaiPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -322,6 +328,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuPhong.add(mniCapNhatLoaiPhong);
 
+        mniTimKiemPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-search-24.png"))); // NOI18N
         mniTimKiemPhong.setText("Tìm kiếm phòng");
         mniTimKiemPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -330,6 +337,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuPhong.add(mniTimKiemPhong);
 
+        mniDatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/televisions.png"))); // NOI18N
         mniDatPhong.setText("Đặt phòng");
         mniDatPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,6 +346,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuPhong.add(mniDatPhong);
 
+        mniDatPhongCho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lich_lam.png"))); // NOI18N
         mniDatPhongCho.setText("Đặt phòng chờ");
         mniDatPhongCho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -352,6 +361,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnuNhanVien.setText("Nhân viên");
         mnuNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminLogin.png"))); // NOI18N
         mniCapNhatNhanVien.setText("Cập nhật nhân viên");
         mniCapNhatNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -360,6 +370,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuNhanVien.add(mniCapNhatNhanVien);
 
+        mniTimKiemNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/customer-service.png"))); // NOI18N
         mniTimKiemNhanVien.setText("Tìm kiếm nhân viên");
         mniTimKiemNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,6 +385,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnuKhachHang.setText("Khách hàng");
         mnuKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/customer.png"))); // NOI18N
         mniCapNhatKhachHang.setText("Cập nhật khách hàng");
         mniCapNhatKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -382,6 +394,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuKhachHang.add(mniCapNhatKhachHang);
 
+        mniTimKiemKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/help (1).png"))); // NOI18N
         mniTimKiemKhachHang.setText("Tìm kiếm khách hàng");
         mniTimKiemKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -396,6 +409,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnuThongKe.setText("Thống Kê");
         mnuThongKe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniThongKeDoanhThu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/bar-chart.png"))); // NOI18N
         mniThongKeDoanhThu.setText("Thống kê doanh thu");
         mniThongKeDoanhThu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -404,6 +418,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuThongKe.add(mniThongKeDoanhThu);
 
+        mniThongKeDoanhThuTheoKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/budget.png"))); // NOI18N
         mniThongKeDoanhThuTheoKhachHang.setText("Thống kê doanh thu theo khách hàng");
         mniThongKeDoanhThuTheoKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -418,6 +433,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnuHoaDon.setText("Hoá đơn");
         mnuHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniLapHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/bill (1).png"))); // NOI18N
         mniLapHoaDon.setText("Lập hoá đơn");
         mniLapHoaDon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -426,6 +442,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuHoaDon.add(mniLapHoaDon);
 
+        mniThanhToan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/money-bag.png"))); // NOI18N
         mniThanhToan.setText("Thanh toán");
         mniThanhToan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -440,6 +457,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnuDichVu.setText("Dịch vụ");
         mnuDichVu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/storeNav.png"))); // NOI18N
         mniCapNhatDichVu.setText("Cập nhật dịch vụ");
         mniCapNhatDichVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -448,6 +466,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuDichVu.add(mniCapNhatDichVu);
 
+        mniTimKiemDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/invoices.png"))); // NOI18N
         mniTimKiemDichVu.setText("Tìm kiếm dịch vụ");
         mniTimKiemDichVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -462,6 +481,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         mnuKhuyenMai.setText("Khuyến mãi");
         mnuKhuyenMai.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatKhuyenMai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/promotion.png"))); // NOI18N
         mniCapNhatKhuyenMai.setText("Cập nhật khuyến mãi");
         mniCapNhatKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -470,6 +490,7 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         });
         mnuKhuyenMai.add(mniCapNhatKhuyenMai);
 
+        mniTimKiemKhuyenMai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-search-24.png"))); // NOI18N
         mniTimKiemKhuyenMai.setText("Tìm kiếm khuyến mãi");
         mniTimKiemKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -534,6 +555,10 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
     private void cbSoLuongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSoLuongActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbSoLuongActionPerformed
+
+    private void txtSoCCCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSoCCCDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSoCCCDActionPerformed
 
     private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
         GUITrangChu tc = new GUITrangChu();
@@ -647,10 +672,6 @@ public class GUICapNhatKhuyenMai extends javax.swing.JFrame {
         tkkm.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
-
-    private void txtSoCCCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSoCCCDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSoCCCDActionPerformed
 
     /**
      * @param args the command line arguments

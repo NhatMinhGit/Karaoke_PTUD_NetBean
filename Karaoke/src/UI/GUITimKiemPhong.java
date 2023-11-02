@@ -211,6 +211,8 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnHeThong.setText("Hệ Thống");
         mnHeThong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniTrangChu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mniTrangChu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/24-hours.png"))); // NOI18N
         mniTrangChu.setText("Trang chủ");
         mniTrangChu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,6 +221,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnHeThong.add(mniTrangChu);
 
+        mniTroGiup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/detail.png"))); // NOI18N
         mniTroGiup.setText("Trợ giúp");
         mniTroGiup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,6 +230,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnHeThong.add(mniTroGiup);
 
+        mniDangXuat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/DangXuat.png"))); // NOI18N
         mniDangXuat.setText("Đăng xuất");
         mnHeThong.add(mniDangXuat);
 
@@ -236,7 +240,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnuPhong.setText("Phòng");
         mnuPhong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        mniCapNhatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/room (1).png"))); // NOI18N
+        mniCapNhatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/menu.png"))); // NOI18N
         mniCapNhatPhong.setText("Cập nhật phòng");
         mniCapNhatPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,6 +249,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuPhong.add(mniCapNhatPhong);
 
+        mniCapNhatLoaiPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/description.png"))); // NOI18N
         mniCapNhatLoaiPhong.setText("Cập nhật loại phòng");
         mniCapNhatLoaiPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,7 +258,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuPhong.add(mniCapNhatLoaiPhong);
 
-        mniTimKiemPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
+        mniTimKiemPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-search-24.png"))); // NOI18N
         mniTimKiemPhong.setText("Tìm kiếm phòng");
         mniTimKiemPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,6 +267,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuPhong.add(mniTimKiemPhong);
 
+        mniDatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/televisions.png"))); // NOI18N
         mniDatPhong.setText("Đặt phòng");
         mniDatPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -270,6 +276,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuPhong.add(mniDatPhong);
 
+        mniDatPhongCho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lich_lam.png"))); // NOI18N
         mniDatPhongCho.setText("Đặt phòng chờ");
         mniDatPhongCho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,7 +291,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnuNhanVien.setText("Nhân viên");
         mnuNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        mniCapNhatNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/patient.png"))); // NOI18N
+        mniCapNhatNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminLogin.png"))); // NOI18N
         mniCapNhatNhanVien.setText("Cập nhật nhân viên");
         mniCapNhatNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,7 +300,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuNhanVien.add(mniCapNhatNhanVien);
 
-        mniTimKiemNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
+        mniTimKiemNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/customer-service.png"))); // NOI18N
         mniTimKiemNhanVien.setText("Tìm kiếm nhân viên");
         mniTimKiemNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -308,6 +315,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnuKhachHang.setText("Khách hàng");
         mnuKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/customer.png"))); // NOI18N
         mniCapNhatKhachHang.setText("Cập nhật khách hàng");
         mniCapNhatKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,6 +324,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuKhachHang.add(mniCapNhatKhachHang);
 
+        mniTimKiemKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/help (1).png"))); // NOI18N
         mniTimKiemKhachHang.setText("Tìm kiếm khách hàng");
         mniTimKiemKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -330,7 +339,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnuThongKe.setText("Thống Kê");
         mnuThongKe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        mniThongKeDoanhThu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/trend.png"))); // NOI18N
+        mniThongKeDoanhThu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/bar-chart.png"))); // NOI18N
         mniThongKeDoanhThu.setText("Thống kê doanh thu");
         mniThongKeDoanhThu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,7 +348,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuThongKe.add(mniThongKeDoanhThu);
 
-        mniThongKeDoanhThuTheoKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/stats.png"))); // NOI18N
+        mniThongKeDoanhThuTheoKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/budget.png"))); // NOI18N
         mniThongKeDoanhThuTheoKhachHang.setText("Thống kê doanh thu theo khách hàng");
         mniThongKeDoanhThuTheoKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -354,6 +363,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnuHoaDon.setText("Hoá đơn");
         mnuHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniLapHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/bill (1).png"))); // NOI18N
         mniLapHoaDon.setText("Lập hoá đơn");
         mniLapHoaDon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -362,6 +372,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuHoaDon.add(mniLapHoaDon);
 
+        mniThanhToan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/money-bag.png"))); // NOI18N
         mniThanhToan.setText("Thanh toán");
         mniThanhToan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -376,6 +387,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnuDichVu.setText("Dịch vụ");
         mnuDichVu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/storeNav.png"))); // NOI18N
         mniCapNhatDichVu.setText("Cập nhật dịch vụ");
         mniCapNhatDichVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -384,6 +396,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuDichVu.add(mniCapNhatDichVu);
 
+        mniTimKiemDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/invoices.png"))); // NOI18N
         mniTimKiemDichVu.setText("Tìm kiếm dịch vụ");
         mniTimKiemDichVu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -398,6 +411,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         mnuKhuyenMai.setText("Khuyến mãi");
         mnuKhuyenMai.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
+        mniCapNhatKhuyenMai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/promotion.png"))); // NOI18N
         mniCapNhatKhuyenMai.setText("Cập nhật khuyến mãi");
         mniCapNhatKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -406,6 +420,7 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         });
         mnuKhuyenMai.add(mniCapNhatKhuyenMai);
 
+        mniTimKiemKhuyenMai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-search-24.png"))); // NOI18N
         mniTimKiemKhuyenMai.setText("Tìm kiếm khuyến mãi");
         mniTimKiemKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,6 +471,108 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tblDanhSachPhongComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tblDanhSachPhongComponentShown
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_tblDanhSachPhongComponentShown
+    public void docDuLieuTuDataVaoTableDanhSachPhong() throws SQLException 
+	{
+//            DichVu_DAO dv_dao = new DichVu_DAO();
+//            DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
+//            dftbl.setColumnCount(0);
+//            for(int i = 0;i < dsdv.size();i++)
+//            {
+//                String madv = dsdv.get(i).getMaDV();
+//                String tendv = dsdv.get(i).getTenDV();
+//                int soluong = dsdv.get(i).getSoLuong();
+//                double dongia = dsdv.get(i).getGiaBan();
+//                String dvt = dsdv.get(i).getDonViTinh();
+//                boolean ttdv = dsdv.get(i).isTrangThaiDV();
+//                Object[] row = new Object[]{madv,tendv,soluong,dongia,dvt,ttdv};
+//                dftbl.addRow(row);
+//            }
+            ///
+//            try{
+//            tblDanhSachDichVu.removeAll();
+//            String[] arr = {"Mã dịch vụ","Tên dịch vụ","Số lượng dịch vụ","Giá bán","Đơn vị tính","Trạng thái dịch vụ"};
+//            DefaultTableModel mdlPhong = new DefaultTableModel(arr,0); 
+//            
+//            Connection connection = ConnectDB.getConnection();
+//            String query = "SELECT * FROM DichVu";
+//            PreparedStatement ps = connection.prepareStatement(query);
+//            ResultSet rs = ps.executeQuery();
+//            
+//            while(rs.next()){
+//                DichVu dv = new DichVu();
+//                dv.add(rs.getString(1));
+//                dv.add(rs.getString(2));
+//                dv.add(rs.getInt(3));
+//                dv.add(rs.getString(4));
+//                dv.add(rs.getInt(5));
+//                dv.add(rs.getBoolean(6));
+//                mdlPhong.addRow(dv);
+//            }
+//            tblDanhSachDichVu.setModel(mdlPhong);
+//            }catch(SQLException ex){
+//                Logger.getLogger(GUIDatPhongCho.class.getName()).log(Level.SEVERE, null,ex);
+//            }
+            ///
+            
+            DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
+            ArrayList<Phong> listp = p_dao.getAllPhong();
+            dftbl.setRowCount(0);
+		for(Phong x : listp)
+		{
+			dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
+		}
+        }
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+        try {       
+            //themDuLieuComboBox();
+            docDuLieuTuDataVaoTableDanhSachPhong();
+            System.out.println("Đọc thành công");
+        } catch (SQLException ex) {
+            System.out.println("Đọc lỗi");
+        }
+    }//GEN-LAST:event_formComponentShown
+
+    private void btnTimPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimPhongActionPerformed
+        // TODO add your handling code here:
+        String maLP = (String)cboLoaiPhong.getSelectedItem();
+        String trangThaiP = (String)cboTrangThai.getSelectedItem();
+        DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
+	ArrayList<Phong> dsp = p_dao.locPhong(maLP,trangThaiP);
+	dftbl.setRowCount(0);
+	for(Phong x : dsp)
+	{					
+		dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
+	}
+	
+    }//GEN-LAST:event_btnTimPhongActionPerformed
+    private void themDuLieuComboBox() throws SQLException{
+        ArrayList<Phong> dsP = p_dao.getAllPhong();
+		for(Phong x : dsP)
+		{
+			cboLoaiPhong.addItem(x.getLoaiPhong().getMaLoaiPhong());
+                        cboTrangThai.addItem(x.getTrangThaiPhong());
+		}
+    }
+    private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
+        try {
+            // TODO add your handling code here:
+//        cboLoaiPhong.setSelectedIndex(0);
+//        cboTrangThai.setSelectedIndex(0);
+            docDuLieuTuDataVaoTableDanhSachPhong();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUITimKiemPhong.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnLamMoiActionPerformed
+
+    private void tblDanhSachPhongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDanhSachPhongMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblDanhSachPhongMouseClicked
 
     private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
         GUITrangChu tc = new GUITrangChu();
@@ -569,108 +686,6 @@ public class GUITimKiemPhong extends javax.swing.JFrame {
         tkkm.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
-
-    private void tblDanhSachPhongComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tblDanhSachPhongComponentShown
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_tblDanhSachPhongComponentShown
-    public void docDuLieuTuDataVaoTableDanhSachPhong() throws SQLException 
-	{
-//            DichVu_DAO dv_dao = new DichVu_DAO();
-//            DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachDichVu.getModel();
-//            dftbl.setColumnCount(0);
-//            for(int i = 0;i < dsdv.size();i++)
-//            {
-//                String madv = dsdv.get(i).getMaDV();
-//                String tendv = dsdv.get(i).getTenDV();
-//                int soluong = dsdv.get(i).getSoLuong();
-//                double dongia = dsdv.get(i).getGiaBan();
-//                String dvt = dsdv.get(i).getDonViTinh();
-//                boolean ttdv = dsdv.get(i).isTrangThaiDV();
-//                Object[] row = new Object[]{madv,tendv,soluong,dongia,dvt,ttdv};
-//                dftbl.addRow(row);
-//            }
-            ///
-//            try{
-//            tblDanhSachDichVu.removeAll();
-//            String[] arr = {"Mã dịch vụ","Tên dịch vụ","Số lượng dịch vụ","Giá bán","Đơn vị tính","Trạng thái dịch vụ"};
-//            DefaultTableModel mdlPhong = new DefaultTableModel(arr,0); 
-//            
-//            Connection connection = ConnectDB.getConnection();
-//            String query = "SELECT * FROM DichVu";
-//            PreparedStatement ps = connection.prepareStatement(query);
-//            ResultSet rs = ps.executeQuery();
-//            
-//            while(rs.next()){
-//                DichVu dv = new DichVu();
-//                dv.add(rs.getString(1));
-//                dv.add(rs.getString(2));
-//                dv.add(rs.getInt(3));
-//                dv.add(rs.getString(4));
-//                dv.add(rs.getInt(5));
-//                dv.add(rs.getBoolean(6));
-//                mdlPhong.addRow(dv);
-//            }
-//            tblDanhSachDichVu.setModel(mdlPhong);
-//            }catch(SQLException ex){
-//                Logger.getLogger(GUIDatPhongCho.class.getName()).log(Level.SEVERE, null,ex);
-//            }
-            ///
-            
-            DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
-            ArrayList<Phong> listp = p_dao.getAllPhong();
-            dftbl.setRowCount(0);
-		for(Phong x : listp)
-		{
-			dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
-		}
-        }
-    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-        // TODO add your handling code here:
-        try {       
-            //themDuLieuComboBox();
-            docDuLieuTuDataVaoTableDanhSachPhong();
-            System.out.println("Đọc thành công");
-        } catch (SQLException ex) {
-            System.out.println("Đọc lỗi");
-        }
-    }//GEN-LAST:event_formComponentShown
-
-    private void btnTimPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimPhongActionPerformed
-        // TODO add your handling code here:
-        String maLP = (String)cboLoaiPhong.getSelectedItem();
-        String trangThaiP = (String)cboTrangThai.getSelectedItem();
-        DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
-	ArrayList<Phong> dsp = p_dao.locPhong(maLP,trangThaiP);
-	dftbl.setRowCount(0);
-	for(Phong x : dsp)
-	{					
-		dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
-	}
-	
-    }//GEN-LAST:event_btnTimPhongActionPerformed
-    private void themDuLieuComboBox() throws SQLException{
-        ArrayList<Phong> dsP = p_dao.getAllPhong();
-		for(Phong x : dsP)
-		{
-			cboLoaiPhong.addItem(x.getLoaiPhong().getMaLoaiPhong());
-                        cboTrangThai.addItem(x.getTrangThaiPhong());
-		}
-    }
-    private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
-        try {
-            // TODO add your handling code here:
-//        cboLoaiPhong.setSelectedIndex(0);
-//        cboTrangThai.setSelectedIndex(0);
-            docDuLieuTuDataVaoTableDanhSachPhong();
-        } catch (SQLException ex) {
-            Logger.getLogger(GUITimKiemPhong.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnLamMoiActionPerformed
-
-    private void tblDanhSachPhongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDanhSachPhongMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tblDanhSachPhongMouseClicked
 
     /**
      * @param args the command line arguments
