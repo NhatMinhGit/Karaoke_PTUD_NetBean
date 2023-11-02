@@ -767,7 +767,6 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
     public void docDuLieuTuDataVaoTableDanhSachPhong() throws SQLException 
 	{  
             DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
-            dftbl.setRowCount(0);
             ArrayList<Phong> listp = p_dao.getAllPhong();
             dftbl.setRowCount(0);
 		for(Phong x : listp)
