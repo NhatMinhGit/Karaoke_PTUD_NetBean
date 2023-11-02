@@ -67,27 +67,6 @@ public class KhachHang {
         this.soCCCD = soCCCD;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.maKhachHang);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final KhachHang other = (KhachHang) obj;
-        return true;
-    }
 
     public KhachHang() {
     }
@@ -100,11 +79,4 @@ public class KhachHang {
         this.soDT = soDT;
         this.soCCCD = soCCCD;
     }
-
-    @Override
-    public String toString() {
-        return "KhachHang{" + "maKhachHang=" + maKhachHang + ", tenKhachHang=" + tenKhachHang + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + ngaySinh + ", soDT=" + soDT + ", soCCCD=" + soCCCD + '}';
-    }
-    
-    
 }

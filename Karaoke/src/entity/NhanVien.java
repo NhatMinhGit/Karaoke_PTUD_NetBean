@@ -12,11 +12,12 @@ import java.util.Objects;
  * @author Duong Ngo Manh
  */
 public class NhanVien {
+
     private String maNhanVien;
-    private String maChucVu;
+    private ChucVu chucVu;
     private String tenNhanVien;
-    private boolean gioiTinh;
-    private Date ngaySinh;
+    private String gioiTinh;
+    private String ngaySinh;
     private String soDienThoai;
     private String diaChi;
     private String matKhau;
@@ -24,9 +25,9 @@ public class NhanVien {
     public NhanVien() {
     }
 
-    public NhanVien(String maNhanVien, String maChucVu, String tenNhanVien, boolean gioiTinh, Date ngaySinh, String soDienThoai, String diaChi, String matKhau) {
+    public NhanVien(String maNhanVien, ChucVu chucVu, String tenNhanVien, String gioiTinh, String ngaySinh, String soDienThoai, String diaChi, String matKhau) {
         this.maNhanVien = maNhanVien;
-        this.maChucVu = maChucVu;
+        this.chucVu = chucVu;
         this.tenNhanVien = tenNhanVien;
         this.gioiTinh = gioiTinh;
         this.ngaySinh = ngaySinh;
@@ -39,19 +40,19 @@ public class NhanVien {
         return maNhanVien;
     }
 
-    public String getMaChucVu() {
-        return maChucVu;
+    public ChucVu getChucVu() {
+        return chucVu;
     }
 
     public String getTenNhanVien() {
         return tenNhanVien;
     }
 
-    public boolean isGioiTinh() {
+    public String getGioiTinh() {
         return gioiTinh;
     }
 
-    public Date getNgaySinh() {
+    public String getNgaySinh() {
         return ngaySinh;
     }
 
@@ -71,19 +72,19 @@ public class NhanVien {
         this.maNhanVien = maNhanVien;
     }
 
-    public void setMaChucVu(String maChucVu) {
-        this.maChucVu = maChucVu;
+    public void setChucVu(ChucVu chucVu) {
+        this.chucVu = chucVu;
     }
 
     public void setTenNhanVien(String tenNhanVien) {
         this.tenNhanVien = tenNhanVien;
     }
 
-    public void setGioiTinh(boolean gioiTinh) {
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 
-    public void setNgaySinh(Date ngaySinh) {
+    public void setNgaySinh(String ngaySinh) {
         this.ngaySinh = ngaySinh;
     }
 
@@ -99,33 +100,4 @@ public class NhanVien {
         this.matKhau = matKhau;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 11 * hash + Objects.hashCode(this.maNhanVien);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final NhanVien other = (NhanVien) obj;
-        return Objects.equals(this.maNhanVien, other.maNhanVien);
-    }
-    
-    
-
-    @Override
-    public String toString() {
-        return "NhanVien{" + "maNhanVien=" + maNhanVien + ", maChucVu=" + maChucVu + ", tenNhanVien=" + tenNhanVien + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + ngaySinh + ", soDienThoai=" + soDienThoai + ", diaChi=" + diaChi + ", matKhau=" + matKhau + '}';
-    }
-    
 }

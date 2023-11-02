@@ -67,27 +67,6 @@ public class KhuyenMai {
         this.ngayKetThuc = ngayKetThuc;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 59 * hash + Objects.hashCode(this.maKhuyenMai);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final KhuyenMai other = (KhuyenMai) obj;
-        return true;
-    }
 
     public KhuyenMai() {
     }
@@ -101,10 +80,6 @@ public class KhuyenMai {
         this.ngayKetThuc = ngayKetThuc;
     }
 
-    @Override
-    public String toString() {
-        return "KhuyenMai{" + "maKhuyenMai=" + maKhuyenMai + ", maGiamGia=" + maGiamGia + ", chietKhau=" + chietKhau + ", soLuong=" + soLuong + ", ngayBatDau=" + ngayBatDau + ", ngayKetThuc=" + ngayKetThuc + '}';
-    }
     
     
 }
