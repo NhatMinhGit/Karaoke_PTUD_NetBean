@@ -4,10 +4,6 @@
  */
 package UI;
 
-/**
- *
- * @author LENOVO
- */
 public class DangNhap extends javax.swing.JFrame {
 
     /**
@@ -15,6 +11,7 @@ public class DangNhap extends javax.swing.JFrame {
      */
     public DangNhap() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -47,18 +44,19 @@ public class DangNhap extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
         jLabel2.setText("ĐĂNG NHẬP");
 
-        txtTaiKhoan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtTaiKhoan.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtTaiKhoan.setText("admin");
 
-        lblTaiKhoan.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTaiKhoan.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         lblTaiKhoan.setText("Tài khoản:");
 
-        lblMatKhau.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblMatKhau.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         lblMatKhau.setText("Mật khẩu:");
 
-        txtMatKhau.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtMatKhau.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtMatKhau.setText("123456");
 
+        radMatKhau.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         radMatKhau.setText("Hiển thị mật khẩu");
         radMatKhau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +130,7 @@ public class DangNhap extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(160, 160, 160)
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(30, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,6 +187,8 @@ public class DangNhap extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(DangNhap.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

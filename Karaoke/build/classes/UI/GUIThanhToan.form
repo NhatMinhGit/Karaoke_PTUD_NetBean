@@ -472,6 +472,9 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+ESCAPE"/>
                 </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/24-hours.png"/>
                 </Property>
@@ -483,6 +486,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTroGiup">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/detail.png"/>
                 </Property>
@@ -494,6 +500,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniDangXuat">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/DangXuat.png"/>
                 </Property>
@@ -515,6 +524,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatPhong">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/menu.png"/>
                 </Property>
@@ -526,6 +538,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatLoaiPhong">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/description.png"/>
                 </Property>
@@ -537,6 +552,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemPhong">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/icons8-search-24.png"/>
                 </Property>
@@ -548,6 +566,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniDatPhong">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/televisions.png"/>
                 </Property>
@@ -559,6 +580,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniDatPhongCho">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/lich_lam.png"/>
                 </Property>
@@ -583,6 +607,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatNhanVien">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/adminLogin.png"/>
                 </Property>
@@ -594,6 +621,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemNhanVien">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/customer-service.png"/>
                 </Property>
@@ -618,6 +648,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatKhachHang">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/customer.png"/>
                 </Property>
@@ -629,6 +662,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemKhachHang">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/help (1).png"/>
                 </Property>
@@ -653,6 +689,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniThongKeDoanhThu">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/bar-chart.png"/>
                 </Property>
@@ -664,6 +703,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniThongKeDoanhThuTheoKhachHang">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/budget.png"/>
                 </Property>
@@ -688,6 +730,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniLapHoaDon">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/bill (1).png"/>
                 </Property>
@@ -699,6 +744,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniThanhToan">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/money-bag.png"/>
                 </Property>
@@ -723,6 +771,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatDichVu">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/storeNav.png"/>
                 </Property>
@@ -734,6 +785,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemDichVu">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/invoices.png"/>
                 </Property>
@@ -758,6 +812,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mniCapNhatKhuyenMai">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/promotion.png"/>
                 </Property>
@@ -769,6 +826,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mniTimKiemKhuyenMai">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/icons8-search-24.png"/>
                 </Property>
