@@ -858,6 +858,20 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
 
     private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
         // TODO add your handling code here:
+        txtMaPhieuDatPhong.setText("");
+        txtMaPhong.setText("");
+        txtMaKhachHang.setText("");
+        txtMaNhanVien.setText("");
+        try {
+            docDuLieuTuDataVaoTableDanhSachPhieuDatPhong();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUICapNhatPhong.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            docDuLieuTuDataVaoTableDanhSachPhongCho();
+        } catch (SQLException ex) {
+            Logger.getLogger(GUIDatPhongCho.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnLamMoiActionPerformed
     
     private void mniTrangChuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniTrangChuActionPerformed
