@@ -92,6 +92,10 @@ public class KhachHang {
     public KhachHang() {
     }
 
+    public KhachHang(String maKhachHang) {
+        this.maKhachHang = maKhachHang;
+    }
+    
     public KhachHang(String maKhachHang, String tenKhachHang, boolean gioiTinh, Date ngaySinh, String soDT, String soCCCD) {
         this.maKhachHang = maKhachHang;
         this.tenKhachHang = tenKhachHang;

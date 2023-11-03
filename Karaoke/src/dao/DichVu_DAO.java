@@ -23,7 +23,7 @@ public class DichVu_DAO {
 	public ArrayList<DichVu> getAllDichVu() throws SQLException
 	{
             
-		ArrayList<DichVu> dsDV = new ArrayList<>();
+		ArrayList<DichVu> dsDV = new ArrayList<DichVu>();
 		
 			//ket noi
 			ConnectDB.getInstance();
