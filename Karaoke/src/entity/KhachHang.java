@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package entity;
 
 import java.util.Date;
@@ -14,10 +11,11 @@ import java.util.Objects;
 public class KhachHang {
     private String maKhachHang;
     private String tenKhachHang;
-    private boolean gioiTinh;
+    private String gioiTinh;
     private Date ngaySinh;
     private String soDT;
     private String soCCCD;
+    private String diaChi;
 
     public String getMaKhachHang() {
         return maKhachHang;
@@ -27,12 +25,12 @@ public class KhachHang {
         return tenKhachHang;
     }
 
-    public boolean isGioiTinh() {
+    public String getGioiTinh() {
         return gioiTinh;
     }
 
     public Date getNgaySinh() {
-        return ngaySinh;
+        return new java.sql.Date(this.ngaySinh.getTime());
     }
 
     public String getSoDT() {
@@ -51,7 +49,7 @@ public class KhachHang {
         this.tenKhachHang = tenKhachHang;
     }
 
-    public void setGioiTinh(boolean gioiTinh) {
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 
@@ -67,16 +65,54 @@ public class KhachHang {
         this.soCCCD = soCCCD;
     }
 
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + Objects.hashCode(this.maKhachHang);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final KhachHang other = (KhachHang) obj;
+        return true;
+    }
 
     public KhachHang() {
     }
 
-    public KhachHang(String maKhachHang, String tenKhachHang, boolean gioiTinh, Date ngaySinh, String soDT, String soCCCD) {
+    public KhachHang(String maKhachHang, String tenKhachHang, String gioiTinh,Date ngaySinh, String soDT, String soCCCD, String diaChi) {
         this.maKhachHang = maKhachHang;
         this.tenKhachHang = tenKhachHang;
         this.gioiTinh = gioiTinh;
         this.ngaySinh = ngaySinh;
         this.soDT = soDT;
         this.soCCCD = soCCCD;
+        this.diaChi = diaChi;
     }
+
+
+    @Override
+    public String toString() {
+        return "KhachHang{" + "maKhachHang=" + maKhachHang + ", tenKhachHang=" + tenKhachHang + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + ngaySinh + ", soDT=" + soDT + ", soCCCD=" + soCCCD + ", diaChi=" + '}';
+    }
+    
+    
 }
