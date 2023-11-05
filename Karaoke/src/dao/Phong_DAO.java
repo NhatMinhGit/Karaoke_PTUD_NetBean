@@ -33,7 +33,7 @@ public class Phong_DAO {
 			//ket noi
 			ConnectDB.getInstance();
 			Connection con = ConnectDB.getConnection();
-			String sql = "SELECT * FROM Phong";
+			String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP;";
 			Statement stmt = con.createStatement();
 			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
 			ResultSet rs = stmt.executeQuery(sql);
@@ -60,7 +60,7 @@ public class Phong_DAO {
 			//ket noi
 			ConnectDB.getInstance();
 			Connection con = ConnectDB.getConnection();
-			String sql = "SELECT * FROM Phong where TrangThaiPhong = N'Trống'";
+			String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP where Phong.TrangThaiPhong = N'Trống'";
 			Statement stmt = con.createStatement();
 			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
 			ResultSet rs = stmt.executeQuery(sql);
@@ -87,7 +87,7 @@ public class Phong_DAO {
 			//ket noi
 			ConnectDB.getInstance();
 			Connection con = ConnectDB.getConnection();
-			String sql = "SELECT * FROM Phong where TrangThaiPhong = N'Chờ'";
+			String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP where Phong.TrangThaiPhong = N'Chờ'";
 			Statement stmt = con.createStatement();
 			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
 			ResultSet rs = stmt.executeQuery(sql);
@@ -142,7 +142,7 @@ public class Phong_DAO {
 			Connection con = ConnectDB.getConnection();
 			PreparedStatement stmt = null;
 			try {
-				String sql = "SELECT * FROM Phong WHERE MaLP =? or TrangThaiPhong=?";
+				String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP WHERE Phong.MaLP =? or Phong.TrangThaiPhong=?";
 				stmt = con.prepareStatement(sql);
 				stmt.setString(1, maLP);
                                 stmt.setString(2, trangThaiP);
@@ -184,7 +184,7 @@ public class Phong_DAO {
 			Connection con = ConnectDB.getConnection();
 			PreparedStatement stmt = null;
 			try {
-				String sql = "SELECT * FROM Phong WHERE MaLP =? or SoNguoiToiDa=? ";
+				String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP WHERE Phong.MaLP =? or Phong.SoNguoiToiDa=? ";
 				stmt = con.prepareStatement(sql);
 				stmt.setString(1, maLP);
                                 stmt.setString(2, soNguoiToiDa);

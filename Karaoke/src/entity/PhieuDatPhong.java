@@ -16,7 +16,7 @@ public class PhieuDatPhong {
     private KhachHang khachHang;
     private NhanVien nhanVien;
     private String ngayDatPhong;
-
+    private String gioNhanPhong;
     public PhieuDatPhong() {
     }
 
@@ -24,14 +24,23 @@ public class PhieuDatPhong {
         this.maPhieuDatPhong = maPhieuDatPhong;
     }
 
-    public PhieuDatPhong(String maPhieuDatPhong, Phong phong, KhachHang khachHang, NhanVien nhanVien, String ngayDatPhong) {
+    public PhieuDatPhong(String maPhieuDatPhong, Phong phong, KhachHang khachHang, NhanVien nhanVien, String ngayDatPhong, String gioNhanPhong) {
         this.maPhieuDatPhong = maPhieuDatPhong;
         this.phong = phong;
         this.khachHang = khachHang;
         this.nhanVien = nhanVien;
         this.ngayDatPhong = ngayDatPhong;
+        this.gioNhanPhong = gioNhanPhong;
     }
 
+    public String getGioNhanPhong() {
+        return gioNhanPhong;
+    }
+
+    public void setGioNhanPhong(String gioNhanPhong) {
+        this.gioNhanPhong = gioNhanPhong;
+    }
+  
     public String getNgayDatPhong() {
         return ngayDatPhong;
     }

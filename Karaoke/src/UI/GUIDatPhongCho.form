@@ -715,17 +715,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblMaPhieuDatPhong" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblMaNhanVien" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="lblMaNhanVien" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="txtMaNhanVien" min="-2" pref="230" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="lblMaPhieuDatPhong" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txtMaPhieuDatPhong" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="txtMaPhieuDatPhong" pref="152" max="32767" attributes="0"/>
+                      <Component id="cboNhanVien" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -734,8 +731,8 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtMaPhong" pref="150" max="32767" attributes="0"/>
-                      <Component id="txtMaKhachHang" max="32767" attributes="0"/>
+                      <Component id="txtMaPhong" pref="163" max="32767" attributes="0"/>
+                      <Component id="cboKhachHang" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="lblMaKhachHang1" min="-2" max="-2" attributes="0"/>
@@ -772,19 +769,16 @@
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lblMaPhieuDatPhong" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtMaPhieuDatPhong" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblMaNhanVien" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtMaNhanVien" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="lblMaNhanVien" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="lblMaPhong" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -796,13 +790,16 @@
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblMaKhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtMaKhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cboKhachHang" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lblMaKhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cboNhanVien" alignment="3" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
@@ -905,8 +902,6 @@
             <Property name="text" type="java.lang.String" value="Nh&#xe2;n vi&#xea;n:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtMaNhanVien">
-        </Component>
         <Component class="javax.swing.JLabel" name="lblMaKhachHang">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -915,14 +910,12 @@
             <Property name="text" type="java.lang.String" value="Kh&#xe1;ch h&#xe0;ng:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtMaKhachHang">
-        </Component>
         <Component class="javax.swing.JLabel" name="lblMaKhachHang1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ng&#xe0;y nh&#x1ead;n ph&#xf2;ng:"/>
+            <Property name="text" type="java.lang.String" value="Ng&#xe0;y &#x111;&#x1eb7;t ph&#xf2;ng:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblMaPhieuDatPhong">
@@ -937,6 +930,29 @@
         </Component>
         <Component class="com.toedter.calendar.JDateChooser" name="dcNgayDatPhong">
         </Component>
+        <Component class="javax.swing.JComboBox" name="cboNhanVien">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="cboNhanVienComponentShown"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cboKhachHang">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="pnlTieuDe3">
@@ -947,26 +963,41 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="1920" height="-1"/>
+          <AbsoluteConstraints x="0" y="0" width="1520" height="100"/>
         </Constraint>
       </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="827" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="709" max="-2" attributes="0"/>
                   <Component id="lblTieuDe" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="891" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="259" max="-2" attributes="0"/>
+                  <Component id="lblGio" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="lblNgay" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Component id="lblTieuDe" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="29" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblNgay" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblGio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="lblTieuDe" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="36" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -985,6 +1016,29 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="&#x110;&#x1eb6;T PH&#xd2;NG CH&#x1edc;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblNgay">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ng&#xe0;y , Th&#xe1;ng N&#x103;m"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblGio">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="00:00:00"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -1087,12 +1141,13 @@
             <Component class="javax.swing.JTable" name="tblDanhSachPhieuDatPhong">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="6">
-                    <Column editable="true" title="M&#xe3; phi&#x1ebf;u &#x111;&#x1eb7;t ph&#xf2;ng" type="java.lang.String"/>
+                  <Table columnCount="6" rowCount="6">
+                    <Column editable="true" title="M&#xe3; phi&#x1ebf;u &#x111;&#x1eb7;t ph&#xf2;ng" type="java.lang.Object"/>
                     <Column editable="true" title="M&#xe3; ph&#xf2;ng" type="java.lang.String"/>
                     <Column editable="true" title="Kh&#xe1;ch h&#xe0;ng" type="java.lang.String"/>
                     <Column editable="true" title="Nh&#xe2;n vi&#xea;n" type="java.lang.String"/>
-                    <Column editable="true" title="Ng&#xe0;y nh&#x1ead;n ph&#xf2;ng" type="java.lang.String"/>
+                    <Column editable="true" title="Ng&#xe0;y &#x111;&#x1eb7;t ph&#xf2;ng" type="java.lang.String"/>
+                    <Column editable="true" title="Gi&#x1edd; nh&#x1ead;n ph&#xf2;ng" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -1103,6 +1158,11 @@
                       <Renderer/>
                     </Column>
                     <Column maxWidth="-1" minWidth="100" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>

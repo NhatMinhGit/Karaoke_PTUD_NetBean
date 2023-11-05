@@ -675,6 +675,20 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
 //	txtGiaBan.setText(dftbl.getValueAt(row, 4).toString());
 //        txtSoNguoiToiDa.setText(dftbl.getValueAt(row, 5).toString());
 //	cboTrangThaiP.setSelectedItem(dftbl.getValueAt(row, 6).toString());
+        int row = tblDanhSachPhong.getSelectedRow();
+        String maPhong = tblDanhSachPhong.getValueAt(row, 0).toString();
+        String tenLP = tblDanhSachPhong.getValueAt(row,1).toString();
+        String tenPhong = tblDanhSachPhong.getValueAt(row, 2).toString();
+        String giaBan = tblDanhSachPhong.getValueAt(row, 3).toString();
+        String soNguoiToiDa = tblDanhSachPhong.getValueAt(row, 4).toString();
+        String trangThaiPhong = tblDanhSachPhong.getValueAt(row, 5).toString();
+        
+	txtMaPhong.setText(maPhong);
+        txtMaLoaiPhong.setText(tenLP);
+        txtTenPhong.setText(tenPhong);
+        txtGiaBan.setText(giaBan);
+        txtSoNguoiToiDa.setText(soNguoiToiDa);
+        cboTrangThaiP.setSelectedItem(trangThaiPhong);
     }//GEN-LAST:event_tblDanhSachPhongMouseClicked
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
@@ -824,10 +838,10 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
             DefaultTableModel dftbl = (DefaultTableModel)tblDanhSachPhong.getModel();
             ArrayList<Phong> listp = p_dao.getAllPhong();
             dftbl.setRowCount(0);
-		for(Phong x : listp)
-		{
-			dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
-		}
+            for(Phong x : listp)
+            {
+		dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
+            }
         }
     /**
      * @param args the command line arguments
