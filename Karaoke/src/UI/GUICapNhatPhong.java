@@ -645,7 +645,7 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
 				JOptionPane.showMessageDialog(this, "Bạn chưa điền đủ thông tin");
 				return;
 			}
-			String maP = txtMaPhong.getText();
+			String maP = txtMaPhong.getText();                       
                         LoaiPhong maLP = new LoaiPhong(txtMaLoaiPhong.getText());
 			String tenP = txtTenPhong.getText();
                         float giaBan = Float.parseFloat(txtGiaBan.getText());
@@ -657,7 +657,7 @@ public class GUICapNhatPhong extends javax.swing.JFrame {
 			try {
 				p_dao.capNhatPhong(x);
                                 dftbl.addRow(new Object[] {x.getMaPhong(),x.getLoaiPhong().getMaLoaiPhong(),x.getTenPhong(),x.getGiaPhong(),x.getSoNguoiToiDa(),x.getTrangThaiPhong()});
-				//docDuLieuTuDataVaoTableDanhSachPhong();
+				docDuLieuTuDataVaoTableDanhSachPhong();
 				JOptionPane.showMessageDialog(this, "Cap nhat thanh cong");
 			} catch (Exception e2) {
                                 JOptionPane.showMessageDialog(this, "Cap nhat không thanh cong");

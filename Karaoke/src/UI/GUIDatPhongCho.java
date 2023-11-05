@@ -499,6 +499,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         lblGio.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblGio.setForeground(new java.awt.Color(255, 255, 255));
         lblGio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblGio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/alarm-clock.png"))); // NOI18N
         lblGio.setText("00:00:00");
 
         javax.swing.GroupLayout pnlTieuDe3Layout = new javax.swing.GroupLayout(pnlTieuDe3);
@@ -512,7 +513,7 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                 .addComponent(lblGio)
                 .addGap(18, 18, 18)
                 .addComponent(lblNgay)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlTieuDe3Layout.setVerticalGroup(
             pnlTieuDe3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

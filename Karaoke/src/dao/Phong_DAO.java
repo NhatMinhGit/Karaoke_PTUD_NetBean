@@ -33,7 +33,7 @@ public class Phong_DAO {
 			//ket noi
 			ConnectDB.getInstance();
 			Connection con = ConnectDB.getConnection();
-			String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP;";
+			String sql = "SELECT * FROM Phong";
 			Statement stmt = con.createStatement();
 			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
 			ResultSet rs = stmt.executeQuery(sql);
@@ -41,12 +41,12 @@ public class Phong_DAO {
 			while(rs.next())
 			{
                                 String maP = rs.getString(1);
-                                LoaiPhong tenLP = new LoaiPhong(rs.getString(2));
+                                LoaiPhong maLP = new LoaiPhong(rs.getString(2));
 				String tenP = rs.getString(3);
 				float giaP = rs.getFloat(4);
                                 int soNguoiToiDa = rs.getInt(5);
 				String trangThaiP = rs.getString(6);
-				Phong p = new Phong(maP ,tenLP, tenP,giaP, soNguoiToiDa,trangThaiP );
+				Phong p = new Phong(maP ,maLP, tenP,giaP, soNguoiToiDa,trangThaiP );
 				dsP.add( p);    
 			}
             
@@ -60,7 +60,7 @@ public class Phong_DAO {
 			//ket noi
 			ConnectDB.getInstance();
 			Connection con = ConnectDB.getConnection();
-			String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP where Phong.TrangThaiPhong = N'Trống'";
+			String sql = "SELECT * FROM Phong where TrangThaiPhong = N'Trống'";
 			Statement stmt = con.createStatement();
 			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
 			ResultSet rs = stmt.executeQuery(sql);
@@ -68,12 +68,12 @@ public class Phong_DAO {
 			while(rs.next())
 			{
                                 String maP = rs.getString(1);
-                                LoaiPhong tenLP = new LoaiPhong(rs.getString(2));
+                                LoaiPhong maLP = new LoaiPhong(rs.getString(2));
 				String tenP = rs.getString(3);
 				float giaP = rs.getFloat(4);
                                 int soNguoiToiDa = rs.getInt(5);
 				String trangThaiP = rs.getString(6);
-				Phong p = new Phong(maP ,tenLP, tenP,giaP, soNguoiToiDa,trangThaiP );
+				Phong p = new Phong(maP ,maLP, tenP,giaP, soNguoiToiDa,trangThaiP );
 				dsP.add( p);    
 			}
             
@@ -87,7 +87,7 @@ public class Phong_DAO {
 			//ket noi
 			ConnectDB.getInstance();
 			Connection con = ConnectDB.getConnection();
-			String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP where Phong.TrangThaiPhong = N'Chờ'";
+			String sql = "SELECT * FROM Phong where TrangThaiPhong = N'Chờ'";
 			Statement stmt = con.createStatement();
 			//Thuc thi cau lenh SQL tra ve doi tuong ResultSet
 			ResultSet rs = stmt.executeQuery(sql);
@@ -142,7 +142,7 @@ public class Phong_DAO {
 			Connection con = ConnectDB.getConnection();
 			PreparedStatement stmt = null;
 			try {
-				String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP WHERE Phong.MaLP =? or Phong.TrangThaiPhong=?";
+				String sql = "SELECT * FROM Phong WHERE MaLP =? or TrangThaiPhong=?";
 				stmt = con.prepareStatement(sql);
 				stmt.setString(1, maLP);
                                 stmt.setString(2, trangThaiP);
@@ -184,7 +184,7 @@ public class Phong_DAO {
 			Connection con = ConnectDB.getConnection();
 			PreparedStatement stmt = null;
 			try {
-				String sql = "SELECT Phong.MaPhong,LoaiPhong.TenLoaiPhong,Phong.TenPhong,Phong.GiaPhong,Phong.SoNguoiToiDa,Phong.TrangThaiPhong FROM Phong JOIN LoaiPhong ON LoaiPhong.MaLoaiPhong = Phong.MaLP WHERE Phong.MaLP =? or Phong.SoNguoiToiDa=? ";
+				String sql = "SELECT * FROM Phong WHERE MaLP =? or SoNguoiToiDa=? ";
 				stmt = con.prepareStatement(sql);
 				stmt.setString(1, maLP);
                                 stmt.setString(2, soNguoiToiDa);
@@ -224,9 +224,9 @@ public class Phong_DAO {
 		PreparedStatement stmt = null;
 		int n = 0;
 		try {
-			stmt = con.prepareStatement("update Phong set MaPhong=?, MaLP=?,TenPhong=?,GiaPhong=?,SoNguoiToiDa=?,TrangThaiPhong=? where MaPhong=?");
+			stmt = con.prepareStatement("update Phong set MaPhong=?,MaLP=?,TenPhong=?,GiaPhong=?,SoNguoiToiDa=?,TrangThaiPhong=? where MaPhong=?");
 			stmt.setString(1,x.getMaPhong());
-                        stmt.setString(2, x.getLoaiPhong().getTenLoaiPhong());
+                        stmt.setString(2, x.getLoaiPhong().getMaLoaiPhong());
 			stmt.setString(3, x.getTenPhong());
                         stmt.setFloat(4, x.getGiaPhong());
                         stmt.setInt(5, x.getSoNguoiToiDa());
