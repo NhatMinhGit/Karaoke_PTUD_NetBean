@@ -2,6 +2,41 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUITrangChu.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUICapNhatPhong.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUICapNhatLoaiPhong.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUILapHoaDon.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/dao/DichVu_DAO.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUITimKiemKhuyenMai.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUIDatPhongCho.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUICapNhatDichVu.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUICapNhatKhuyenMai.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUITimKiemDichVu.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/entity/DichVu.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/entity/KhachHang.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUICapNhatKhachHang.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/dao/HoaDon_DAO.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/dao/KhachHang_DAO.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUITimKiemKhachHang.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUITimKiemNhanVien.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/entity/PhieuDatPhong.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUITimKiemPhong.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/dao/NhanVien_DAO.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/entity/Phong.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/dao/Phong_DAO.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/entity/HoaDon.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUIDatPhong.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUIThongKeDoanhThu.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUIThanhToan.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/entity/NhanVien.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUICapNhatNhanVien.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/DangNhap.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/entity/LoaiPhong.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/dao/PhieuDatPhong_DAO.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/UI/GUIThongKeKhachHang.java</file>
+            <file>file:/C:/Users/ad/Documents/NetBeansProjects/Karaoke_PTUD_NetBean/Karaoke/src/connectdb/ConnectDB.java</file>
+        </group>
     </open-files>
 </project-private>
