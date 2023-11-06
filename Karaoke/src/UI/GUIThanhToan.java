@@ -4,11 +4,28 @@
  */
 package UI;
 
+import PDF.XuatPDF;
 import dao.HoaDon_DAO;
 import entity.HoaDon;
+import java.io.FileOutputStream;
+import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Hashtable;
+import javax.print.attribute.HashPrintRequestAttributeSet;
+import javax.print.attribute.PrintRequestAttribute;
+import javax.print.attribute.PrintRequestAttributeSet;
+import javax.print.attribute.TextSyntax;
+import javax.print.attribute.standard.DocumentName;
+import javax.print.attribute.standard.JobName;
+import javax.print.attribute.standard.OrientationRequested;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.FileOutputStream;
 /**
  *
  * @author Duong Ngo Manh
@@ -70,8 +87,9 @@ public class GUIThanhToan extends javax.swing.JFrame {
         lblMaHoaDon = new javax.swing.JLabel();
         lblNgayLapHoaDon = new javax.swing.JLabel();
         txtMaHoaDon = new javax.swing.JTextField();
-        ftxtNgayLapHoaDon = new javax.swing.JFormattedTextField();
         btnThanhToan = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        btnXuatHoaDon = new javax.swing.JButton();
         pnlDanhSachHoaDon = new javax.swing.JPanel();
         scrDanhSachHoaDon = new javax.swing.JScrollPane();
         tblDanhSachHoaDon = new javax.swing.JTable();
@@ -383,13 +401,6 @@ public class GUIThanhToan extends javax.swing.JFrame {
             }
         });
 
-        ftxtNgayLapHoaDon.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/yyyy"))));
-        ftxtNgayLapHoaDon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ftxtNgayLapHoaDonActionPerformed(evt);
-            }
-        });
-
         btnThanhToan.setBackground(new java.awt.Color(153, 255, 153));
         btnThanhToan.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnThanhToan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hoadon.png"))); // NOI18N
@@ -400,6 +411,16 @@ public class GUIThanhToan extends javax.swing.JFrame {
             }
         });
 
+        btnXuatHoaDon.setBackground(new java.awt.Color(255, 255, 153));
+        btnXuatHoaDon.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnXuatHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/payment.png"))); // NOI18N
+        btnXuatHoaDon.setText("Xuất hoá đơn pdf");
+        btnXuatHoaDon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXuatHoaDonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlThongTinHoaDonLayout = new javax.swing.GroupLayout(pnlThongTinHoaDon);
         pnlThongTinHoaDon.setLayout(pnlThongTinHoaDonLayout);
         pnlThongTinHoaDonLayout.setHorizontalGroup(
@@ -407,27 +428,38 @@ public class GUIThanhToan extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlThongTinHoaDonLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblMaHoaDon)
-                .addGap(47, 47, 47)
-                .addComponent(txtMaHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblNgayLapHoaDon)
-                .addGap(36, 36, 36)
-                .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79)
                 .addComponent(btnThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(35, 35, 35)
+                .addComponent(btnXuatHoaDon)
+                .addGap(64, 64, 64))
         );
         pnlThongTinHoaDonLayout.setVerticalGroup(
             pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlThongTinHoaDonLayout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addGroup(pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMaHoaDon)
-                    .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNgayLapHoaDon)
-                    .addComponent(ftxtNgayLapHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGroup(pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnlThongTinHoaDonLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(pnlThongTinHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblMaHoaDon)
+                            .addComponent(txtMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblNgayLapHoaDon)))
+                    .addGroup(pnlThongTinHoaDonLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlThongTinHoaDonLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnThanhToan, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
+                    .addGroup(pnlThongTinHoaDonLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnXuatHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pnlDanhSachHoaDon.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DANH SÁCH HOÁ ĐƠN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
@@ -495,7 +527,7 @@ public class GUIThanhToan extends javax.swing.JFrame {
         pnlTieuDeLayout.setHorizontalGroup(
             pnlTieuDeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTieuDeLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(639, Short.MAX_VALUE)
                 .addComponent(lblTieuDe)
                 .addGap(448, 448, 448))
         );
@@ -792,10 +824,6 @@ public class GUIThanhToan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMaHoaDonActionPerformed
 
-    private void ftxtNgayLapHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftxtNgayLapHoaDonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ftxtNgayLapHoaDonActionPerformed
-
     private void btnThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThanhToanActionPerformed
         // TODO add your handling code here:
         dlgHoaDon.setVisible(true);
@@ -913,6 +941,26 @@ public class GUIThanhToan extends javax.swing.JFrame {
         tkkm.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mniTimKiemKhuyenMaiActionPerformed
+    
+    private void btnXuatHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXuatHoaDonActionPerformed
+        // TODO add your handling code here:
+        XuatHoaDon(2);
+    }//GEN-LAST:event_btnXuatHoaDonActionPerformed
+    public void XuatHoaDon(int idhd){
+        String maHD = txtMaHoaDon.getText();
+        MessageFormat header = new MessageFormat("Hoá đơn thanh toán");
+        MessageFormat footer = new MessageFormat("Cảm ơn quý khách");        
+        try {
+            PrintRequestAttributeSet set = new HashPrintRequestAttributeSet();
+            set.add(OrientationRequested.PORTRAIT);
+            set.add(new JobName(maHD, null));//đặt tên cho file PDF           
+            tblDanhSachHoaDon.print(JTable.PrintMode.FIT_WIDTH,header,footer,true,set,true);
+            JOptionPane.showMessageDialog(null,"\n" + "Printed successful");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"\n" + "Printed unsuccessful");
+        }
+        
+    }
     private HoaDon_DAO HD_dao;
 // doc du lieu tu Data vao Table
 //	public void docDuLieuTuDataVaoTable()
@@ -970,8 +1018,9 @@ public class GUIThanhToan extends javax.swing.JFrame {
     private javax.swing.JButton btnQuayLaiFromHoaDonTinhTien;
     private javax.swing.JButton btnThanhToan;
     private javax.swing.JButton btnXacNhanIndlgChiTietHoaDon;
+    private javax.swing.JButton btnXuatHoaDon;
     private javax.swing.JDialog dlgHoaDon;
-    private javax.swing.JFormattedTextField ftxtNgayLapHoaDon;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JLabel lblChietKhau;
     private javax.swing.JLabel lblDiaChi;
