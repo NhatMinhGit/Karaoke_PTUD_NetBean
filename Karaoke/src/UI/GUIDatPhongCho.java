@@ -118,9 +118,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         lblMaKhachHang1 = new javax.swing.JLabel();
         lblMaPhieuDatPhong = new javax.swing.JLabel();
         txtMaPhieuDatPhong = new javax.swing.JTextField();
-        dcNgayDatPhong = new com.toedter.calendar.JDateChooser();
         cboNhanVien = new javax.swing.JComboBox<>();
         cboKhachHang = new javax.swing.JComboBox<>();
+        dcNgayDatPhong = new com.toedter.calendar.JDateChooser();
         pnlTieuDe3 = new javax.swing.JPanel();
         lblTieuDe = new javax.swing.JLabel();
         lblNgay = new javax.swing.JLabel();
@@ -429,9 +429,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                     .addComponent(cboKhachHang, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(lblMaKhachHang1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(81, 81, 81)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(147, 147, 147)
                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnNhanPhongCho)
                     .addComponent(btnHuyPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -467,9 +467,8 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                                     .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(lblMaPhong)
                                         .addComponent(txtMaPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblMaKhachHang1)
-                                        .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(lblMaKhachHang1)
+                                    .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cboKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

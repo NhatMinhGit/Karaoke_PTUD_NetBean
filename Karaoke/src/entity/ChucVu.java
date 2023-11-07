@@ -22,6 +22,10 @@ public class ChucVu {
         this.maChucVu = maChucVu;
     }
 
+//    public ChucVu(String tenChucVu) {
+//        this.tenChucVu = tenChucVu;
+//    }
+
     public ChucVu(String maChucVu, String tenChucVu) {
         this.maChucVu = maChucVu;
         this.tenChucVu = tenChucVu;
@@ -42,33 +46,5 @@ public class ChucVu {
     public void setTenChucVu(String tenChucVu) {
         this.tenChucVu = tenChucVu;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + Objects.hashCode(this.maChucVu);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final ChucVu other = (ChucVu) obj;
-        return Objects.equals(this.maChucVu, other.maChucVu);
-    }
-
-    @Override
-    public String toString() {
-        return "ChucVu{" + "maChucVu=" + maChucVu + ", tenChucVu=" + tenChucVu + '}';
-    }
-
 
 }

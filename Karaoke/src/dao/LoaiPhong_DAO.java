@@ -40,7 +40,7 @@ public class LoaiPhong_DAO {
         Connection con = ConnectDB.getInstance().getConnection();
         PreparedStatement stmt = null;
         int n = 0;
-        String sql = "INSERT INTO LoaiPhong(MaLoaiPhong, TenLoaiPhong) VALUE(?,?)";
+        String sql = "INSERT INTO LoaiPhong(MaLoaiPhong, TenLoaiPhong) VALUES(?,?)";
         try {
             stmt = con.prepareStatement(sql);
             stmt.setString(1, x.getMaLoaiPhong());
@@ -57,4 +57,27 @@ public class LoaiPhong_DAO {
         }
         return n > 0;
     }
+
+    public boolean capNhatLoaiPhong(LoaiPhong x) {
+        Connection con = ConnectDB.getInstance().getConnection();
+        PreparedStatement stmt = null;
+        int n = 0;
+        String sql = "UPDATE LoaiPhong SET TenLoaiPhong = ? WHERE MaLoaiPhong = ?";
+        try {
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1, x.getTenLoaiPhong());
+            stmt.setString(2, x.getMaLoaiPhong());
+            n = stmt.executeUpdate();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        } finally {
+            try {
+                stmt.close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+        return n > 0;
+    }
+
 }
