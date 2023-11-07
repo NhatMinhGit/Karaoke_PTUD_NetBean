@@ -807,7 +807,7 @@ public class GUITimKiemNhanVien extends javax.swing.JFrame {
     private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
         // TODO add your handling code here:
         txtMaNhanVien.setText("");
-        cboChucVu.removeAllItems();
+        cboChucVu.setSelectedItem("Tất cả");
         txtTenNhanVien.setText("");
         txtSoDienThoai.setText("");
         radNam.setSelected(false);
