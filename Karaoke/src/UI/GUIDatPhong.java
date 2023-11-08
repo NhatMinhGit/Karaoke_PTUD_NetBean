@@ -166,7 +166,6 @@ public class GUIDatPhong extends javax.swing.JFrame {
         mniTimKiemKhuyenMai = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(0, 0));
         setPreferredSize(new java.awt.Dimension(1520, 780));
         setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
