@@ -93,4 +93,35 @@ public class PhieuDatPhong_DAO {
 		}
 		return n > 0;
         }
+        public boolean huyPhieuDatPhong(String maPDP,String maP)
+	{
+		//ket noi ConnectDB
+		Connection con = ConnectDB.getInstance().getConnection();
+		PreparedStatement stmt = null;
+		int n =0;
+		String sql ="delete from PhieuDatPhong where MaPhieuDatPhong=?";
+		try {
+			stmt = con.prepareStatement(sql);
+                        stmt.setString(1,maPDP);
+			n = stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+                String sql2 ="Update Phong set TrangThaiPhong=N'Trống' where MaPhong=?";
+		try {
+			stmt = con.prepareStatement(sql2);
+                        stmt.setString(1,maP);
+			n = stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				stmt.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return n > 0;
+        }
 }

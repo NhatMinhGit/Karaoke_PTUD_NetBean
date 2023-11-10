@@ -118,9 +118,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         lblMaKhachHang1 = new javax.swing.JLabel();
         lblMaPhieuDatPhong = new javax.swing.JLabel();
         txtMaPhieuDatPhong = new javax.swing.JTextField();
+        dcNgayDatPhong = new com.toedter.calendar.JDateChooser();
         cboNhanVien = new javax.swing.JComboBox<>();
         cboKhachHang = new javax.swing.JComboBox<>();
-        dcNgayDatPhong = new com.toedter.calendar.JDateChooser();
         pnlTieuDe3 = new javax.swing.JPanel();
         lblTieuDe = new javax.swing.JLabel();
         lblNgay = new javax.swing.JLabel();
@@ -429,9 +429,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                     .addComponent(cboKhachHang, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(lblMaKhachHang1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(147, 147, 147)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81)
                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnNhanPhongCho)
                     .addComponent(btnHuyPhongCho, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -467,8 +467,9 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
                                     .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(lblMaPhong)
                                         .addComponent(txtMaPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblMaKhachHang1)
-                                    .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblMaKhachHang1)
+                                        .addComponent(dcNgayDatPhong, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(pnlChucNangThongTinDatPhongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cboKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -603,6 +604,11 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
         tblDanhSachPhieuDatPhong.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 tblDanhSachPhieuDatPhongFocusLost(evt);
+            }
+        });
+        tblDanhSachPhieuDatPhong.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblDanhSachPhieuDatPhongMouseClicked(evt);
             }
         });
         tblDanhSachPhieuDatPhong.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -873,6 +879,18 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
     
     private void btnHuyPhongChoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHuyPhongChoActionPerformed
         // TODO add your handling code here:
+                        String maPDP = txtMaPhieuDatPhong.getText();
+                        String maP   = txtMaPhong.getText();
+                        DefaultTableModel dftblPDP = (DefaultTableModel)tblDanhSachPhieuDatPhong.getModel();
+			//kiem tra trung ma
+			try {
+				pdp_dao.huyPhieuDatPhong(maPDP,maP);
+				
+				JOptionPane.showMessageDialog(this, "Huy thanh cong");
+			} catch (Exception e2) {
+                                JOptionPane.showMessageDialog(this, "Huy không thanh cong");
+				e2.printStackTrace();
+			}
     }//GEN-LAST:event_btnHuyPhongChoActionPerformed
 
     private void btnDatPhongChoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDatPhongChoActionPerformed
@@ -1191,6 +1209,15 @@ public class GUIDatPhongCho extends javax.swing.JFrame {
     private void cboNhanVienComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_cboNhanVienComponentShown
         
     }//GEN-LAST:event_cboNhanVienComponentShown
+
+    private void tblDanhSachPhieuDatPhongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDanhSachPhieuDatPhongMouseClicked
+        // TODO add your handling code here:
+        int row = tblDanhSachPhieuDatPhong.getSelectedRow();
+        String maPDP = tblDanhSachPhieuDatPhong.getValueAt(row, 0).toString();
+        String maP = tblDanhSachPhieuDatPhong.getValueAt(row, 1).toString();
+	txtMaPhieuDatPhong.setText(maPDP);
+        txtMaPhong.setText(maP);
+    }//GEN-LAST:event_tblDanhSachPhieuDatPhongMouseClicked
                                                
     private void themDuLieuComboBoxIndlg() throws SQLException{
         ArrayList<Phong> dsP = p_dao.getAllPhong();
